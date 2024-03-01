@@ -1,0 +1,14 @@
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\bin\Debug\net8.0\TheZone.exe
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\bin\Debug\net8.0\TheZone.deps.json
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\bin\Debug\net8.0\TheZone.runtimeconfig.json
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\bin\Debug\net8.0\TheZone.dll
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\bin\Debug\net8.0\TheZone.pdb
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.AssemblyInfoInputs.cache
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.AssemblyInfo.cs
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.csproj.CoreCompileInputs.cache
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.dll
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\refint\TheZone.dll
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.pdb
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.genruntimeconfig.cache
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\ref\TheZone.dll
