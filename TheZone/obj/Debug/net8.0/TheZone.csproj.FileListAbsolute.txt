@@ -12,3 +12,4 @@ C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\refint\TheZone
 C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.pdb
 C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.genruntimeconfig.cache
 C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\ref\TheZone.dll
+C:\Users\Rich Rodi\Desktop\repos\TheZone\TheZone\obj\Debug\net8.0\TheZone.sourcelink.json

@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheZone
+namespace TheZone.Menus
 {
     public class Menu
     {
@@ -18,6 +18,7 @@ namespace TheZone
             Prompt = prompt;
             Options = options;
             SelectedIndex = 0;
+
         }
         public void DislpayOptions()
         {
@@ -28,7 +29,7 @@ namespace TheZone
                 string prefix;
                 if (i == SelectedIndex)
                 {
-                    prefix = "*";
+                    prefix = "\u2622";
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.BackgroundColor = ConsoleColor.White;
                 }
@@ -38,9 +39,10 @@ namespace TheZone
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.BackgroundColor = ConsoleColor.Black;
                 }
-                Console.WriteLine($"{prefix} << {currentOption} >>");
                 Console.ResetColor();
-                
+                Console.WriteLine($"{prefix}   {currentOption} ");
+
+
             }
         }
         public int Run()
@@ -70,7 +72,7 @@ namespace TheZone
                     }
                 }
 
-            }while (keyPressed != ConsoleKey.Enter);
+            } while (keyPressed != ConsoleKey.Enter);
 
             return SelectedIndex;
         }

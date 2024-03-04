@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\menus\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\menus\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\printer\\getcoloredtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\printer\\getcoloredtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\menus\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\menus\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\printer\\artassets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\printer\\artassets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\thezone\\thezone\\menus\\deathmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D230B3C-90DA-462F-B4D9-83B66804F3AA}|TheZone\\TheZone.csproj|solutionrelative:thezone\\menus\\deathmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Game.cs",
               "RelativeDocumentMoniker": "TheZone\\Game.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Game.cs*",
-              "RelativeToolTip": "TheZone\\Game.cs*",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA1wCQAAAAvAAAA",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Game.cs",
+              "RelativeToolTip": "TheZone\\Game.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowAYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T19:14:22.041Z",
               "IsPinned": true,
@@ -48,39 +60,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "GetColoredText.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Printer\\GetColoredText.cs",
+              "RelativeDocumentMoniker": "TheZone\\Printer\\GetColoredText.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Printer\\GetColoredText.cs",
+              "RelativeToolTip": "TheZone\\Printer\\GetColoredText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T20:02:18.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DeathMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menus\\DeathMenu.cs",
+              "RelativeDocumentMoniker": "TheZone\\Menus\\DeathMenu.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menus\\DeathMenu.cs",
+              "RelativeToolTip": "TheZone\\Menus\\DeathMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T19:22:28.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menus\\MainMenu.cs",
+              "RelativeDocumentMoniker": "TheZone\\Menus\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menus\\MainMenu.cs*",
+              "RelativeToolTip": "TheZone\\Menus\\MainMenu.cs*",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA2wCMAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T15:33:44.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menu.cs",
-              "RelativeDocumentMoniker": "TheZone\\Menu.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menu.cs",
-              "RelativeToolTip": "TheZone\\Menu.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowEoAAAAhAAAA",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menus\\Menu.cs",
+              "RelativeDocumentMoniker": "TheZone\\Menus\\Menu.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Menus\\Menu.cs",
+              "RelativeToolTip": "TheZone\\Menus\\Menu.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAADQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T19:23:32.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ArtAssets.cs",
               "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Printer\\ArtAssets.cs",
               "RelativeDocumentMoniker": "TheZone\\Printer\\ArtAssets.cs",
               "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Printer\\ArtAssets.cs",
               "RelativeToolTip": "TheZone\\Printer\\ArtAssets.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAvAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwBUAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T19:15:09.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Program.cs",
               "RelativeDocumentMoniker": "TheZone\\Program.cs",
               "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheZone\\TheZone\\Program.cs",
               "RelativeToolTip": "TheZone\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T19:13:23.822Z",
               "EditorCaption": ""

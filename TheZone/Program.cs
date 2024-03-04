@@ -3,7 +3,13 @@ using TheZone;
 
 
 
+internal class Program
 {
-    Game mygame = new Game();
-    Game.RunGame();
+    private static void Main(string[] args)
+    {
+        {
+            Game myGame = new Game();
+            myGame.RunGame();
+        }
+    }
 }
