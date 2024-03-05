@@ -12,8 +12,16 @@ namespace TheZone.Printer
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             string cyanText = text;
-            Console.ResetColor();
+           
             return cyanText;
+        }
+        public static string GetDarkYellowText(string text) 
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            string darkYellowText = text;
+            
+            return darkYellowText;
+          
         }
     }
 }

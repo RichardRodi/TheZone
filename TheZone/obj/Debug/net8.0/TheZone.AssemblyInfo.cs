@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheZone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a6f75d6c4e5695c255ed933a98898693bed477a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38ae1e22e32fe17a9b62bafbcfc8baba2c29f22d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheZone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheZone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

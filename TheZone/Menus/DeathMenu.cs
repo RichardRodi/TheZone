@@ -11,7 +11,9 @@ namespace TheZone.Menus
     {
         public void DeathScreen()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"{ArtAssets.DeathHeader}");
+            Console.ResetColor();
         }
     }
 }

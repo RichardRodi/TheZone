@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheZone.Encounters;
 using TheZone.Printer;
 
 namespace TheZone.Menus
@@ -22,17 +23,18 @@ namespace TheZone.Menus
             string[] options = { "Play", "Credits", "Exit" };
             Menu mainMenu = new Menu(prompt, options);
             int selectedIndex = mainMenu.Run();
-            Game newGame = new Game();
+            FirstEncounter newGame = new FirstEncounter();
+            Game game = new Game();
             switch (selectedIndex)
             {
                 case 0:
                     newGame.RunFirstChoice();
                     break;
                 case 1:
-                    newGame.DisplayCreditInfo();
+                    game.DisplayCreditInfo();
                     break;
                 case 2:
-                    newGame.ExitGame();
+                    game.ExitGame();
                     break;
 
             }
