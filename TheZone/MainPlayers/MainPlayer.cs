@@ -10,7 +10,7 @@ namespace TheZone.MainPlayers
         {
 
         }
-        public MainPlayer(string name, int health, int radiation, int damage, int armorValue, int firstaid, int weaponValue)
+        public MainPlayer(string name, int health, int radiation, int damage, int armorValue, int firstaid, int weaponValue, int speed)
         {
             Name = name;
             Health = health;
@@ -19,7 +19,7 @@ namespace TheZone.MainPlayers
             ArmorValue = armorValue;
             FirstAid = firstaid;
             WeaponValue = weaponValue;
-
+            Speed = speed;
         }
 
         

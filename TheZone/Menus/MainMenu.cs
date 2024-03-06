@@ -17,10 +17,10 @@ namespace TheZone.Menus
             string radiationSymbol = "\u2622";
 
 
-            string prompt = $"\n\t\t\t\t{radiationSymbol}  {radiationSymbol}  {radiationSymbol}   Welcome To  {radiationSymbol}  {radiationSymbol}  {radiationSymbol}\n\t\n\n " +
-                $"{ArtAssets.GameHeader}\n\n\n\n Use Arrow Keys and Enter to Select Options \n\n\n";
+            string prompt = $"\n\t\t\t\t    {radiationSymbol}  {radiationSymbol}  {radiationSymbol}   Welcome To  {radiationSymbol}  {radiationSymbol}  {radiationSymbol}\n\t\n\n " +
+                $"{ArtAssets.GameHeader}\n\n\n\n Use Arrow Keys and Enter to Select Options: \n\n\n";
 
-            string[] options = { "Play", "Credits", "Exit" };
+            string[] options = { "Play Game", "Credits", "Exit" };
             Menu mainMenu = new Menu(prompt, options);
             int selectedIndex = mainMenu.Run();
             FirstEncounter newGame = new FirstEncounter();

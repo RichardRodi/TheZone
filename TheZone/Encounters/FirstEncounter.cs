@@ -8,19 +8,19 @@ namespace TheZone.Encounters
         public void RunFirstChoice()
         {
 
-            string prompt = $"\n\nEnveloped within the swirling vortex of a dream,\n you find yourself confronted by a towering presence:\n " +
+            string prompt = $"\n\n Enveloped within the swirling vortex of a dream,\n you find yourself confronted by a towering presence:\n " +
                 $"a Massive Monolith stretches out before you.\n" +
                 $" Its surface emits a faint, rhythmic pulse that intensifies,\n" +
                 $" overwhelming your senses with a deafening roar. As the sound crescendos to an unbearable level,\n" +
                 $" you instinctively cover your ears, but find no relief.\n You try to scream but no air fills your lungs, no voice escapes your lips.\n" +
                 $" Darkness descends; and you awaken to the sensation of damp earth beneath you, face-down in a marsh.\n" +
                 $" The once-pervasive hum of the Monolith is replaced by the crackling static of your Geiger Meter.\n" +
-                $" You are now in The Zone\n\n";
-
+                $" You have entered the Zone\n\n\n";
 
             string[] options = { "Turn Off your Geiger Meter and walk towards a small structure about 300 meters away.\n", "Keep your Geiger On and walk towards a small structure about 300 meters away.\n", "Look Around.\n" };
             Menu firstChoiceMenu = new Menu(prompt, options);
             int selectedIndex = firstChoiceMenu.Run();
+            
             switch (selectedIndex)
             {
                 case 0:
@@ -42,7 +42,7 @@ namespace TheZone.Encounters
                     Console.WriteLine("\n\n You walk carefully through the swamp as you avoid the areas that crackle from your Geiger Meter.");
                     Console.ReadKey(true);
                     Console.Clear();
-                    EncounterCreateCharacterName newCharacter = new EncounterCreateCharacterName();
+                    EncounterCreateCharacterClass newCharacter = new EncounterCreateCharacterClass();
                     newCharacter.RunCharacterCreateEncounterName();
                     break;
                 case 2:

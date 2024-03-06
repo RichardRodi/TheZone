@@ -8,17 +8,16 @@ namespace TheZone.Combat
     public class CombatMutant
     {
 
-
-
         private static Random random = new Random();
 
         public static void Fight(MainPlayer player, BaseCharacter enemy)
         {
-            SlowPrint.Print($" {player.Name} is fighting {enemy.Name}!");
+            SlowPrint.Print($" {player.Name} is now fighting a {enemy.Name}!");
 
-            while (player.IsAlive() && enemy.IsAlive())
+            while (player.IsAlive() && enemy.IsAlive() && player.IsAliveFromRadiation())
+           
             {
-
+                
                 int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue);
                 enemy.TakeDamage(playerDamage);
                 SlowPrint.Print($" {player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
@@ -41,8 +40,6 @@ namespace TheZone.Combat
                     break;
                 }
             }
-
-
         }
 
         private static int CalculateDamage(int attack, int defense)

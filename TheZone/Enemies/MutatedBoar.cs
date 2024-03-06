@@ -8,12 +8,14 @@ namespace TheZone.Enemies
         {
                 
         }
-        public MutatedBoar(string name, int health, int damage, int armorValue  )
+        public MutatedBoar(string name, int health, int damage, int armorValue, int radiationDamage, int speed)
         {
             Name = name;
             Health = health;
             Damage = damage;
             ArmorValue = armorValue;
+            RadiationDamage = radiationDamage;
+            Speed = speed;
         }
         
     }
