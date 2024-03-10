@@ -1,0 +1,14 @@
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\TheAnomalousZone.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\TheAnomalousZone.AssemblyInfoInputs.cache
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\TheAnomalousZone.AssemblyInfo.cs
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\TheAnomalousZone.csproj.CoreCompileInputs.cache
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\bin\Debug\net8.0\TheAnomalousZone.exe
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\bin\Debug\net8.0\TheAnomalousZone.deps.json
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\bin\Debug\net8.0\TheAnomalousZone.runtimeconfig.json
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\bin\Debug\net8.0\TheAnomalousZone.dll
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\bin\Debug\net8.0\TheAnomalousZone.pdb
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\TheAnomalousZone.dll
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\refint\TheAnomalousZone.dll
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\TheAnomalousZone.pdb
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\TheAnomalousZone.genruntimeconfig.cache
+C:\Users\Rich Rodi\Desktop\repos\TheAnomalousZone\TheAnomalousZone\obj\Debug\net8.0\ref\TheAnomalousZone.dll
