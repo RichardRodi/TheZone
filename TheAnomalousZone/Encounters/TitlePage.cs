@@ -17,9 +17,6 @@ namespace TheAnomalousZone.Encounters
 
         }
 
-       
-       
-
         public bool RunTitlePage()
         {
 

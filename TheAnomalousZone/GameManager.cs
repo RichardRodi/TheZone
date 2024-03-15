@@ -28,7 +28,7 @@ namespace TheAnomalousZone
         public void GenerateMainCharacter()
         {
 
-            AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 40, radiation: 0, damage: 1, armorValue: 8,
+            AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 40, radiation: 0, damage: 1, armorValue: 6,
                 firstAid: 1, weaponValue: 10, ammunition: 50, speed: 5, numberOfShotsFired: 3, "You were a soldier in the Ukranian Army"));
 
             AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 20, radiation: 0, damage: 1, armorValue: 3,
@@ -74,6 +74,9 @@ namespace TheAnomalousZone
             var dilapidatedBuilding = new DilapidatedBuilding(this);
             Encounters.Add(dilapidatedBuilding);
 
+            var wareHouse = new WareHouse(this);
+            Encounters.Add(wareHouse);
+
         }
         public void RunGame()
         {
@@ -91,6 +94,6 @@ namespace TheAnomalousZone
             Encounters.Where(x => x.GetType() == typeof(SwampIntro)).FirstOrDefault().RunEncounter();
 
         }
-   
+
     }
 }

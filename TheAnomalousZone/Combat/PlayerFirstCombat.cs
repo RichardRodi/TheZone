@@ -1,4 +1,6 @@
-﻿using System.Media;
+﻿using System;
+using System.Media;
+using System.Numerics;
 using TheAnomalousZone.Encounters.Enemies;
 using TheAnomalousZone.MainCharacter;
 using TheAnomalousZone.Printer;
@@ -15,33 +17,43 @@ namespace TheAnomalousZone.Combat
             SlowPrint.Print($" {player.Name} is now fighting {enemy.Name}!");
 
             while (player.IsAlive() && enemy.IsAlive() && player.IsAliveFromRadiation())
-
             {
-                SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
-                playGunSound.Play();
-                int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue);
-                enemy.TakeDamage(playerDamage);
-
-                SlowPrint.Print($" {player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
-
-                if (!enemy.IsAlive())
+                int ammunition = player.Ammunition;
+                if (ammunition <= 0) 
                 {
-                    SlowPrint.Print($" {enemy.Name} has been defeated!");
-                    break;
+                    SlowPrint.Print($"{player.Name} is out of ammunition!");
+                  
+                    ammunition = player.Ammunition;
                 }
-                SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"bear.wav");
-                playAnimalSound.Play(); 
-                int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
-                player.TakeDamage(enemyDamage);
-                SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
-
-                if (!player.IsAlive())
+                for (int i = 0; i < ammunition; i++)
                 {
-                    SlowPrint.Print($"{player.Name} has been defeated!");
-                    break;
+                    SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
+                    playGunSound.Play();
+                    int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue);
+                    enemy.TakeDamage(playerDamage);
+
+                    SlowPrint.Print($" {player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
+
+                    if (!enemy.IsAlive())
+                    {
+                        SlowPrint.Print($" {enemy.Name} has been defeated!");
+                        break;
+                    }
+                    SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"bear.wav");
+                    playAnimalSound.Play();
+                    int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                    player.TakeDamage(enemyDamage);
+                    SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+
+                    if (!player.IsAlive())
+                    {
+                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        break;
+                    }
                 }
             }
         }
+        
 
         private static int CalculateDamage(int attack, int defense)
         {

@@ -10,7 +10,5 @@ namespace TheAnomalousZone.Encounters
         public string EncounterName { get; set; } = string.Empty;
         public abstract void RunEncounter();
         public abstract void NextEncounter(Type encounterType);
-
-
     }
 }

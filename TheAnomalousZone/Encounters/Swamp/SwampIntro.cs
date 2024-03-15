@@ -1,4 +1,5 @@
-﻿using TheAnomalousZone.NewFolder;
+﻿using TheAnomalousZone.MainCharacter;
+using TheAnomalousZone.NewFolder;
 
 namespace TheAnomalousZone.Encounters.Swamp
 {
@@ -28,12 +29,12 @@ namespace TheAnomalousZone.Encounters.Swamp
 
                     Console.WriteLine("You start to head towards the dilapidated building when you hear a rustling in a nearby bush");
                     Console.ReadKey(true);
-
+                    NextEncounter(typeof(DilapidatedBuilding));
                     break;
                 case 1:
 
                     Console.WriteLine("You start to head towards the makeshift camp when you hear a voice call out to you in a commanding voice");
-                    NextEncounter(typeof(SpaceEncounter));
+                    NextEncounter(typeof(WareHouse));
                     break;
                 case 2:
                     Console.WriteLine("You see a vast and expansive swamp");
@@ -43,7 +44,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                 case 3:
                     
                     Console.ReadKey(true);
-
+                    
                     break;
 
             }

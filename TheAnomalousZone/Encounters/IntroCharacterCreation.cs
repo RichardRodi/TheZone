@@ -12,7 +12,7 @@ namespace TheAnomalousZone.Encounters
         public IntroCharacterCreation(GameManager gameManager)
         {
             _gameManager = gameManager;
-            RunGenerateMainCharacter();
+             RunGenerateMainCharacter();
         }
         public void RunGenerateMainCharacter()
         {
@@ -30,7 +30,6 @@ namespace TheAnomalousZone.Encounters
                     var selectedSoldier = _gameManager.AllMainCharacters.Where(x => x.Name == "Sergei").FirstOrDefault();
                     if(selectedSoldier is not null)
                         _gameManager.SelectedMainPlayer = selectedSoldier;
-                    
                     break;
                 case 1:
                     Console.WriteLine("You remember you were a Mercenary Sniper");
