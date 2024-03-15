@@ -1,4 +1,5 @@
-﻿using TheAnomalousZone.Enemies;
+﻿using System.Media;
+using TheAnomalousZone.Encounters.Enemies;
 using TheAnomalousZone.MainCharacter;
 using TheAnomalousZone.Printer;
 
@@ -16,9 +17,11 @@ namespace TheAnomalousZone.Combat
             while (player.IsAlive() && enemy.IsAlive() && player.IsAliveFromRadiation())
 
             {
-
+                SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
+                playGunSound.Play();
                 int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue);
                 enemy.TakeDamage(playerDamage);
+
                 SlowPrint.Print($" {player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
 
                 if (!enemy.IsAlive())
@@ -26,7 +29,8 @@ namespace TheAnomalousZone.Combat
                     SlowPrint.Print($" {enemy.Name} has been defeated!");
                     break;
                 }
-
+                SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"bear.wav");
+                playAnimalSound.Play(); 
                 int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
                 player.TakeDamage(enemyDamage);
                 SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");

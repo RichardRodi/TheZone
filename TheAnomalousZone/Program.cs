@@ -1,10 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using TheAnomalousZone;
-using TheAnomalousZone.Combat;
-using TheAnomalousZone.Encounters;
-using TheAnomalousZone.MainCharacter;
 
-GameManager.RunGame();
+GameManager gameManager = new GameManager(true);
+gameManager.RunGame();
 
 //gameManager.GenerateMainCharacter();
 //gameManager.GenerateAllEnemies();

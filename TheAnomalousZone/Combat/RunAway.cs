@@ -1,4 +1,4 @@
-﻿using TheAnomalousZone.Enemies;
+﻿using TheAnomalousZone.Encounters.Enemies;
 using TheAnomalousZone.MainCharacter;
 
 namespace TheAnomalousZone.Combat

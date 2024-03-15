@@ -3,100 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\combat\\runaway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\combat\\runaway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\combat\\playerfirstcombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\combat\\playerfirstcombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\combat\\enemyfirstcombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\combat\\enemyfirstcombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\swamp\\wildboarencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\swamp\\wildboarencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\maincharacter\\mainplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\maincharacter\\mainplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\enemies\\baseenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\enemies\\baseenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\spaceencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\spaceencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\swamp\\swampintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\swamp\\swampintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\swamp\\swampfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\swamp\\swampfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\swamp\\banditencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\swamp\\banditencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\maincharacter\\basecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\maincharacter\\basecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\powerplant\\powerplantintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\powerplant\\powerplantintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\introcharactercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\introcharactercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\theanomalouszone.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\theanomalouszone.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\menus\\basemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\menus\\basemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\template.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\template.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\baseencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\baseencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\titlepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\titlepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\printer\\titleartassets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\printer\\titleartassets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\introcharactercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\introcharactercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\printer\\storyscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\printer\\storyscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\baseencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\baseencounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\printer\\enemyart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\printer\\enemyart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\printer\\slowprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\printer\\slowprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\template.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\template.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\enemies\\mutatedanimals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\enemies\\mutatedanimals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\maincharacter\\basecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\maincharacter\\basecharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\enemies\\bandits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\enemies\\bandits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\maincharacter\\mainplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\maincharacter\\mainplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\theanomalouszone.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\theanomalouszone.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|c:\\users\\rich rodi\\desktop\\repos\\theanomalouszone\\theanomalouszone\\encounters\\powerplant\\powerplantintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC9326F5-88F2-4F6C-BD76-289BBECBB730}|TheAnomalousZone\\TheAnomalousZone.csproj|solutionrelative:theanomalouszone\\encounters\\powerplant\\powerplantintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,313 +70,169 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnemyFirstCombat.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Combat\\EnemyFirstCombat.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Combat\\EnemyFirstCombat.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Combat\\EnemyFirstCombat.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Combat\\EnemyFirstCombat.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAwDgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T22:54:56.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BaseCharacter.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
-              "RelativeToolTip": "TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:49:52.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerFirstCombat.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Combat\\PlayerFirstCombat.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Combat\\PlayerFirstCombat.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Combat\\PlayerFirstCombat.cs*",
-              "RelativeToolTip": "TheAnomalousZone\\Combat\\PlayerFirstCombat.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T04:37:03.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\GameManager.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\GameManager.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\GameManager.cs",
-              "RelativeToolTip": "TheAnomalousZone\\GameManager.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowBcAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:29:57.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WIldBoarEncounter.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\WIldBoarEncounter.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\Swamp\\WIldBoarEncounter.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\WIldBoarEncounter.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Encounters\\Swamp\\WIldBoarEncounter.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAMwCwAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T21:59:58.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Program.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Program.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Program.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:28:30.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseEnemy.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Enemies\\BaseEnemy.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Enemies\\BaseEnemy.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Enemies\\BaseEnemy.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Enemies\\BaseEnemy.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAA7wDsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T15:36:48.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MainPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
-              "RelativeToolTip": "TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T13:35:14.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BanditEncounter.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\BanditEncounter.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\Swamp\\BanditEncounter.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\BanditEncounter.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Encounters\\Swamp\\BanditEncounter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T21:59:45.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RunAway.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Combat\\RunAway.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Combat\\RunAway.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Combat\\RunAway.cs*",
-              "RelativeToolTip": "TheAnomalousZone\\Combat\\RunAway.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T22:07:13.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SwampIntro.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwC0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T15:31:09.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PowerPlantIntro.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T15:30:58.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "IntroCharacterCreation.cs",
               "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\IntroCharacterCreation.cs",
               "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\IntroCharacterCreation.cs",
               "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\IntroCharacterCreation.cs",
               "RelativeToolTip": "TheAnomalousZone\\Encounters\\IntroCharacterCreation.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAACcAAAAqAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T20:27:07.178Z",
+              "WhenOpened": "2024-03-15T16:39:18.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TheAnomalousZone",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Program.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Program.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Program.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T14:38:01.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Template.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Template.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\Template.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Template.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Encounters\\Template.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T12:57:00.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaseCharacter.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
+              "RelativeToolTip": "TheAnomalousZone\\MainCharacter\\BaseCharacter.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T14:00:55.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpaceEncounter.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\SpaceEncounter.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\SpaceEncounter.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\SpaceEncounter.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Encounters\\SpaceEncounter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T21:24:51.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\GameManager.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\GameManager.cs",
+              "RelativeToolTip": "TheAnomalousZone\\GameManager.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwFwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T21:27:31.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
+              "RelativeToolTip": "TheAnomalousZone\\MainCharacter\\MainPlayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T13:11:03.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SwampIntro.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Encounters\\Swamp\\SwampIntro.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAQwDgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T12:56:24.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TitlePage.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\TitlePage.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\TitlePage.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\TitlePage.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Encounters\\TitlePage.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAwwCMAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T21:43:28.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SwampFirst.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\SwampFirst.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\Swamp\\SwampFirst.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Swamp\\SwampFirst.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Encounters\\Swamp\\SwampFirst.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAQwDUAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T14:14:33.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseEncounter.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\BaseEncounter.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\BaseEncounter.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\BaseEncounter.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Encounters\\BaseEncounter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T21:41:15.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PowerPlantIntro.cs",
+              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
+              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
+              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
+              "RelativeToolTip": "TheAnomalousZone\\Encounters\\PowerPlant\\PowerPlantIntro.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T21:34:33.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TheAnomalousZone.csproj",
               "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\TheAnomalousZone.csproj",
               "RelativeDocumentMoniker": "TheAnomalousZone\\TheAnomalousZone.csproj",
               "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\TheAnomalousZone.csproj",
               "RelativeToolTip": "TheAnomalousZone\\TheAnomalousZone.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-10T22:13:21.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BaseMenu.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Menus\\BaseMenu.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Menus\\BaseMenu.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Menus\\BaseMenu.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Menus\\BaseMenu.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCUAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T03:21:52.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Template.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Template.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\Template.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\Template.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Encounters\\Template.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAwAcAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T20:27:20.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BaseEncounter.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\BaseEncounter.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\BaseEncounter.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\BaseEncounter.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Encounters\\BaseEncounter.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T14:52:36.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TitlePage.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\TitlePage.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Encounters\\TitlePage.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Encounters\\TitlePage.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Encounters\\TitlePage.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAuwBkAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T03:23:41.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TitleArtAssets.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\TitleArtAssets.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Printer\\TitleArtAssets.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\TitleArtAssets.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Printer\\TitleArtAssets.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T03:28:41.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "StoryScript.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\StoryScript.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Printer\\StoryScript.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\StoryScript.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Printer\\StoryScript.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T20:25:51.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "EnemyArt.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\EnemyArt.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Printer\\EnemyArt.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\EnemyArt.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Printer\\EnemyArt.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T03:29:48.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SlowPrint.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\SlowPrint.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Printer\\SlowPrint.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Printer\\SlowPrint.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Printer\\SlowPrint.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T04:37:35.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MutatedAnimals.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Enemies\\MutatedAnimals.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Enemies\\MutatedAnimals.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Enemies\\MutatedAnimals.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Enemies\\MutatedAnimals.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T14:03:05.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Bandits.cs",
-              "DocumentMoniker": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Enemies\\Bandits.cs",
-              "RelativeDocumentMoniker": "TheAnomalousZone\\Enemies\\Bandits.cs",
-              "ToolTip": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\Enemies\\Bandits.cs",
-              "RelativeToolTip": "TheAnomalousZone\\Enemies\\Bandits.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T14:03:14.457Z"
+              "WhenOpened": "2024-03-13T12:58:15.124Z"
             }
           ]
         }

@@ -24,7 +24,7 @@
         public void DisplayStats()
         {
             Console.WriteLine($"Character Stats\n\n---------------\n\n");
-            Console.WriteLine($"Name: {Name}\nHealth: {Health}\nRadiation: {Radiation}\nArmor Rating: {ArmorValue}\nWeapon Damage: {WeaponValue}\nSpeed: {Speed}");
+            Console.WriteLine($"Name: {Name}\nHealth \u2661 : {Health}\nRadiation \u2622 : {Radiation}\nArmor Rating  \u26E8 : {ArmorValue}\nWeapon Damage \u2694 : {WeaponValue}\nSpeed: {Speed}");
         }
 
         //public void CreateClassSoldier()

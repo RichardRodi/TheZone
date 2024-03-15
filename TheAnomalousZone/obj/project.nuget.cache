@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hdZnAgaZSHzzosXoC0LMU++xR/psPEbDevqQCf0OzykLEz4glkYlBFcEeEqrTijpFCc6DM2K1Q0vkIQ9KO89UQ==",
+  "dgSpecHash": "Bm2refia5UifM9jPLrzCL6J3asfUbG4+L/qP8oSHCwRq2WLvhhsCp5SnUsIQMLQYIoDkJw44u6KvMOcNkCyFtQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rich Rodi\\Desktop\\repos\\TheAnomalousZone\\TheAnomalousZone\\TheAnomalousZone.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Rich Rodi\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
