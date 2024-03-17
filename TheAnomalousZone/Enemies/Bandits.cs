@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Xml.Linq;
 using TheAnomalousZone.MainCharacter;
 
-namespace TheAnomalousZone.Encounters.Enemies
+namespace TheAnomalousZone.Enemies
 {
     public class Bandits : BaseEnemy
     {

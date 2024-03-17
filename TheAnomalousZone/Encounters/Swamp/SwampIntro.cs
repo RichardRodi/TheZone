@@ -39,10 +39,10 @@ namespace TheAnomalousZone.Encounters.Swamp
                 case 2:
                     Console.WriteLine("You see a vast and expansive swamp");
                     Console.ReadKey(true);
-
+                    
                     break;
                 case 3:
-                    
+                    _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
                     
                     break;

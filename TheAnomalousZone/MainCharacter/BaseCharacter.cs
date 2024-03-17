@@ -16,7 +16,7 @@
         public int Speed { get; set; }
         public int NumberOfShotsFired { get; set; }
         public string Description { get; set; }
-
+        public int Rubles { get; set; }
 
 
 

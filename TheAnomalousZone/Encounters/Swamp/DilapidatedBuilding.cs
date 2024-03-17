@@ -17,8 +17,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         public override void RunEncounter()
 
         {
-            GameManager gameManager = new GameManager();
-            gameManager.GenerateAllEnemies();
+            
             string prompt = ($"\n\nYou are faced with a snarling Boar. What do you do?\n\n");
 
             string[] options = { "1.Raise you rifle to fire at it!", "2.Run!", "3.Take a Closer look at the Boar" };
@@ -30,7 +29,10 @@ namespace TheAnomalousZone.Encounters.Swamp
                 case 0:
                     Console.WriteLine("You raise your Rifle and at the wild boar");
                     Console.ReadKey(true);
-                    PlayerFirstCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                    Console.Clear();
+                    PlayerFirstMutantCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+
+                    RunBoarDefeated();
                     break;
 
                 case 1:
@@ -40,29 +42,60 @@ namespace TheAnomalousZone.Encounters.Swamp
                     {
                         Console.WriteLine("You Failed To Get Away");
                         Console.ReadKey(true);
-                        EnemyFirstCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                        Console.Clear();
+                        EnemyFirstMutantCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                        Console.ReadKey(true);
+                        RunBoarDefeated();
                     }
 
                     else
                     {
                         Console.WriteLine("You Got Away!");
                         Console.ReadKey(true);
-                       
+                        RunBoarDefeated();
                     }
                     break;
                 case 2:
                     Console.WriteLine("You inspect the boar");
-                    gameManager.Enemies[3].DisplayStats();
+                    _gameManager.Enemies[3].DisplayStats();
                     SlowPrint.Print("While you took time inspecting the boar it decides its had enough and lunges at you");
-                    EnemyFirstCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                    Console.Clear();
+                    EnemyFirstMutantCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                    Console.ReadKey(true);
+                    RunBoarDefeated();
                     break;
 
             }
 
         }
-        
+        private static void RunBoarDefeated()
+        {
 
-        
+                string prompt = ($"You Have defeated the boar");
+
+                string[] options = { "\n\nCheck the house", "Move On", "Head back" };
+                BaseMenu menu = new BaseMenu(prompt, options);
+                int selectedIndex = menu.Run();
+
+                switch (selectedIndex)
+                {
+                    case 0:
+
+                        break;
+
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+
+                }
+
+            }
+
+
+
 
         public override void NextEncounter(Type encounterType)
         {

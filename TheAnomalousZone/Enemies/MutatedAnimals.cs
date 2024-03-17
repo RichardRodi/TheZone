@@ -1,6 +1,6 @@
 ﻿using TheAnomalousZone.MainCharacter;
 
-namespace TheAnomalousZone.Encounters.Enemies
+namespace TheAnomalousZone.Enemies
 {
     public class MutatedAnimals : BaseEnemy
     {

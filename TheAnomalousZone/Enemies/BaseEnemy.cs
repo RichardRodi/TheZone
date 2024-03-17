@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheAnomalousZone.Encounters.Enemies
+namespace TheAnomalousZone.Enemies
 {
     public class BaseEnemy
     {
@@ -53,7 +53,7 @@ namespace TheAnomalousZone.Encounters.Enemies
         public void DisplayStats()
         {
             Console.WriteLine($"\n\nEnemy Stats\n\n---------------\n\n");
-            Console.WriteLine($"Name: {Name}\nHealth: {Health}\nRadiation: {Radiation}\nArmor Rating: {ArmorValue}\nWeapon Damage: {WeaponValue}\nSpeed: {Speed} \n Ammunition: {Ammunition}");
+            Console.WriteLine($"Name: {Name}\nHealth: {Health}\nRadiation: {Radiation}\nArmor Rating: {ArmorValue}\nWeapon Damage: {WeaponValue}\nSpeed: {Speed}");
         }
     }
 }

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Media;
-using System.Numerics;
-using TheAnomalousZone.Encounters.Enemies;
+﻿using System.Media;
+using TheAnomalousZone.Enemies;
 using TheAnomalousZone.MainCharacter;
 using TheAnomalousZone.Printer;
 
 namespace TheAnomalousZone.Combat
 {
-    public static class PlayerFirstCombat
+    public static class PlayerFirstMutantCombat
     {
 
         private static Random random = new Random();
@@ -16,15 +14,10 @@ namespace TheAnomalousZone.Combat
         {
             SlowPrint.Print($" {player.Name} is now fighting {enemy.Name}!");
 
-            while (player.IsAlive() && enemy.IsAlive() && player.IsAliveFromRadiation())
+            while (player.IsAlive() && enemy.IsAlive())
             {
                 int ammunition = player.Ammunition;
-                if (ammunition <= 0) 
-                {
-                    SlowPrint.Print($"{player.Name} is out of ammunition!");
-                  
-                    ammunition = player.Ammunition;
-                }
+                
                 for (int i = 0; i < ammunition; i++)
                 {
                     SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
@@ -44,7 +37,24 @@ namespace TheAnomalousZone.Combat
                     int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
                     player.TakeDamage(enemyDamage);
                     SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+                    
+                    if (i == ammunition - 1)
+                    {
+                        SoundPlayer playAnimalReloadSound = new SoundPlayer(soundLocation: @"bear.wav");
+                        playAnimalReloadSound.Play();
+                        SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
+                        ammunition = 0;
+                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                        player.TakeDamage(enemyDamage);
+                        SoundPlayer playAnimalReloadSecondSound = new SoundPlayer(soundLocation: @"bear.wav");
 
+                        playAnimalReloadSecondSound.Play();
+                        SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                        player.TakeDamage(enemyDamage);
+                        SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+
+                    }
                     if (!player.IsAlive())
                     {
                         SlowPrint.Print($"{player.Name} has been defeated!");
@@ -53,7 +63,6 @@ namespace TheAnomalousZone.Combat
                 }
             }
         }
-        
 
         private static int CalculateDamage(int attack, int defense)
         {
