@@ -7,7 +7,7 @@
 
         }
         public MainPlayer(string name, int health, int radiation, int damage, int armorValue, int firstAid, int weaponValue, int ammunitionPerMagazine, int speed, 
-            string description, int rubles)
+            string description, int rubles, int maxHealth)
         {
             Name = name;
             Health = health;
@@ -20,11 +20,41 @@
             Speed = speed;
             Description = description;
             Rubles = rubles;
+            MaxHealth = maxHealth;
         }
         public void DisplayStats()
         {
             Console.WriteLine($"Character Stats\n\n---------------\n\n");
-            Console.WriteLine($"Name: {Name}\nHealth \u2661 : {Health}\nRadiation \u2622 : {Radiation}\nArmor Rating  \u26E8 : {ArmorValue}\nWeapon Damage \u2694 : {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition \u204D {Ammunition}\nRubles \u20BD  {Rubles}");
+            Console.WriteLine($"Name: {Name}\nHealth \u2661 : {Health}/{MaxHealth}\nArmor Rating  \u26E8 : {ArmorValue}\nWeapon Damage \u2694 : {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition \u204D  {Ammunition}\nFirstAid Kits: \u2624  {FirstAid}\nRubles \u20BD  {Rubles}");
+        }
+        public void Heal(int amount)
+        {
+            
+            if (Health >= MaxHealth)
+            {
+                Health = MaxHealth;
+                Console.WriteLine("You are at full Health!");
+            }
+            else if (FirstAid <= 0)
+            {
+                Console.WriteLine("You are out if First Aid Kits!");
+            }
+            else 
+            {
+
+                Health += amount;
+                FirstAid --;   
+                Console.WriteLine($"You Healed for {amount} Health");
+
+                if (Health == MaxHealth) 
+                { 
+                    Health = MaxHealth;
+                    Console.WriteLine("You are now at full health");
+                     
+                }
+              
+              
+            }
         }
 
         //public void CreateClassSoldier()

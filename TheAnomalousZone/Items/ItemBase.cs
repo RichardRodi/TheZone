@@ -11,12 +11,14 @@ namespace TheAnomalousZone.Items
         public int ID { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
+        public int AmountToHeal {  get; set; }
 
-        public ItemBase(int iD, string name, int price)
+        public ItemBase(int iD, string name, int price, int amountToHeal)
         {
             ID = iD;
             Name = name;
             Price = price;
+            AmountToHeal = amountToHeal;
         }
 
     }

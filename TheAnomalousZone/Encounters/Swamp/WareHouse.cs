@@ -32,13 +32,13 @@ namespace TheAnomalousZone.Encounters.Swamp
                     Console.WriteLine("Without hesitating you raise your rifle to the bandit leader. With a loud deafening thud you begin to fire at him");
                     Console.ReadKey(true);
                     Console.Clear();
-                    EnemyFirstBanditCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
-                    _gameManager.SelectedMainPlayer.DisplayStats();
+                    PlayerFirstBanditCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
+                    Console.ReadKey(true);
                     RunWareHouseDefeatedBanditLeader();
                     break;
 
                 case 1:
-                    Console.WriteLine("You attempt to run away from the Boar");
+                    Console.WriteLine("You attempt to run away from the Bandits");
                     bool getAway = RunAway.Run(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
                     if (!getAway)
                     {
@@ -60,7 +60,10 @@ namespace TheAnomalousZone.Encounters.Swamp
                 case 2:
                     Console.WriteLine("You take a closer look at the bandit");
                     _gameManager.Enemies[1].DisplayStats();
+                    Console.ReadKey(true);
+                    Console.Clear();
                     SlowPrint.Print("While you took your time inspecting the bandit leader he quietly unclicks the safety on his rifle and begins to fire at you");
+                    Console.ReadKey(true);
                     Console.Clear();
                     EnemyFirstBanditCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
                     Console.ReadKey(true);
@@ -68,7 +71,6 @@ namespace TheAnomalousZone.Encounters.Swamp
                     break;
 
             }
-
 
         }
         private void RunWareHouseDefeatedBanditLeader()
@@ -79,9 +81,9 @@ namespace TheAnomalousZone.Encounters.Swamp
                     $" Anticipating retaliation, you swiftly pivot your firearm muzzles towards the remaining bandits locations,\n" +
                     $" but it seems the demise of their leader has shattered any semblance of courage among them. \n" +
                     $"Pausing to catch your breath, you survey your surroundings.\n\n");
-                   
 
-                string[] options = { "1.Check Area", "2.Check the inside of the Warehouse", "3.Leave Area", "4.Check Stats", "5.First Aid" };
+
+                string[] options = { "1.Check Area", "2.Check the inside of the Warehouse", "3.Leave Area", "4.Check Stats", "5.Use First Aid" };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -110,11 +112,17 @@ namespace TheAnomalousZone.Encounters.Swamp
                     case 3:
                         _gameManager.SelectedMainPlayer.DisplayStats();
                         Console.ReadKey(true);
+                        RunWareHouseDefeatedBanditLeader();
+                        break;
+                    case 4:
+                        _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].AmountToHeal);
+                        Console.ReadKey(true);
+                        RunWareHouseDefeatedBanditLeader();
                         break;
                 }
 
                 Console.ResetColor();
-            
+
             }
         }
         private void RunWarehouseAnomaly()
@@ -127,7 +135,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                     $"Its presence flickers, appearing and disappearing in a mesmerizing dance. \n" +
                     $"It's as though it beckons to you, a silent but compelling invitation.");
 
-                string[] options = {"1.Climb the rafters to try and avoid the flames", 
+                string[] options = {"1.Climb the rafters to try and avoid the flames",
                     "2.Do your best to run through the flames and grab the object", "3.Take a brief moment to grab the dead Bandit leaders Jacket to use as a fire blanket",
                 "4.Leave the Warehouse"};
                 BaseMenu menu = new BaseMenu(prompt, options);

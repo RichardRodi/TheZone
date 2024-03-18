@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheAnomalousZone.Printer
 {
-    internal class TitleArtAssets
+    public class TitleArtAssets
     {
         public static string GameHeader =
 

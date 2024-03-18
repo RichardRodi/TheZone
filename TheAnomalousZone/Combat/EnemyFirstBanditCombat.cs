@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
-using System.Media;
+﻿using System.Media;
 using TheAnomalousZone.Enemies;
 using TheAnomalousZone.MainCharacter;
+using TheAnomalousZone.Menus;
 using TheAnomalousZone.Printer;
 
 namespace TheAnomalousZone.Combat
@@ -18,17 +18,18 @@ namespace TheAnomalousZone.Combat
             {
 
                 int ammunition = player.Ammunition;
-                
+
                 for (int i = 0; i < ammunition; i++)
                 {
                     SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"glock19.wav");
                     playAnimalSound.Play();
-                    int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                    int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                     player.TakeDamage(enemyDamage);
                     SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
                     if (!enemy.IsAlive())
-                    {   int c = random.Next(200,750);
+                    {
+                        int c = random.Next(200, 750);
                         player.Rubles += c;
                         SlowPrint.Print($" {enemy.Name} has been defeated! You Found {c} Rubles in the Bandits Pocket");
                         break;
@@ -36,7 +37,7 @@ namespace TheAnomalousZone.Combat
 
                     SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
                     playGunSound.Play();
-                    int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue);
+                    int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, enemy.Speed, player.Speed);
                     enemy.TakeDamage(playerDamage);
 
                     SlowPrint.Print($" {player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
@@ -46,18 +47,21 @@ namespace TheAnomalousZone.Combat
                         playAnimalSound.Play();
                         SlowPrint.Print($" {player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
-                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                        enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
                         playAnimalSound.Play();
                         SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
-                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                        enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
                         SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
                     }
-                    if (!player.IsAlive())
+                    if (player.Health <= 0)
                     {
-                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        SlowPrint.Print($" {player.Name} has been defeated!");
+                        Console.ReadKey(true);
+                        var deathmenu = new DeathMenu();
+                        deathmenu.RunEncounter();
                         break;
                     }
 
@@ -66,14 +70,23 @@ namespace TheAnomalousZone.Combat
         }
 
 
-        private static int CalculateDamage(int attack, int defense)
+        private static int CalculateDamage(int attack, int defense, int playerSpeed, int enemySpeed)
         {
+            double hitChance = 0.5 + (playerSpeed - enemySpeed) * 0.03;
+            if (random.NextDouble() > hitChance)
+            {
+                SlowPrint.Print(" Attack Missed!");
+                return 0;
 
-            double damageMultiplier = random.NextDouble() * 0.75 + 1.25;
-            int damage = (int)(attack * damageMultiplier) - defense;
-            if (damage < 0)
-                damage = 0;
-            return damage;
+            }
+            else
+            {
+                double damageMultiplier = random.NextDouble() * 0.75 + 1.25;
+                int damage = (int)(attack * damageMultiplier) - defense;
+                if (damage < 0)
+                    damage = 0;
+                return damage;
+            }
         }
 
     }

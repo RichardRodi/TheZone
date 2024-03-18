@@ -1,7 +1,9 @@
 ﻿using System.Media;
 using TheAnomalousZone.Enemies;
 using TheAnomalousZone.MainCharacter;
+using TheAnomalousZone.Menus;
 using TheAnomalousZone.Printer;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TheAnomalousZone.Combat
 {
@@ -22,7 +24,7 @@ namespace TheAnomalousZone.Combat
                 {
                     SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
                     playGunSound.Play();
-                    int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue);
+                    int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, player.Speed, enemy.Speed);
                     enemy.TakeDamage(playerDamage);
 
                     SlowPrint.Print($" {player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
@@ -37,7 +39,7 @@ namespace TheAnomalousZone.Combat
                     }
                     SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"bear.wav");
                     playAnimalSound.Play();
-                    int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                    int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue, player.Speed, enemy.Speed);
                     player.TakeDamage(enemyDamage);
                     SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
@@ -47,34 +49,47 @@ namespace TheAnomalousZone.Combat
                         playAnimalReloadSound.Play();
                         SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
-                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue, player.Speed, enemy.Speed);
                         player.TakeDamage(enemyDamage);
                         SoundPlayer playAnimalReloadSecondSound = new SoundPlayer(soundLocation: @"bear.wav");
 
                         playAnimalReloadSecondSound.Play();
                         SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
-                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
+                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue, player.Speed, enemy.Speed);
                         player.TakeDamage(enemyDamage);
                         SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
                     }
-                    if (!player.IsAlive())
+                    if (player.Health <= 0)
                     {
                         SlowPrint.Print($"{player.Name} has been defeated!");
+                        Console.ReadKey(true);
+                        var deathmenu = new DeathMenu();
+                        deathmenu.RunEncounter();
                         break;
                     }
                 }
             }
         }
 
-        private static int CalculateDamage(int attack, int defense)
+        private static int CalculateDamage(int attack, int defense, int playerSpeed, int enemySpeed)
         {
 
-            double damageMultiplier = random.NextDouble() * 0.75 + 1.25;
-            int damage = (int)(attack * damageMultiplier) - defense;
-            if (damage < 0)
-                damage = 0;
-            return damage;
+            double hitChance = 0.5 + (playerSpeed - enemySpeed) * 0.08;
+            if (random.NextDouble() > hitChance)
+            {
+                Console.WriteLine("Attack Missed!");
+                return 0;
+
+            }
+            else
+            {
+                double damageMultiplier = random.NextDouble() * 0.75 + 1.25;
+                int damage = (int)(attack * damageMultiplier) - defense;
+                if (damage < 0)
+                    damage = 0;
+                return damage;
+            }
         }
 
     }

@@ -1,11 +1,10 @@
 ﻿using System.Data;
-using System.Xml.Linq;
 using TheAnomalousZone.Encounters;
+using TheAnomalousZone.Encounters.Shop;
 using TheAnomalousZone.Encounters.Swamp;
 using TheAnomalousZone.Enemies;
 using TheAnomalousZone.Items;
 using TheAnomalousZone.MainCharacter;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace TheAnomalousZone
 {
@@ -37,13 +36,13 @@ namespace TheAnomalousZone
 
 
             AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 50, radiation: 0, damage: 2, armorValue: 8,
-                firstAid: 2, weaponValue: 15, ammunitionPerMagazine: 10, speed: 20, "You were a soldier in the Ukranian Army", rubles: 500));
+                firstAid: 2, weaponValue: 7, ammunitionPerMagazine: 3, speed: 5, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
 
             AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 40, radiation: 0, damage: 1, armorValue: 5,
-                firstAid: 3, weaponValue: 25, ammunitionPerMagazine: 5, speed: 6,  "You were a sniper in the Ukranian Army", rubles: 1000));
+                firstAid: 3, weaponValue: 15, ammunitionPerMagazine: 1, speed: 6, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 40));
 
             AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 30, radiation: 0, damage: 1, armorValue: 7,
-                firstAid: 1, weaponValue: 3, ammunitionPerMagazine: 3, speed: 5,  "You were a scientist in the Ukranian Army", rubles: 800));
+                firstAid: 1, weaponValue: 5, ammunitionPerMagazine: 9, speed: 5, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 30));
         }
 
 
@@ -51,28 +50,28 @@ namespace TheAnomalousZone
         {
 
             Enemies.Add(new Bandits("Bandit Soldier", health: 20, damage: 1, armorValue: 3,
-                firstAid: 1, weaponValue: 8, ammunition: 20, speed: 5, numberOfShotsFired: 3));
+                firstAid: 1, weaponValue: 15, ammunition: 5, speed: 5, numberOfShotsFired: 3));
 
-            Enemies.Add(new Bandits("Bandit Leader", health: 20, damage: 1, armorValue: 4,
-                firstAid: 2, weaponValue: 18, ammunition: 15, speed: 5, numberOfShotsFired: 1));
+            Enemies.Add(new Bandits("Bandit Leader", health: 30, damage: 1, armorValue: 4,
+                firstAid: 2, weaponValue: 7, ammunition: 15, speed: 4, numberOfShotsFired: 1));
 
             Enemies.Add(new Bandits("Bandit Scout", health: 15, damage: 1, armorValue: 2,
                 firstAid: 1, weaponValue: 5, ammunition: 30, speed: 7, numberOfShotsFired: 2));
 
-            Enemies.Add(new MutatedAnimals("MutatedBoar", health: 60, damage: 5, armorValue: 4, radiationDamage: 1,
+            Enemies.Add(new MutatedAnimals("MutatedBoar", health: 60, damage: 6, armorValue: 4, radiationDamage: 1,
                   speed: 5, "This is a mutated boar"));
 
-            Enemies.Add(new MutatedAnimals("MutatedChimera", health: 20, damage: 1, armorValue: 5, radiationDamage: 1,
+            Enemies.Add(new MutatedAnimals("MutatedChimera", health: 20, damage: 8, armorValue: 5, radiationDamage: 1,
             speed: 5, "This is a mutated chimera"));
 
-            Enemies.Add(new MutatedAnimals("MutatedSnork", health: 10, damage: 1, armorValue: 5, radiationDamage: 1,
+            Enemies.Add(new MutatedAnimals("MutatedSnork", health: 10, damage: 5, armorValue: 5, radiationDamage: 1,
                  speed: 5, "This is a mutated snork"));
         }
 
 
         public void GenerateAllEncounters()
         {
-            // Instantiate All Encounters //
+
             var spaceEncounter = new SpaceEncounter(this);
             Encounters.Add(spaceEncounter);
 
@@ -85,12 +84,16 @@ namespace TheAnomalousZone
             var wareHouse = new WareHouse(this);
             Encounters.Add(wareHouse);
 
+            var strelocksShop = new StrelocksShop(this);
+            Encounters.Add(strelocksShop);
+
+
         }
-       
 
         public void GenerateAllFirstAid()
         {
-            Items.Add(new FirstAidKit(iD: 0, "Basic FirstAid Kit", amountToHeal: 30, price: 1000));
+            Items.Add(new ItemBase(iD: 0, "Basic FirstAid Kit", price: 1000, amountToHeal: 10));
+            Items.Add(new ItemBase(iD: 1, "Military FirstAid Kit", price: 2000, amountToHeal: 50));
         }
 
         public void RunGame()
@@ -103,7 +106,6 @@ namespace TheAnomalousZone
             {
                 IntroCharacterCreation createMainCharacter = new IntroCharacterCreation(this);
             }
-
 
 
             Encounters.Where(x => x.GetType() == typeof(SwampIntro)).FirstOrDefault().RunEncounter();

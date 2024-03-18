@@ -32,8 +32,8 @@ namespace TheAnomalousZone.Encounters.Shop
             {
                 string prompt = ($"\n\nHello welcome to Strelock's Shop!\n\n");
 
-                string[] options = {"Buy Ceramic Plates for your Armor - Armor + 5 - 5000 Rubles", "Buy Custom parts for your Weapon - WeaponValue + 8 - 4000 Rubles",
-                    "Buy Bandit Chest Rig - Ammunition + 2 - 6000 Rubles", "Buy First Aid Kit - Heals 30 Health - 1000 Rubles", "Check Stats"};
+                string[] options = {"Buy Ceramic Plates for your Armor\n - Armor + 5 - 5000 Rubles", "Buy Custom parts for your Weapon\n - WeaponValue + 8 - 4000 Rubles",
+                    "Buy Bandit Chest Rig\n - Ammunition + 2 - 6000 Rubles", "Buy First Aid Kit\n - Heals 30 Health - 1000 Rubles", "Check Stats"};
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 

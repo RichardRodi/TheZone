@@ -17,11 +17,12 @@
         public int NumberOfShotsFired { get; set; }
         public string Description { get; set; }
         public int Rubles { get; set; }
-
+        public int MaxHealth { get; set; }
 
 
         public void TakeDamage(int damage)
         {
+
             Health -= damage;
             if (Health < 0)
                 Health = 0;
@@ -34,21 +35,13 @@
                 Radiation = 10;
         }
 
-        public void Heal(int amount)
-        {
-            Health += amount;
-            if (Health > Health)
-                Health = Health;
-        }
+        
 
         public bool IsAlive()
         {
             return Health > 0;
         }
-        public bool IsAliveFromRadiation()
-        {
-            return Radiation < 10;
-        }
+       
         public void DisplayStats()
         {
             Console.WriteLine($"\n\nCharacter Stats\n\n---------------\n\n");
