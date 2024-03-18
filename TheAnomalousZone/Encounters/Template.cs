@@ -11,7 +11,7 @@ namespace TheAnomalousZone.Encounters
 
             string prompt = ($"");
 
-            string[] options = { "Play Game", "Credits", "Exit" };
+            string[] options = { "1.Play Game", "2.Credits", "3.Exit" };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 

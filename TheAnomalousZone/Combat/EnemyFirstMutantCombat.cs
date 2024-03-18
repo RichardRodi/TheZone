@@ -33,6 +33,9 @@ namespace TheAnomalousZone.Combat
                     if (!enemy.IsAlive())
                     {
                         SlowPrint.Print($" {enemy.Name} has been defeated!");
+                        int c = random.Next(100, 500);
+                        player.Rubles += c;
+                        SlowPrint.Print($" {enemy.Name} has been defeated! You Found {c} Rubles in the Mutants Stomach");
                         break;
                     }
                    
@@ -66,7 +69,6 @@ namespace TheAnomalousZone.Combat
                 }
             }
         }
-
 
         private static int CalculateDamage(int attack, int defense)
         {

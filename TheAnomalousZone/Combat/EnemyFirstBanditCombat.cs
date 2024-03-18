@@ -1,4 +1,5 @@
-﻿using System.Media;
+﻿using System.ComponentModel;
+using System.Media;
 using TheAnomalousZone.Enemies;
 using TheAnomalousZone.MainCharacter;
 using TheAnomalousZone.Printer;
@@ -15,8 +16,9 @@ namespace TheAnomalousZone.Combat
 
             while (player.IsAlive() && enemy.IsAlive())
             {
-                int ammunition = player.Ammunition;
 
+                int ammunition = player.Ammunition;
+                
                 for (int i = 0; i < ammunition; i++)
                 {
                     SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"glock19.wav");
@@ -26,8 +28,9 @@ namespace TheAnomalousZone.Combat
                     SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
                     if (!enemy.IsAlive())
-                    {
-                        SlowPrint.Print($" {enemy.Name} has been defeated!");
+                    {   int c = random.Next(200,750);
+                        player.Rubles += c;
+                        SlowPrint.Print($" {enemy.Name} has been defeated! You Found {c} Rubles in the Bandits Pocket");
                         break;
                     }
 

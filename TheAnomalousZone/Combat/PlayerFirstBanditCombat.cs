@@ -36,7 +36,9 @@ namespace TheAnomalousZone.Combat
 
                         if (!enemy.IsAlive())
                         {
-                            SlowPrint.Print($" {enemy.Name} has been defeated!");
+                            int c = random.Next(200, 750);
+                            player.Rubles += c;
+                            SlowPrint.Print($" {enemy.Name} has been defeated! You Found {c} Rubles in the Bandits Pocket");
                             break;
                         }
                         SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"glock19.wav");

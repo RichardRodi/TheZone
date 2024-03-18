@@ -17,7 +17,7 @@ namespace TheAnomalousZone.Combat
             while (player.IsAlive() && enemy.IsAlive())
             {
                 int ammunition = player.Ammunition;
-                
+
                 for (int i = 0; i < ammunition; i++)
                 {
                     SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
@@ -30,6 +30,9 @@ namespace TheAnomalousZone.Combat
                     if (!enemy.IsAlive())
                     {
                         SlowPrint.Print($" {enemy.Name} has been defeated!");
+                        int c = random.Next(100, 500);
+                        player.Rubles += c;
+                        SlowPrint.Print($" {enemy.Name} has been defeated! You Found {c} Rubles in the Mutants Stomach"); ;
                         break;
                     }
                     SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"bear.wav");
@@ -37,7 +40,7 @@ namespace TheAnomalousZone.Combat
                     int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue);
                     player.TakeDamage(enemyDamage);
                     SlowPrint.Print($" {enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
-                    
+
                     if (i == ammunition - 1)
                     {
                         SoundPlayer playAnimalReloadSound = new SoundPlayer(soundLocation: @"bear.wav");

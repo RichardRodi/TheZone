@@ -6,8 +6,8 @@
         {
 
         }
-        public MainPlayer(string name, int health, int radiation, int damage, int armorValue, int firstAid, int weaponValue, int ammunitionPerMagazine, int speed, int numberOfShotsFired,
-            string description)
+        public MainPlayer(string name, int health, int radiation, int damage, int armorValue, int firstAid, int weaponValue, int ammunitionPerMagazine, int speed, 
+            string description, int rubles)
         {
             Name = name;
             Health = health;
@@ -18,13 +18,13 @@
             WeaponValue = weaponValue;
             Ammunition = ammunitionPerMagazine;
             Speed = speed;
-            NumberOfShotsFired = numberOfShotsFired;
             Description = description;
+            Rubles = rubles;
         }
         public void DisplayStats()
         {
             Console.WriteLine($"Character Stats\n\n---------------\n\n");
-            Console.WriteLine($"Name: {Name}\nHealth \u2661 : {Health}\nRadiation \u2622 : {Radiation}\nArmor Rating  \u26E8 : {ArmorValue}\nWeapon Damage \u2694 : {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition \u204D {Ammunition}");
+            Console.WriteLine($"Name: {Name}\nHealth \u2661 : {Health}\nRadiation \u2622 : {Radiation}\nArmor Rating  \u26E8 : {ArmorValue}\nWeapon Damage \u2694 : {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition \u204D {Ammunition}\nRubles \u20BD  {Rubles}");
         }
 
         //public void CreateClassSoldier()
