@@ -36,7 +36,7 @@ namespace TheAnomalousZone
 
 
             AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 50, radiation: 0, damage: 2, armorValue: 8,
-                firstAid: 2, weaponValue: 7, ammunitionPerMagazine: 3, speed: 5, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
+                firstAid: 2, weaponValue: 12, ammunitionPerMagazine: 3, speed: 15, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
 
             AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 40, radiation: 0, damage: 1, armorValue: 5,
                 firstAid: 3, weaponValue: 15, ammunitionPerMagazine: 1, speed: 6, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 40));
@@ -53,7 +53,7 @@ namespace TheAnomalousZone
                 firstAid: 1, weaponValue: 15, ammunition: 5, speed: 5, numberOfShotsFired: 3));
 
             Enemies.Add(new Bandits("Bandit Leader", health: 30, damage: 1, armorValue: 4,
-                firstAid: 2, weaponValue: 7, ammunition: 15, speed: 4, numberOfShotsFired: 1));
+                firstAid: 2, weaponValue: 8, ammunition: 15, speed: 8, numberOfShotsFired: 1));
 
             Enemies.Add(new Bandits("Bandit Scout", health: 15, damage: 1, armorValue: 2,
                 firstAid: 1, weaponValue: 5, ammunition: 30, speed: 7, numberOfShotsFired: 2));
@@ -87,6 +87,8 @@ namespace TheAnomalousZone
             var strelocksShop = new StrelocksShop(this);
             Encounters.Add(strelocksShop);
 
+            var abandonedChurch = new AbandonedChurch(this);
+            Encounters.Add(abandonedChurch);
 
         }
 
@@ -107,10 +109,96 @@ namespace TheAnomalousZone
                 IntroCharacterCreation createMainCharacter = new IntroCharacterCreation(this);
             }
 
-
-            Encounters.Where(x => x.GetType() == typeof(SwampIntro)).FirstOrDefault().RunEncounter();
-
+            var firstEncounter = Encounters.Where(x => x.GetType() == typeof(SwampIntro)).FirstOrDefault();
+            if (firstEncounter != null)
+                firstEncounter.RunEncounter();
+            else
+                RunGame();
         }
 
+
+        //Health: 50
+        //Damage: 3
+        //Armor Value: 10
+        //First Aid: 2
+        //Weapon Value: 12
+        //Ammunition Per Magazine: 3
+        //Speed: 10
+        //Description: Ukrainian Army Soldier
+        //Rubles: 500
+        //Artyom:
+
+        //Health: 40
+        //Damage: 2
+        //Armor Value: 8
+        //First Aid: 3
+        //Weapon Value: 15
+        //Ammunition Per Magazine: 2
+        //Speed: 12
+        //Description: Ukrainian Army Sniper
+        //Rubles: 1000
+        //Dimitri:
+
+        //Health: 30
+        //Damage: 1
+        //Armor Value: 7
+        //First Aid: 1
+        //Weapon Value: 5
+        //Ammunition Per Magazine: 6
+        //Speed: 8
+        //Description: Ukrainian Army Scientist
+        //Rubles: 800
+        //Enemies:
+        //Bandit Soldier:
+
+        //Health: 25
+        //Damage: 2
+        //Armor Value: 5
+        //First Aid: 1
+        //Weapon Value: 10
+        //Ammunition: 8
+        //Speed: 7
+        //Number of Shots Fired: 2
+        //Bandit Leader:
+
+        //Health: 35
+        //Damage: 3
+        //Armor Value: 6
+        //First Aid: 2
+        //Weapon Value: 12
+        //Ammunition: 12
+        //Speed: 9
+        //Number of Shots Fired: 1
+        //Bandit Scout:
+
+        //Health: 20
+        //Damage: 1
+        //Armor Value: 4
+        //First Aid: 1
+        //Weapon Value: 8
+        //Ammunition: 20
+        //Speed: 10
+        //Number of Shots Fired: 3
+        //Mutated Boar:
+
+        //Health: 70
+        //Damage: 8
+        //Armor Value: 6
+        //Radiation Damage: 2
+        //Speed: 6
+        //Mutated Chimera:
+
+        //Health: 30
+        //Damage: 10
+        //Armor Value: 8
+        //Radiation Damage: 3
+        //Speed: 8
+        //Mutated Snork:
+
+        //Health: 15
+        //Damage: 6
+        //Armor Value: 4
+        //Radiation Damage: 1
+        //Speed: 12
     }
 }

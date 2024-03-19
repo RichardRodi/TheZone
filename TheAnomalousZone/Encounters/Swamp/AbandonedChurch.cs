@@ -1,19 +1,18 @@
 ﻿using TheAnomalousZone.NewFolder;
 
-namespace TheAnomalousZone.Encounters
+namespace TheAnomalousZone.Encounters.Swamp
 {
-    internal class Template : BaseEncounter
+    internal class AbandonedChurch : BaseEncounter
     {
         private GameManager _gameManager;
 
-        public Template(GameManager gameManager)
+        public AbandonedChurch(GameManager gameManager)
         {
             _gameManager = gameManager;
         }
-
         public override void NextEncounter(Type encounterType)
         {
-            throw new NotImplementedException();
+            _gameManager.Encounters.Where(x => x.GetType() == encounterType).FirstOrDefault().RunEncounter();
         }
 
         public override void RunEncounter()
@@ -46,6 +45,7 @@ namespace TheAnomalousZone.Encounters
                         _gameManager.SelectedMainPlayer.DisplayStats();
                         Console.ReadKey(true);
                         Console.Clear();
+
                         break;
 
                 }

@@ -72,10 +72,10 @@ namespace TheAnomalousZone.Combat
 
         private static int CalculateDamage(int attack, int defense, int playerSpeed, int enemySpeed)
         {
-            double hitChance = 0.5 + (playerSpeed - enemySpeed) * 0.03;
+            double hitChance = 0.5 + (playerSpeed - enemySpeed) * 0.05;
             if (random.NextDouble() > hitChance)
             {
-                SlowPrint.Print(" Attack Missed!");
+                SlowPrint.Print("\tAttack Missed!");
                 return 0;
 
             }
