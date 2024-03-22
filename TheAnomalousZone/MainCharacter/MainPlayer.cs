@@ -1,4 +1,8 @@
-﻿namespace TheAnomalousZone.MainCharacter
+﻿using System.Numerics;
+using TheAnomalousZone.Menus;
+using TheAnomalousZone.Printer;
+
+namespace TheAnomalousZone.MainCharacter
 {
     public class MainPlayer : BaseCharacter
     {
@@ -25,7 +29,7 @@
         public void DisplayStats()
         {
             Console.WriteLine($"Character Stats\n\n---------------\n");
-            Console.WriteLine($"Name: {Name}\nHealth \u2661 : {Health}/{MaxHealth}\nArmor Rating  \u26E8 : {ArmorValue}\nWeapon Damage \u2694 : {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition \u204D  {Ammunition}\nFirstAid Kits: \u2624  {FirstAid}\nRubles \u20BD  {Rubles}");
+            Console.WriteLine($"Name: {Name}\nHealth \u2661  {Health}/{MaxHealth}\nArmor Rating  \u26E8  {ArmorValue}\nWeapon Damage \u2694  {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition \u204D  {Ammunition}\nFirstAid Kits \u2624  {FirstAid}\nRubles \u20BD  {Rubles}");
         }
         public void Heal(int amount)
         {
@@ -39,11 +43,15 @@
             {
                 Console.WriteLine("You are out if First Aid Kits!");
             }
+
             else 
             {
 
                 Health += amount;
-                Health = MaxHealth;
+                if (Health >= MaxHealth)
+                {
+                    Health = MaxHealth;
+                }
                 FirstAid --;   
                 Console.WriteLine($"You Healed for {amount} Health");
               
@@ -55,9 +63,21 @@
 
                 Health -= damage;
                 if (Health < 0)
-                    Health = 0;
+                     Health = 0;
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine($"You Took {damage} Damage!");
+                    Console.ResetColor();
+                if (Health <= 0)
+
+            {   
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                SlowPrint.Print($"{Name} has ceased to be alive!");
+                Console.ReadKey(true);
+                Console.ResetColor();
+                var deathmenu = new DeathMenu();
+                deathmenu.RunEncounter();
             }
+        }
 
 
     }

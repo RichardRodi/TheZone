@@ -22,7 +22,7 @@ namespace TheAnomalousZone.Encounters
 
                 string prompt = ($"");
 
-                string[] options = { "1.Play Game", "2.Credits", "3.Exit", "4. Use FirstAid Kit", "5.Check Stats" };
+                string[] options = { "1.Play Game.", "2.Credits.", "3.Exit.", "4.Use FirstAid Kit.", "5.Check Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -41,11 +41,13 @@ namespace TheAnomalousZone.Encounters
                     case 3:
                         _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].AmountToHeal);
                         Console.ReadKey(true);
+                        RunEncounter();
                         break;
                     case 4:
                         _gameManager.SelectedMainPlayer.DisplayStats();
                         Console.ReadKey(true);
                         Console.Clear();
+                        RunEncounter();
                         break;
 
                 }

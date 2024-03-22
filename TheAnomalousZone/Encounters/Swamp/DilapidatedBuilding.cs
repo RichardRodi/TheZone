@@ -17,41 +17,39 @@ namespace TheAnomalousZone.Encounters.Swamp
 
         {
 
-            string prompt = ($"\n\n As you approach the dilapidated building, the snarl of a large animal breaks the quiet groan of the swamp around you.\n" +
-                $"Emerging from the undergrowth is a creature unlike any you've encountered before.\n" +
+            string prompt = ($"\n\nAs you approach the dilapidated building, the snarl of a large animal breaks the quiet groan of the swamp around you.\n" +
+                $"Emerging from the undergrowth is a creature unlike any you've seen before.\n" +
                 $"It possesses the unmistakable features of a boar, yet something is profoundly amiss.\n" +
                 $"It appears to be grotesquely mutated, its form twisted beyond recognition.\n\n");
 
-            string[] options = { "1.Raise you rifle to fire at it!", "2.Run!", "3.Take a Closer look at the Boar" };
+            string[] options = { "1.Raise you rifle to fire at it!", "2.Run to avoid this monstrosity and the house all together", "3.Take a Closer look at the Boar." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("You raise your Rifle and at the wild boar");
+                    Console.WriteLine("You raise your Rifle and at the wild boar.");
                     Console.ReadKey(true);
                     Console.Clear();
-                    PlayerFirstMutantCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                    MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
                     RunBoarDefeated();
                     break;
 
                 case 1:
-                    Console.WriteLine("You attempt to run away from the Boar");
+                    Console.WriteLine("You attempt to run away from the Boar.");
                     bool getAway = RunAway.Run(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
                     if (!getAway)
                     {
-                        Console.WriteLine("You Failed To Get Away");
                         Console.ReadKey(true);
                         Console.Clear();
-                        EnemyFirstMutantCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                        MutantCombat.FightMutantFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
                         Console.ReadKey(true);
                         RunBoarDefeated();
                     }
 
                     else
                     {
-                        Console.WriteLine("You Got Away!");
                         Console.WriteLine("Deciding not to mess with this ridiculous animal,\n" +
                             " you make your way out of this area and proceed along a small dirt path.\n" +
                             " You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
@@ -62,11 +60,12 @@ namespace TheAnomalousZone.Encounters.Swamp
                     }
                     break;
                 case 2:
-                    Console.WriteLine("You inspect the boar");
+                    Console.WriteLine("You inspect the boar.");
                     _gameManager.Enemies[3].DisplayStats();
-                    SlowPrint.Print("While you took time inspecting the boar it decides its had enough and lunges at you");
+                    Console.WriteLine("While you took time inspecting the boar it decides its had enough and lunges at you.");
+                    Console.ReadKey(true);
                     Console.Clear();
-                    EnemyFirstMutantCombat.Fight(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
+                    MutantCombat.FightMutantFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[3]);
                     Console.ReadKey(true);
                     RunBoarDefeated();
                     break;
@@ -77,8 +76,8 @@ namespace TheAnomalousZone.Encounters.Swamp
         private void RunBoarDefeated()
         {
 
-            string prompt = ($"After finishing off the swine like abomination breathes its last breath you make your way towards the shanty home\n" +
-            $"There is a faint crackling coming from the home\n\n");
+            string prompt = ($"After this swine like abomination breathes its last breath you make your way towards the shanty home\n" +
+            $"There is a faint crackling coming from the home.\n\n");
 
             string[] options = { "Check the house.", "Move On.", "Use FirstAid Kit.", "Check Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
@@ -88,7 +87,7 @@ namespace TheAnomalousZone.Encounters.Swamp
             {
                 case 0:
                     Console.WriteLine("As you approach the home, the hairs on the back of your neck to stand on end,\n" +
-                        "Not from being scared but some external force. You decide to go inside");
+                        "not from being scared but some external force. You decide to go inside.");
                     Console.ReadKey(true);
                     RunElectricalAnomaly();
                     break;
@@ -123,9 +122,9 @@ namespace TheAnomalousZone.Encounters.Swamp
                 $"with massive tendrils of electricity surging forth. \n" +
                 $"It's as if a colossal electrical spider has woven its web ,enveloping the home in a crackling energy. \n" +
                 $"Sitting amidst this chaotic spectacle, a tiny swirling globe of pure energy captivates your attention. \n" +
-                $"An instinctual urge compels you to claim it as your own.");
+                $"An instinctual urge compels you to claim it as your own.\n\n");
 
-            string[] options = { "1.Run through the Electricity as fast as you can to grab the object", "2.Pick up a piece of Metal debris to throw at the swirling maelstrom", "3.Exit", "4. Use FirstAid Kit", "5.Check Stats" };
+            string[] options = { "1.Run through the Electricity as fast as you can to grab the object.", "2.Pick up a piece of Metal debris to throw at the swirling maelstrom.", "3.Exit.", "4. Use FirstAid Kit.", "5.Check Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -136,7 +135,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                     {
                         Console.WriteLine("You deftly run through the maze of electrical tendrils and grab the sphere\n" +
                                 "You only take a few minor shocks that burn your skin");
-                        _gameManager.SelectedMainPlayer.PlayerDamage(10);
+                        _gameManager.SelectedMainPlayer.PlayerDamage(5);
                         Console.ReadKey();
                         Console.WriteLine("You skin feels strange to the touch as if has been hardened from the strange artifact you are holding");
                         _gameManager.SelectedMainPlayer.ArmorValue += 1;
@@ -146,19 +145,19 @@ namespace TheAnomalousZone.Encounters.Swamp
                         Console.ReadKey(true);
                         Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming  structure.\n" +
-                            " As you get closer to the structure you realize that it is a church.");
+                            "As you get closer to the structure you realize that it is a church.");
                     }
                     else
                     {
                         Console.WriteLine("You attempt to run through the maze of electrical nightmares but you are too slow\n" +
-                            "You get caught by the tendrils and they severly burn your skin through electrical shock");
-                        _gameManager.SelectedMainPlayer.PlayerDamage(25);
+                            "You get caught by the tendrils and they severely burn your skin through electrical shock");
+                        _gameManager.SelectedMainPlayer.PlayerDamage(20);
                         Console.WriteLine("After severely injuring yourself you realize you do not want anything to do with this place anymore");
                         Console.ReadKey(true);
                         DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                         Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
-                            " As you get closer to the structure you realize that it is a church.");
+                            "As you get closer to the structure you realize that it is a church.");
                         NextEncounter(typeof(AbandonedChurch));
                     }
                     break;
@@ -178,8 +177,8 @@ namespace TheAnomalousZone.Encounters.Swamp
                     Console.WriteLine("Since there is nothing left of interest in this area you decide to move on from this home.");
                     Console.ReadKey(true);
                     Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
-                        "You notice the only way out of this terrible bog is through a nearby looming  structure.\n" +
-                        " As you get closer to the structure you realize that it is a church.");
+                        "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
+                        "As you get closer to the structure you realize that it is a church.");
                     NextEncounter(typeof(AbandonedChurch));
                     break;
                 case 2:
@@ -190,17 +189,17 @@ namespace TheAnomalousZone.Encounters.Swamp
                 case 3:
                     _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].AmountToHeal);
                     Console.ReadKey(true);
+                    RunElectricalAnomaly();
                     break;
                 case 4:
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
-                    Console.Clear();
+                    RunElectricalAnomaly();
                     break;
 
             }
 
         }
-
 
         public override void NextEncounter(Type encounterType)
         {
