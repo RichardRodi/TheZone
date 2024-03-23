@@ -13,8 +13,9 @@ namespace TheAnomalousZone.Combat
 
         public static void FightPlayerFirstMutant(MainPlayer player, BaseEnemy enemy)
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            SlowPrint.Print($" {player.Name} is now fighting {enemy.Name}!");
+            SlowPrint.Print($"\t {player.Name} is now fighting a {enemy.Name}!");
 
             while (player.Health > 0 && enemy.Health > 0)
             {
@@ -22,15 +23,34 @@ namespace TheAnomalousZone.Combat
 
                 for (int i = 0; i < ammunition; i++)
                 {
-                    SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
-                    playGunSound.Play();
+                    
                     int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, player.Speed, enemy.Speed);
                     enemy.TakeDamage(playerDamage);
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     SlowPrint.Print($"{player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
 
-                    SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"bear.wav");
-                    playAnimalSound.Play();
+                    if (player.Health <= 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        Console.ReadKey(true);
+                        Console.ResetColor();
+                        var deathmenu = new DeathMenu();
+                        deathmenu.RunEncounter();
+                        break;
+                    }
+                    if (enemy.Health <= 0)
+                    {
+                        int c = random.Next(200, 750);
+                        player.Rubles += c;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Mutants Stomach.");
+                        Console.ResetColor();
+                        Console.ReadKey(true);
+                        break;
+                    }
+
+                    
                     int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, player.Speed, enemy.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -40,14 +60,12 @@ namespace TheAnomalousZone.Combat
                     {
 
 
-                        //playGunSound.Play(); should change this to reloading SFX
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
 
                         enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
-                        playAnimalSound.Play();
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
@@ -61,7 +79,7 @@ namespace TheAnomalousZone.Combat
                         Console.ResetColor();
                         var deathmenu = new DeathMenu();
                         deathmenu.RunEncounter();
-                       
+                        break;
                     }
                     if (enemy.Health <= 0)
                     {
@@ -70,6 +88,7 @@ namespace TheAnomalousZone.Combat
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Mutant's Stomach.");
                         Console.ResetColor();
+                        Console.ReadKey(true);
                         break;
                     }
                 }
@@ -79,8 +98,9 @@ namespace TheAnomalousZone.Combat
 
         public static void FightMutantFirst(MainPlayer player, BaseEnemy enemy)
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            SlowPrint.Print($" {player.Name} is now fighting {enemy.Name}!");
+            SlowPrint.Print($"\t {player.Name} is now fighting a {enemy.Name}!");
 
             while (player.Health > 0 && enemy.Health > 0)
             {
@@ -89,15 +109,34 @@ namespace TheAnomalousZone.Combat
 
                 for (int i = 0; i < ammunition; i++)
                 {
-                    SoundPlayer playAnimalSound = new SoundPlayer(soundLocation: @"Bear.wav");
-                    playAnimalSound.Play();
+                    
                     int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
-                    SoundPlayer playGunSound = new SoundPlayer(soundLocation: @"glock19.wav");
-                    playGunSound.Play();
+                    if (player.Health <= 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        Console.ReadKey(true);
+                        Console.ResetColor();
+                        var deathmenu = new DeathMenu();
+                        deathmenu.RunEncounter();
+                        break;
+                    }
+                    if (enemy.Health <= 0)
+                    {
+                        int c = random.Next(200, 750);
+                        player.Rubles += c;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Mutants's Pockets.");
+                        Console.ResetColor();
+                        Console.ReadKey(true);
+                        break;
+                    }
+
+                    
                     int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, enemy.Speed, player.Speed);
                     enemy.TakeDamage(playerDamage);
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -106,14 +145,14 @@ namespace TheAnomalousZone.Combat
                     if (i == ammunition - 1 && player.Health > 0 && enemy.Health > 0)
                     {
 
-                        //playGunSound.Play(); should change this to reloading SFX
+                        
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
 
                         enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
-                        playAnimalSound.Play();
+                        
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
@@ -134,8 +173,9 @@ namespace TheAnomalousZone.Combat
                         int c = random.Next(200, 750);
                         player.Rubles += c;
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the  Mutant's Stomach.");
+                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Mutant's Stomach.");
                         Console.ResetColor();
+                        Console.ReadKey(true);
                         break;
                     }
 

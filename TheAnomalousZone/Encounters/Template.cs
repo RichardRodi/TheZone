@@ -39,7 +39,7 @@ namespace TheAnomalousZone.Encounters
 
                         break;
                     case 3:
-                        _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].AmountToHeal);
+                        _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                         Console.ReadKey(true);
                         RunEncounter();
                         break;

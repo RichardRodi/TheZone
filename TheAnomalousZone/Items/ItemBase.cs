@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheAnomalousZone.Items
+﻿namespace TheAnomalousZone.Items
 {
     public class ItemBase
     {
         public int ID { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
-        public int AmountToHeal {  get; set; }
+        public int MinAmountToHeal { get; private set; }
+        public int MaxAmountToHeal { get; private set; }
 
-        public ItemBase(int iD, string name, int price, int amountToHeal)
+        public ItemBase(int iD, string name, int price, int minAmountToHeal, int maxAmountToHeal)
         {
             ID = iD;
             Name = name;
             Price = price;
-            AmountToHeal = amountToHeal;
+            MinAmountToHeal = minAmountToHeal;
+            MaxAmountToHeal = maxAmountToHeal;
         }
 
     }

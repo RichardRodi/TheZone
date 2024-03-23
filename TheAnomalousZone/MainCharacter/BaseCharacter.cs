@@ -35,8 +35,6 @@
                 Radiation = 10;
         }
 
-        
-
         public bool IsAlive()
         {
             return Health > 0;

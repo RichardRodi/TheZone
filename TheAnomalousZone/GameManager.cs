@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using TheAnomalousZone.Encounters;
+using TheAnomalousZone.Encounters.Corridor;
 using TheAnomalousZone.Encounters.Shop;
 using TheAnomalousZone.Encounters.Swamp;
 using TheAnomalousZone.Enemies;
@@ -36,10 +37,10 @@ namespace TheAnomalousZone
 
 
             AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 50, radiation: 0, damage: 2, armorValue: 8,
-                firstAid: 2, weaponValue: 15, ammunitionPerMagazine: 1, speed: 10, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
+                firstAid: 2, weaponValue: 20, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
 
             AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 40, radiation: 0, damage: 1, armorValue: 5,
-                firstAid: 3, weaponValue: 25, ammunitionPerMagazine: 1, speed: 13, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 40));
+                firstAid: 3, weaponValue: 25, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 40));
 
             AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 30, radiation: 0, damage: 1, armorValue: 7,
                 firstAid: 1, weaponValue: 12, ammunitionPerMagazine: 9, speed: 8, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 30));
@@ -58,14 +59,20 @@ namespace TheAnomalousZone
             Enemies.Add(new Bandits("Bandit Scout", health: 15, damage: 1, armorValue: 2,
                 firstAid: 1, weaponValue: 9, ammunition: 2, speed: 14, numberOfShotsFired: 2));
 
-            Enemies.Add(new MutatedAnimals("MutatedBoar", health: 20, damage: 6, armorValue: 4, radiationDamage: 1,
+            Enemies.Add(new MutatedAnimals("Mutated Boar", health: 20, damage: 6, armorValue: 4, radiationDamage: 1,
                   speed: 10, "This is a mutated boar"));
 
-            Enemies.Add(new MutatedAnimals("MutatedChimera", health: 60, damage: 8, armorValue: 5, radiationDamage: 1,
+            Enemies.Add(new MutatedAnimals("Chimera", health: 60, damage: 8, armorValue: 5, radiationDamage: 1,
             speed: 5, "This is a mutated chimera"));
 
-            Enemies.Add(new MutatedAnimals("MutatedSnork", health: 30, damage: 5, armorValue: 5, radiationDamage: 1,
+            Enemies.Add(new MutatedAnimals("Snork", health: 30, damage: 5, armorValue: 5, radiationDamage: 1,
                  speed: 15, "This is a mutated Snork"));
+
+            Enemies.Add(new MutatedAnimals("Snork", health: 30, damage: 5, armorValue: 5, radiationDamage: 1,
+                speed: 15, "This is a mutated Snork"));
+
+            Enemies.Add(new MutatedAnimals("Snork", health: 30, damage: 5, armorValue: 5, radiationDamage: 1,
+                speed: 15, "This is a mutated Snork"));
         }
 
 
@@ -90,12 +97,14 @@ namespace TheAnomalousZone
             var abandonedChurch = new AbandonedChurch(this);
             Encounters.Add(abandonedChurch);
 
+            var corridorIntro = new CorridorIntro(this);
+            Encounters.Add(corridorIntro);
         }
 
         public void GenerateAllFirstAid()
         {
-            Items.Add(new ItemBase(iD: 0, "Basic FirstAid Kit", price: 1000, amountToHeal: 10));
-            Items.Add(new ItemBase(iD: 1, "Military FirstAid Kit", price: 2000, amountToHeal: 50));
+            Items.Add(new ItemBase(iD: 0, "Basic FirstAid Kit", price: 1000, minAmountToHeal: 10, maxAmountToHeal:15));
+            Items.Add(new ItemBase(iD: 1, "Military FirstAid Kit", price: 2000, minAmountToHeal: 15, maxAmountToHeal: 20));
         }
 
         public void RunGame()
