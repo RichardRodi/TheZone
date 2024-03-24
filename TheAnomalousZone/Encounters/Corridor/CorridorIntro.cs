@@ -19,18 +19,19 @@ namespace TheAnomalousZone.Encounters.Corridor
         public override void RunEncounter()
         {
             {
-                string prompt = ($"Leaving the swamp behind, you are confronted with a long and winding valley.\n" +
+                string prompt = ($"\nLeaving the swamp behind, you are confronted with a long and winding valley.\n" +
                     $"A narrow two-lane road cuts through the center of this expanse,\n" +
-                    $" leading your gaze to the far end where a massive power plant looms on the horizon.\n" +
-                    $" As you stare at the imposing structure, the haunting hum of the Monolith from your nightmares reverberates in your skull,\n" +
-                    $" sending shivers down your spine.Once again, you are faced with a choice.\n" +
+                    $"leading your gaze to the far end where a massive power plant looms on the horizon.\n" +
+                    $"As you stare at the imposing structure,\n" +
+                    $"the haunting hum of the Monolith from your nightmares reverberates in your skull,\n" +
+                    $"sending shivers down your spine.Once again, you are faced with a choice.\n" +
                     $"To your left, a sign beckons with the promise of a Shop,\n" +
-                    $" pointing toward a small rural village nestled amidst the landscape.\n" +
+                    $"pointing toward a small rural village nestled amidst the landscape.\n" +
                     $"Ahead of you, the road stretches toward what you assume to be your destination,\n" +
                     $"inviting you to continue your journey into the unknown.\n\n");
 
 
-                string[] options = { "1.Continue to your Left.", "2.Continue down the Road.", "3.Check Surroundings.", "4.Use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Continue to your Left towards the Shop.", "2.Continue down the Road.", "3.Check Surroundings.", "4.Use FirstAid Kit.", "5.Check Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -45,13 +46,14 @@ namespace TheAnomalousZone.Encounters.Corridor
                     case 1:
                         Console.WriteLine($"Not wanting to risk being eaten or shot you make your way down the road.");
                         Console.WriteLine($"MORE TO GAME TO COME!");
+                        Console.Read();
                         GameManager mainMenu = new GameManager(true);
                         mainMenu.RunGame();
                         break;
                     case 2:
-                        Console.WriteLine($"You gaze at the road leading towards the power plant,\n" +
-                            $" recognizing the daunting challenge it presents.\n" +
-                            $" Yet, despite the difficulties ahead, you understand that this path is one of significance and potential reward.\n" +
+                        Console.WriteLine($"\nYou gaze at the road leading towards the power plant,\n" +
+                            $"recognizing the daunting challenge it presents.\n" +
+                            $"Yet, despite the difficulties ahead, you understand that this path is one of significance and potential reward.\n" +
                             $"However, as your eyes drift towards the shop sign, a sense of tranquility washes over you.\n" +
                             $"It's as if an unseen force gently nudges you towards the quaint village,\n" +
                             $"whispering that there may be something of value waiting for you there.\n");

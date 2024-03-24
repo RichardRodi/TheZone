@@ -21,7 +21,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             {
 
-                string prompt = ($"In the heart of the murky swamp stands an Old Church,\n" +
+                string prompt = ($"\nIn the heart of the murky swamp stands an Old Church,\n" +
                     $"its weathered facade adorned with ornate carvings and intricate details of ancient saints.\n" +
                     $"Tall, slender spires pierce the mist-shrouded sky, \n" +
                     $"their hollowed out peaks disappearing into the veil of fog that hangs heavy over the damp swamp.\n\n");
@@ -84,18 +84,19 @@ namespace TheAnomalousZone.Encounters.Swamp
         private void ChurchFight()
         {
 
-            string prompt = ($"You see the horrified creatures as they approach you running on all fours.\n" +
+            string prompt = ($"\nYou see the horrified creatures as they approach you running on all fours.\n" +
                 $"They are grotesquely mutated human soldiers, \n" +
-                $"Clad in the shredded remnants of their uniform and boots,their face obscured behind cracked gas masks with flailing hoses.\n\n");
+                $"Clad in the shredded remnants of their uniform and boots,\n" +
+                $"their face obscured behind cracked gas masks with flailing hoses.\n\n");
 
-            string[] options = { "1.Stand and Fight!", "2.Run!", "3.Use FirstAid Kit.", "4.Check Stats." };
+            string[] options = { "1.Stand and Fight!", "2.Run!", "3.Check Stats", };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("You eliminate several of the feral monsters as they close in,\n" +
+                    Console.WriteLine("\nYou eliminate several of the feral monsters as they close in,\n" +
                         "preventing them from laying a finger on you. \n" +
                         "However, one nimble adversary manages to evade your gunfire, \n" +
                         "forcing you to hastily reload as it closes in on you.");
@@ -127,24 +128,21 @@ namespace TheAnomalousZone.Encounters.Swamp
                     break;
 
                 case 2:
-                    _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
-                    Console.ReadKey(true);
-                    break;
-                case 3:
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
+                    ChurchFight();
                     Console.Clear();
                     break;
             }
         }
         private void ChurchFightFinished()
         {
-            string prompt = ($"You stand amidst the fallen mutant freaks.\n" +
+            string prompt = ($"\nYou stand amidst the fallen mutant freaks.\n" +
                 $"Any other enemies that could have caused you trouble have run away in terror.\n" +
                 $"feeling the weight of exhaustion settle upon you from the fierce battle you've just endured.\n" +
                 $"You find yourself amidst the eerie silence of this ghostly church.\n\n");
 
-            string[] options = { "1.Check the Altar.", "2.Look around.", "3.Climb the stairs and check the steeple", "4.You want to Leave!", "4.Use FirstAid Kit.", "5.Check Stats." };
+            string[] options = { "1.Check the Altar.", "2.Look around.", "3.Climb the stairs and check the steeple.", "4.You want to Leave!", "4.Use FirstAid Kit.", "5.Check Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -156,7 +154,6 @@ namespace TheAnomalousZone.Encounters.Swamp
                         "teetering precariously upon its surface. Below the Alter lies a small Lock Box." +
                         "There is a simple lock with a four digit combination keeping it shut.\n\n\n" +
                         "Please type numbers to try and open the LockBox.");
-                    Console.ReadKey(true);
                     var answer = Console.ReadLine();
                     if (answer == "9012")
                     {
@@ -171,13 +168,14 @@ namespace TheAnomalousZone.Encounters.Swamp
                         NextEncounter(typeof(CorridorIntro));
                     }
                     else
-                        Console.WriteLine("Unfortunately that is not the answer to the lockbox");
+                        Console.WriteLine("Unfortunately that is not the combination to the lockbox");
                     Console.ReadKey(true);
                     ChurchFightFinished();
                     break;
 
                 case 1:
-                    Console.WriteLine("Looking up at the strangely defiant structure, you notice the numbers 1 and 2 etched into the vacant area of the crucifix");
+                    Console.WriteLine("Looking up at the strangely defiant structure,\n" +
+                        " you notice the numbers 1 and 2 etched into the vacant area of the crucifix");
                     Console.ReadKey();
                     ChurchFightFinished();
                     break;
@@ -187,7 +185,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                         "Peering through the mists of the swamp you can see some semblance of an exit.\n" +
                         "As you get ready to descend, something catches your eye on the way down.\n" +
                         "You noticed the numbers 9 and 0 etched into the are where the a massive bell hung.\n" +
-                        "You are once again standing in the middle of the church");
+                        "You are once again standing in the middle of the church.");
                     Console.ReadKey();
                     ChurchFightFinished();
                     break;
@@ -202,11 +200,14 @@ namespace TheAnomalousZone.Encounters.Swamp
 
                     _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                     Console.ReadKey(true);
+                    Console.Clear();
+                    ChurchFightFinished();
                     break;
                 case 5:
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
                     Console.Clear();
+                    ChurchFightFinished();
                     break;
             }
         }

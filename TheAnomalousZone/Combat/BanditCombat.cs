@@ -195,7 +195,7 @@ namespace TheAnomalousZone.Combat
             }
             else
             {
-                double damageMultiplier = random.NextDouble() * 0.75 + 1.25;
+                double damageMultiplier = random.NextDouble() * 0.50 + 1.15;
                 int damage = (int)(attack * damageMultiplier) - defense;
                 if (damage < 0)
                     damage = 0;

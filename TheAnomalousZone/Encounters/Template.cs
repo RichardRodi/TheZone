@@ -46,7 +46,7 @@ namespace TheAnomalousZone.Encounters
                     case 4:
                         _gameManager.SelectedMainPlayer.DisplayStats();
                         Console.ReadKey(true);
-                        Console.Clear();
+                        
                         RunEncounter();
                         break;
 

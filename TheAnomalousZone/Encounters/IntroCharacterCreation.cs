@@ -43,14 +43,12 @@ namespace TheAnomalousZone.Encounters
                    
                     break;
                 case 2:
-                    Console.WriteLine("You remember were a Scientist working for the Government trying to understand the Zone." +
+                    Console.WriteLine("You remember were a Scientist working for the Government trying to understand the Zone.\n" +
                         "Gripping your Old Soviet Surplus Handgun you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedScientist = _gameManager.AllMainCharacters.Where(x => x.Name == "Dimitri").FirstOrDefault();
                     if (selectedScientist is not null)
                         _gameManager.SelectedMainPlayer = selectedScientist;
-                    Console.ReadKey();
-                  
                     break;
 
             }

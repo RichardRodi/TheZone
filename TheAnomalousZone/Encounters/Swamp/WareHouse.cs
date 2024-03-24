@@ -17,7 +17,7 @@ namespace TheAnomalousZone.Encounters.Swamp
 
         {
 
-            string prompt = ($"\n\nAs you approach the source of the voice when you realize you are surrounded by a group of men\n" +
+            string prompt = ($"\nAs you approach the source of the voice when you realize you are surrounded by a group of armed men\n" +
                 $"The man who is speaking to you seems to be their leader.\n" +
                 $"In a snarled voice he politely asks you to empty your pockets and be on your way.\n\n");
 
@@ -78,7 +78,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             {
 
-                string prompt = ($"The Bandit leader now lies face down in a pool of his own blood.\n" +
+                string prompt = ($"\nThe Bandit leader now lies face down in a pool of his own blood.\n" +
                     $"Anticipating retaliation, you swiftly pivot your firearm muzzles towards the remaining bandits locations,\n" +
                     $"but it seems the demise of their leader has shattered any semblance of courage among them. \n" +
                     $"Pausing to catch your breath, you survey your surroundings.\n\n");
@@ -135,7 +135,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             {
 
-                string prompt = ($"As you approach the Anomaly, the searing heat from the flames washes over your face,\n" +
+                string prompt = ($"\nYou approach the Anomaly, the searing heat from the flames washes over your face,\n" +
                     $"intensifying with each step.\n" +
                     $"Amidst the fiery tumult, something draws your gaze, a small spherical object weaving through the flames. \n" +
                     $"Its presence flickers, appearing and disappearing in a mesmerizing dance. \n" +
@@ -151,7 +151,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                 switch (selectedIndex)
                 {
                     case 0:
-                        Console.WriteLine("As you climb the rafters of the roof to try and avoid the flames,\n" +
+                        Console.WriteLine("\nYou climb the rafters of the roof to try and avoid the flames,\n" +
                             "The brittle rafters give way and you fall into a large open flame scorching your arm.\n" +
                             "The dancing object just escapes your grasp. You pick yourself up and gaze at your burnt Arm.");
                         _gameManager.SelectedMainPlayer.PlayerDamage(20); ;

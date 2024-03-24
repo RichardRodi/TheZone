@@ -51,7 +51,7 @@ namespace TheAnomalousZone.Combat
                     }
 
                     
-                    int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, player.Speed, enemy.Speed);
+                    int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue, player.Speed, enemy.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
@@ -64,7 +64,7 @@ namespace TheAnomalousZone.Combat
                         SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
 
-                        enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
+                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
@@ -110,7 +110,7 @@ namespace TheAnomalousZone.Combat
                 for (int i = 0; i < ammunition; i++)
                 {
                     
-                    int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
+                    int enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue, enemy.Speed, player.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
@@ -150,7 +150,7 @@ namespace TheAnomalousZone.Combat
                         SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
 
-                        enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
+                        enemyDamage = CalculateDamage(enemy.Damage, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
                         
                         Console.ForegroundColor = ConsoleColor.DarkRed;

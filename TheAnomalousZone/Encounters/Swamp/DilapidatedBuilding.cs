@@ -17,7 +17,7 @@ namespace TheAnomalousZone.Encounters.Swamp
 
         {
 
-            string prompt = ($"As you approach the dilapidated building, the snarl of a large animal breaks the quiet groan of the swamp around you.\n" +
+            string prompt = ($"\nAs you approach the dilapidated building, the snarl of a large animal breaks the quiet groan of the swamp around you.\n" +
                 $"Emerging from the undergrowth is a creature unlike any you've seen before.\n" +
                 $"It possesses the unmistakable features of a boar, yet something is profoundly amiss.\n" +
                 $"It appears to be grotesquely mutated, its form twisted beyond recognition.\n\n");
@@ -75,7 +75,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         private void RunBoarDefeated()
         {
 
-            string prompt = ($"After this swine like abomination breathes its last breath, you make your way towards the shanty home.\n" +
+            string prompt = ($"\nAfter this swine like abomination breathes its last breath, you make your way towards the shanty home.\n" +
             $"There is a faint crackling coming from the home.\n\n");
 
             string[] options = { "Check the house.", "Move On.", "Use FirstAid Kit.", "Check Stats." };
@@ -117,7 +117,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         private void RunElectricalAnomaly()
         {
 
-            string prompt = ($"Peering inside, your gaze falls upon an old fuse box, its metal casing melted and deformed, \n" +
+            string prompt = ($"\nPeering inside, your gaze falls upon an old fuse box, its metal casing melted and deformed, \n" +
                 $"with massive tendrils of electricity surging forth. \n" +
                 $"It's as if a colossal electrical spider has woven its web, enveloping the home in a crackling energy. \n" +
                 $"Sitting amidst this chaotic spectacle, a tiny swirling globe of pure energy captivates your attention. \n" +

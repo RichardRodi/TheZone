@@ -30,7 +30,7 @@ namespace TheAnomalousZone.Encounters.Shop
             //_gameManager.SelectedMainPlayer.WeaponValue;
             //_gameManager.SelectedMainPlayer.Ammunition;
             {
-                string prompt = ($"You make your way down to the rustic village,\n" +
+                string prompt = ($"\nYou make your way down to the rustic village,\n" +
                     $"where a few people keep watch, their demeanor nonviolent yet vigilant.\n" +
                     $"They bear similar gear and weapons, hinting at a shared purpose and allegiance.\n" +
                     $"Navigating through the small settlement while following the shop signs,\n" +
@@ -42,8 +42,8 @@ namespace TheAnomalousZone.Encounters.Shop
                     $"Despite his gruff exterior, he welcomes you with a booming voice,\n" +
                     $"urging you to enter and explore his wares.\n\n");
 
-                string[] options = {"Buy Ceramic Plates for your Armor\n - Armor + 5 - 5000 Rubles", "Buy Custom parts for your Weapon\n - WeaponValue + 8 - 4000 Rubles",
-                    "Buy Bandit Chest Rig\n - Ammunition + 2 - 6000 Rubles", "Buy First Aid Kit\n - 1000 Rubles", "Check Stats", "Leave Shop"};
+                string[] options = {"1.Buy Ceramic Plates for your Armor\n \t - Armor + 5 - 5000 Rubles", "2.Buy Custom parts for your Weapon\n \t - WeaponValue + 8 - 4000 Rubles",
+                    "3.Buy Bandit Chest Rig\n \t- Ammunition + 2 - 6000 Rubles", "4.Buy First Aid Kit\n \t - 1000 Rubles", "5.Check Stats", "6.Leave Shop"};
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -109,6 +109,7 @@ namespace TheAnomalousZone.Encounters.Shop
                         if (_gameManager.SelectedMainPlayer.Rubles >= firstAidMod)
                             _gameManager.SelectedMainPlayer.Rubles -= 1000;
                             _gameManager.SelectedMainPlayer.FirstAid += 1;
+                            Console.WriteLine("First Aid Added to your Inventory!");
                             Console.ReadKey();
                             RunEncounter();
                         }
@@ -121,30 +122,24 @@ namespace TheAnomalousZone.Encounters.Shop
 
                         break;
                     case 4:
-                        if (_gameManager.SelectedMainPlayer.Rubles >= firstAidMod)
-                        {
-                            _gameManager.SelectedMainPlayer.Rubles -= firstAidMod;
-                            _gameManager.SelectedMainPlayer.FirstAid += 1;
-                            Console.ReadKey();
-                            RunEncounter();
-                        }
-
-                        break;
-                    case 5:
 
                         _gameManager.SelectedMainPlayer.DisplayStats();
-
+                        Console.ReadKey(true);
+                        RunEncounter();
                         break;
-                    case 6:
-                        Console.WriteLine("'Thank you for your service', Who you assume to be Strelock says,\n" +
-                            "his words carrying a weight of understanding. 'But I can see it in your eyes. \n" +
-                            "The call of the WishGiver. That towering monolith beckons to you,\n" +
-                            "tempting you with untold riches, or perhaps infinite knowledge or power'\n" +
+                    case 5:
+                        Console.Clear();
+                        Console.WriteLine("\nThank you for your service!, Who you assume to be Strelock says,\n" +
+                            "his words carrying a weight of understanding.\n " +
+                            "I can see it in your eyes. \n" +
+                            "The call of the WishGiver. That towering Monolith beckons to you,\n" +
+                            "tempting you with untold riches, or perhaps infinite knowledge or power.\n" +
                             "He pauses, his gaze piercing yet compassionate.\n" +
-                            "'Be wary, for wishes are seldom what you actually want.'\n" +
-                            "'But who am I to tell a man not to follow his heart?' Good luck out there, friend.\n" +
-                            "With his words echoing in your mind, you step out of Strelock's shop, ready to face the challenges ahead.");
-                        Console.WriteLine($"MORE TO GAME TO COME!");
+                            "Be wary, for wishes are seldom what you actually want.\n" +
+                            "But who am I to tell a man not to follow his heart?' Good luck out there, friend.\n" +
+                            "With his words echoing in your mind, you step out of Strelock's shop, ready to face the challenges ahead.\n\n\n");
+                        Console.WriteLine($"MORE GAME TO COME!");
+                        Console.ReadKey();
                         GameManager mainMenu = new GameManager(true);
                         mainMenu.RunGame();
                         break;

@@ -14,7 +14,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         public override void RunEncounter()
         {
 
-            string prompt = ($"Surveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
+            string prompt = ($"\nSurveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
                 $"To your left, a small dilapidated building stands weathered and worn. \n" +
                 $"Despite its decrepit appearance, the structure beckons with an air of intrigue,\n\n" +
                 $"To your right, black smoke rises from the direction of a large warehouse,\n" +
