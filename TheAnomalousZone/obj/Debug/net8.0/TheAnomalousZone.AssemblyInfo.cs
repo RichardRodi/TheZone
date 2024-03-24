@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheAnomalousZone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03a0dcfa7ac2783637adee2ee06acb33f35cd430")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+395da4c012f5a210ea791a65e3631c6704aef2e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheAnomalousZone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheAnomalousZone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -155,11 +155,12 @@ namespace TheAnomalousZone.Encounters.Swamp
                             "The brittle rafters give way and you fall into a large open flame scorching your arm.\n" +
                             "The dancing object just escapes your grasp. You pick yourself up and gaze at your burnt Arm.");
                         _gameManager.SelectedMainPlayer.PlayerDamage(20); ;
-                        Console.WriteLine("After severely injuring yourself you realize you do not want anything to do with this place anymore.");
-                        Console.ReadKey();
-                        Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
-                            "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
-                            "As you get closer to the structure you realize that it is a church.");
+                        Console.WriteLine("You definitely felt the extreme heat on your skin as you reached for the object. Grasping the spherical item,\n" +
+                                "a rush of light-headedness briefly overwhelms you before dissipating and coursing down your body. In an instant,\n" +
+                                "you feel a newfound lightness and agility surge through you.");
+                        _gameManager.SelectedMainPlayer.Speed += 1;
+                        Console.WriteLine("You are now faster Speed + 1!\n" +
+                            "Since there is nothing left of interest in this area you decide to move on from the warehouse.");
                         Console.ReadKey(true);
                         NextEncounter(typeof(AbandonedChurch));
 

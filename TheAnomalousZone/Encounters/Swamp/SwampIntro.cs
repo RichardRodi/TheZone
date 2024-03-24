@@ -44,7 +44,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                     NextEncounter(typeof(WareHouse));
                     break;
                 case 2:
-                    Console.WriteLine("As you around the vast and expansive swamp, the air is thick with moisture and the scent of decay,\n" +
+                    Console.WriteLine("As you look around the vast and expansive swamp, the air is thick with moisture and the scent of decay,\n" +
                         "your gaze falls upon the scattered structures that emerge from the murky landscape. These remnants of civilization,\n" +
                         "once proud and sturdy, now stand as silent witnesses to the relentless march of time and nature's reclaiming embrace.");
                     Console.ReadKey(true);
