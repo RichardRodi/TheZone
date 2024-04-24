@@ -43,7 +43,7 @@ namespace TheAnomalousZone
                 firstAid: 3, weaponValue: 18, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 40));
 
             AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 30, radiation: 0, damage: 1, armorValue: 5,
-                firstAid: 4, weaponValue: 12, ammunitionPerMagazine: 9, speed: 9, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 30));
+                firstAid: 4, weaponValue: 12, ammunitionPerMagazine: 9, speed: 10, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 30));
         }
 
 
@@ -63,7 +63,7 @@ namespace TheAnomalousZone
                   speed: 10, "This is a mutated boar"));
 
             Enemies.Add(new MutatedAnimals("Chimera", health: 60, damage: 12, armorValue: 5, radiationDamage: 1,
-            speed: 5, "This is a mutated chimera"));
+            speed: 9, "This is a mutated chimera"));
 
             Enemies.Add(new MutatedAnimals("Snork", health: 30, damage: 7, armorValue: 5, radiationDamage: 1,
                  speed: 15, "This is a mutated Snork"));
@@ -99,6 +99,18 @@ namespace TheAnomalousZone
 
             var corridorIntro = new CorridorIntro(this);
             Encounters.Add(corridorIntro);
+
+            var corridorCrossRoads = new CorridorCrossRoads(this);
+            Encounters.Add(corridorCrossRoads);
+
+            var factoryEntrance = new FactoryEntrance(this);
+            Encounters.Add(factoryEntrance);
+
+            var mainRoad = new MainRoad(this);
+            Encounters.Add(mainRoad);
+
+            var mainRoadContinued = new MainRoadContinued(this);
+            Encounters.Add(mainRoadContinued);
         }
 
         public void GenerateAllFirstAid()

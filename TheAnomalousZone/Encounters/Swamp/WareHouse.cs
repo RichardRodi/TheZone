@@ -12,7 +12,6 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             _gameManager = gameManager;
         }
-
         public override void RunEncounter()
 
         {
@@ -40,7 +39,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                     bool getAway = RunAway.Run(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
                     if (!getAway)
                     {
-                       
+
                         Console.ReadKey(true);
                         Console.Clear();
                         Console.WriteLine("The Bandit Leader swiftly disengages his safety and opens fire before you can react, leaving you with little time to escape");
@@ -152,12 +151,13 @@ namespace TheAnomalousZone.Encounters.Swamp
                 {
                     case 0:
                         Console.WriteLine("\nYou climb the rafters of the roof to try and avoid the flames,\n" +
-                            "The brittle rafters give way and you fall into a large open flame scorching your arm.\n" +
-                            "The dancing object just escapes your grasp. You pick yourself up and gaze at your burnt Arm.");
+                            "The brittle rafters give way and you fall into a large open flame scorching your arm.\n");
+
                         _gameManager.SelectedMainPlayer.PlayerDamage(20); ;
-                        Console.WriteLine("You definitely felt the extreme heat on your skin as you reached for the object. Grasping the spherical item,\n" +
-                                "a rush of light-headedness briefly overwhelms you before dissipating and coursing down your body. In an instant,\n" +
-                                "you feel a newfound lightness and agility surge through you.");
+                        Console.WriteLine("You pick yourself up and gaze at your burnt Arm. You definitely felt the extreme heat on your skin as you reached for the object.\n" +
+                            "Grasping the spherical item a rush of light-headedness briefly overwhelms you before dissipating and coursing down your body.\n" +
+                            "In an instant you feel a newfound lightness and agility surge through you.");
+
                         _gameManager.SelectedMainPlayer.Speed += 1;
                         Console.WriteLine("You are now faster Speed + 1!\n" +
                             "Since there is nothing left of interest in this area you decide to move on from the warehouse.");
@@ -201,9 +201,13 @@ namespace TheAnomalousZone.Encounters.Swamp
                             Console.ReadKey(true);
                             Console.WriteLine("Since there is nothing left of interest in this area you decide to move on from the warehouse.");
                             Console.ReadKey(true);
+                            Console.Clear();
+                            Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
+                            "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
+                            "As you get closer to the structure you realize that it is a church.");
+                            Console.ReadKey();
                             NextEncounter(typeof(AbandonedChurch));
                         }
-
 
                         Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +

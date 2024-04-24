@@ -89,7 +89,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                 $"Clad in the shredded remnants of their uniform and boots,\n" +
                 $"their face obscured behind cracked gas masks with flailing hoses.\n\n");
 
-            string[] options = { "1.Stand and Fight!", "2.Run!", "3.Check Stats", };
+            string[] options = { "1.Stand and Fight!", "2.Run!", "3.Check Stats.", };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 

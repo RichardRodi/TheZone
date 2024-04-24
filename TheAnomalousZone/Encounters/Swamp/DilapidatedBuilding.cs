@@ -136,6 +136,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                                 "You only take a few minor shocks that burn your skin");
                         _gameManager.SelectedMainPlayer.PlayerDamage(5);
                         Console.ReadKey();
+                        DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                         Console.WriteLine("You skin feels strange to the touch as if has been hardened from the strange artifact you are holding");
                         _gameManager.SelectedMainPlayer.ArmorValue += 1;
                         Console.WriteLine("You get are now tougher Armor + 1!");

@@ -28,7 +28,7 @@ namespace TheAnomalousZone.MainCharacter
         public void DisplayStats()
         {
             Console.WriteLine($"Character Stats\n\n---------------\n");
-            Console.WriteLine($"Name: {Name}\nHealth \u2661  {Health}/{MaxHealth}\nArmor Rating  \u26E8  {ArmorValue}\nWeapon Damage \u2694  {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition \u204D  {Ammunition}\nFirstAid Kits \u2624  {FirstAid}\nRubles \u20BD  {Rubles}");
+            Console.WriteLine($"Name: {Name}\nHealth \u2661  {Health}/{MaxHealth}\nArmor Rating  \u26E8  {ArmorValue}\nWeapon Damage \u2694  {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition per Magazine \u204D  {Ammunition}\nFirstAid Kits \u2624  {FirstAid}\nRubles \u20BD  {Rubles}");
         }
         public void Heal(int minAmountToHeal, int maxAmountToHeal)
         {

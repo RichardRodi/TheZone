@@ -1,4 +1,5 @@
-﻿using TheAnomalousZone.NewFolder;
+﻿using TheAnomalousZone.Encounters.Corridor;
+using TheAnomalousZone.NewFolder;
 
 namespace TheAnomalousZone.Encounters.Shop
 {
@@ -12,7 +13,7 @@ namespace TheAnomalousZone.Encounters.Shop
         }
         public override void NextEncounter(Type encounterType)
         {
-            throw new NotImplementedException();
+            _gameManager.Encounters.Where(x => x.GetType() == encounterType).FirstOrDefault().RunEncounter();
         }
         public int armorMod;
         public int weaponMod;
@@ -136,12 +137,11 @@ namespace TheAnomalousZone.Encounters.Shop
                             "tempting you with untold riches, or perhaps infinite knowledge or power.\n" +
                             "He pauses, his gaze piercing yet compassionate.\n" +
                             "Be wary, for wishes are seldom what you actually want.\n" +
-                            "But who am I to tell a man not to follow his heart?' Good luck out there, friend.\n" +
+                            "But who am I to tell a man not to follow his heart?' Good luck out there, friend. Also take this as a souvenir.\n" +
+                            "As he says these parting words he tosses you an old pair of binoculars" +
                             "With his words echoing in your mind, you step out of Strelock's shop, ready to face the challenges ahead.\n\n\n");
-                        Console.WriteLine($"MORE GAME TO COME!");
                         Console.ReadKey();
-                        GameManager mainMenu = new GameManager(true);
-                        mainMenu.RunGame();
+                        NextEncounter(typeof(CorridorCrossRoads));
                         break;
 
                 }

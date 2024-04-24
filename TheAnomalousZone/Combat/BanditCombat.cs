@@ -1,5 +1,4 @@
-﻿using System.Media;
-using TheAnomalousZone.Enemies;
+﻿using TheAnomalousZone.Enemies;
 using TheAnomalousZone.MainCharacter;
 using TheAnomalousZone.Menus;
 using TheAnomalousZone.Printer;
@@ -8,8 +7,8 @@ namespace TheAnomalousZone.Combat
 {
     public class BanditCombat
     {
-        
-        
+
+
         private static Random random = new Random();
 
         public static void FightPlayerFirst(MainPlayer player, BaseEnemy enemy)
@@ -17,7 +16,7 @@ namespace TheAnomalousZone.Combat
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             SlowPrint.Print($"\t {player.Name} is now fighting a {enemy.Name}!");
-            
+
             while (player.Health > 0 && enemy.Health > 0)
             {
                 int ammunition = player.Ammunition;
@@ -25,8 +24,8 @@ namespace TheAnomalousZone.Combat
                 for (int i = 0; i < ammunition; i++)
                 {
 
-                    
-                    
+
+
                     int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, player.Speed, enemy.Speed);
                     enemy.TakeDamage(playerDamage);
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -53,7 +52,7 @@ namespace TheAnomalousZone.Combat
                         break;
                     }
 
-                    
+
                     int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, player.Speed, enemy.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -62,7 +61,7 @@ namespace TheAnomalousZone.Combat
                     if (i == ammunition - 1 && player.Health > 0 && enemy.Health > 0)
                     {
 
-                        
+
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
@@ -109,7 +108,7 @@ namespace TheAnomalousZone.Combat
 
                 for (int i = 0; i < ammunition; i++)
                 {
-                    
+
                     int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -136,7 +135,7 @@ namespace TheAnomalousZone.Combat
                         break;
                     }
 
-                    
+
                     int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, enemy.Speed, player.Speed);
                     enemy.TakeDamage(playerDamage);
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -145,13 +144,13 @@ namespace TheAnomalousZone.Combat
                     if (i == ammunition - 1 && player.Health > 0 && enemy.Health > 0)
                     {
 
-                        
+
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
                         enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
-                        
+
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
