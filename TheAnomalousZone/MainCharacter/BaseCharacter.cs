@@ -2,8 +2,6 @@
 {
     public class BaseCharacter
     {
-
-
         public string Name { get; set; }
         public int Health { get; set; }
         public int Radiation { get; set; }
@@ -18,7 +16,6 @@
         public string Description { get; set; }
         public int Rubles { get; set; }
         public int MaxHealth { get; set; }
-
 
         public void TakeDamage(int damage)
         {
@@ -39,7 +36,7 @@
         {
             return Health > 0;
         }
-       
+
         public void DisplayStats()
         {
             Console.WriteLine($"\n\nCharacter Stats\n\n---------------\n\n");

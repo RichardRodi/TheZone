@@ -8,7 +8,6 @@ namespace TheAnomalousZone.Combat
     public class BanditCombat
     {
 
-
         private static Random random = new Random();
 
         public static void FightPlayerFirst(MainPlayer player, BaseEnemy enemy)

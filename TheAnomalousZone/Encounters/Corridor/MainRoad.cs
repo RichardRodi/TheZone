@@ -1,8 +1,5 @@
-﻿using System.IO;
-using System;
-using TheAnomalousZone.Combat;
+﻿using TheAnomalousZone.Combat;
 using TheAnomalousZone.NewFolder;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace TheAnomalousZone.Encounters.Corridor
 {
@@ -23,13 +20,13 @@ namespace TheAnomalousZone.Encounters.Corridor
             {
                 string prompt = ($"\nAs you tread down the desolate main road, strewn with forsaken trucks,\n" +
                     $"a cacophony of screeches assaults your ears. Darting among the debris,\n" +
-                    $"mutated creatures reminiscent of rats scuttle in a frenzied frenzy.\n" +
+                    $"mutated creatures reminiscent of rats scuttle in a frenzied whirlwind.\n" +
                     $"In their wake follows a grotesque behemoth, a dual-headed monstrosity,\n" +
                     $"voraciously devouring the rodents in its path.\n" +
                     $"Pausing mid-feast, it fixes its gaze upon you with an unsettling intensity.\n" +
                     $"Brace yourself – this is going to be a touch fight.\n\n");
 
-                string[] options = { "1.Take a defensive position behind a nearby abandoned truck.", "2.Relinquish your personal courage and run!", "3.Immediately begin firing at the Monstrosity", "4.Quickly use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Take a defensive position behind a nearby abandoned truck.", "2.Relinquish your personal courage and run!", "3.Immediately begin firing at the Monstrosity.", "4.Quickly use FirstAid Kit.", "5.Check Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -52,7 +49,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         else
                         {
                             Console.WriteLine($"The Monster connects with your body rocking you to the ground.\n" +
-                                $"You jump up from the wound and have no choice but to put down the monster");
+                                $"You jump up from the wound and have no choice but to put down the monster.");
                             _gameManager.SelectedMainPlayer.PlayerDamage(10);
                             Console.ReadKey();
                             DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
@@ -62,11 +59,10 @@ namespace TheAnomalousZone.Encounters.Corridor
                             ChimeraDefeated();
 
                         }
-
                         break;
 
                     case 1:
-                        Console.WriteLine($"You whisper a nope under your breath and decide to flee this area and head to towards the factories");
+                        Console.WriteLine($"You whisper a nope under your breath and decide to flee this area and head to towards the factories.");
                         if (_gameManager.SelectedMainPlayer.Speed > 11)
                         {
                             Console.WriteLine($"You are able to flee before the mutant notices you.\n" +
@@ -78,7 +74,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         {
 
                             Console.WriteLine($"As you try and flee the mutant connects with your body rocking you to the ground.\n" +
-                                $"You jump up from the wound and have no choice but to put down the monster");
+                                $"You jump up from the wound and have no choice but to put down the monster.");
                             _gameManager.SelectedMainPlayer.PlayerDamage(10);
                             Console.ReadKey();
                             DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
@@ -89,7 +85,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         break;
                     case 2:
                         Console.WriteLine($"You fire at the mutant but given its distance and speed it dodges your attacks.\n" +
-                            $"You have to reload as spent all of your ammunition in your magazine.\n" +
+                            $"You have to reload as all the ammunition in your magazine is spent.\n" +
                             $"You are not able to raise your rifle in time before the beast gets its claws out to attack you.\n");
                         Console.ReadKey();
                         _gameManager.SelectedMainPlayer.PlayerDamage(5);
@@ -124,7 +120,7 @@ namespace TheAnomalousZone.Encounters.Corridor
 
             }
         }
-         private void ChimeraDefeated()
+        private void ChimeraDefeated()
         {
 
             string prompt = ($"\nThe mighty beast exhales its final breath, collapsing to the ground in a silent surrender.\n" +
@@ -144,7 +140,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                 case 0:
                     Console.WriteLine("You seize the peculiar rifle, its weight demanding you relinquish your current weapon.\n" +
                         "Upon closer examination, you discover a small artifact nestled within its structure.\n" +
-                        "Eager to test its capabilities, you take aim at a nearby road sign.With a resounding whoosh,\n" +
+                        "Eager to test its capabilities, you take aim at a nearby road sign. With a resounding whoosh,\n" +
                         "the rifle unleashes an intense blue stream of light, effortlessly melting the sign in half.\n" +
                         "You do this two more times and notice the rifle gets super hot and glows.\n" +
                         "You need to give it a moment to cool down before you can continue firing.");
@@ -154,10 +150,12 @@ namespace TheAnomalousZone.Encounters.Corridor
                     _gameManager.SelectedMainPlayer.Ammunition = 3;
                     _gameManager.SelectedMainPlayer.WeaponValue = 22;
                     Console.ReadKey();
+                    NextEncounter(typeof(MainRoadContinued));
                     break;
                 case 1:
-                    Console.WriteLine("You decide to forgo not picking up the rifle and continue on your way down the ardous road.")
+                    Console.WriteLine("You decide to forgo picking up the rifle and continue on your way down the arduous road.");
                     Console.ReadKey();
+                    NextEncounter(typeof(MainRoadContinued));
                     break;
                 case 2:
                     _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);

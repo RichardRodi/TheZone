@@ -22,7 +22,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                 $"but heading to your right may reveal unknown treasures that could aid you on your journey.\n\n");
 
 
-            string[] options = { "1.Continue Down the Main Road", "2.Head to your Right.", "3.Check Surroundings.", "4.Use FirstAid Kit.", "5.Check Stats." };
+            string[] options = { "1.Continue Down the Main Road.", "2.Head to your Right.", "3.Check Surroundings.", "4.Use FirstAid Kit.", "5.Check Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
             switch (selectedIndex)

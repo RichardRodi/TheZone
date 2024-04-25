@@ -112,7 +112,6 @@ namespace TheAnomalousZone.Encounters.Swamp
 
             }
 
-
         }
         private void RunElectricalAnomaly()
         {
@@ -202,7 +201,6 @@ namespace TheAnomalousZone.Encounters.Swamp
             }
 
         }
-
         public override void NextEncounter(Type encounterType)
         {
             _gameManager.Encounters.Where(x => x.GetType() == encounterType).FirstOrDefault().RunEncounter();

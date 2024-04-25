@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using TheAnomalousZone.Encounters;
 using TheAnomalousZone.Encounters.Corridor;
+using TheAnomalousZone.Encounters.PowerPlant;
 using TheAnomalousZone.Encounters.Shop;
 using TheAnomalousZone.Encounters.Swamp;
 using TheAnomalousZone.Enemies;
@@ -36,8 +37,8 @@ namespace TheAnomalousZone
         {
 
 
-            AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 50, radiation: 0, damage: 2, armorValue: 6,
-                firstAid: 2, weaponValue: 14, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
+            AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 100, radiation: 0, damage: 2, armorValue: 15,
+                firstAid: 2, weaponValue: 20, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 100));
 
             AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 40, radiation: 0, damage: 1, armorValue: 4,
                 firstAid: 3, weaponValue: 18, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 40));
@@ -73,6 +74,19 @@ namespace TheAnomalousZone
 
             Enemies.Add(new MutatedAnimals("Snork", health: 30, damage: 7, armorValue: 5, radiationDamage: 1,
                 speed: 15, "This is a mutated Snork"));
+
+            Enemies.Add(new Bandits("Monolith Soldier", health: 25, damage: 2, armorValue: 5,
+                firstAid: 1, weaponValue: 7, ammunition: 8, speed: 10, numberOfShotsFired: 3));
+
+            Enemies.Add(new Bandits("Monolith Soldier", health: 25, damage: 2, armorValue: 5,
+               firstAid: 1, weaponValue: 7, ammunition: 8, speed: 10, numberOfShotsFired: 3));
+
+            Enemies.Add(new Bandits("Monolith Soldier", health: 25, damage: 2, armorValue: 5,
+                firstAid: 1, weaponValue: 7, ammunition: 8, speed: 10, numberOfShotsFired: 3));
+
+            Enemies.Add(new Bandits("Monolith Leader", health: 50, damage: 2, armorValue: 9,
+                firstAid: 1, weaponValue: 10, ammunition: 8, speed: 10, numberOfShotsFired: 3));
+
         }
 
 
@@ -111,6 +125,12 @@ namespace TheAnomalousZone
 
             var mainRoadContinued = new MainRoadContinued(this);
             Encounters.Add(mainRoadContinued);
+
+            var finalCorridorSection = new FinalCorridorSection(this);  
+            Encounters.Add(finalCorridorSection);
+
+            var powerPlantHallway = new PowerPlantHallway(this);
+            Encounters.Add(powerPlantHallway);
         }
 
         public void GenerateAllFirstAid()
@@ -118,7 +138,6 @@ namespace TheAnomalousZone
             Items.Add(new ItemBase(iD: 0, "Basic FirstAid Kit", price: 1000, minAmountToHeal: 10, maxAmountToHeal: 15));
             Items.Add(new ItemBase(iD: 1, "Military FirstAid Kit", price: 2000, minAmountToHeal: 15, maxAmountToHeal: 20));
         }
-
         public void RunGame()
         {
             TitlePage mainMenu = new TitlePage();

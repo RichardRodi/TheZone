@@ -38,5 +38,20 @@ namespace TheAnomalousZone.Printer
                        |    |     | |______      /_____ |_____| |  \_| |______
                                                            
 ";
+        public static string FloorPlan = @"
+╔────────────╗
+|            |   
+│   x   x    |
+│            |   
+│   x   x    |   
+│            |   
+|   x   x    |            
+│            |
+╚────────────╝";
+
+
+
+
     }
 }
+    

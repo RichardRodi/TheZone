@@ -1,13 +1,13 @@
-﻿using TheAnomalousZone.Encounters.Corridor;
+﻿using TheAnomalousZone.Encounters.PowerPlant;
 using TheAnomalousZone.NewFolder;
 
-namespace TheAnomalousZone.Encounters.Shop
+namespace TheAnomalousZone.Encounters.Corridor
 {
-    public class StrelocksShop : BaseEncounter
+    internal class FinalCorridorSection : BaseEncounter
     {
         private GameManager _gameManager;
 
-        public StrelocksShop(GameManager gameManager)
+        public FinalCorridorSection(GameManager gameManager)
         {
             _gameManager = gameManager;
         }
@@ -21,27 +21,23 @@ namespace TheAnomalousZone.Encounters.Shop
         public int ammunitionMod;
         public override void RunEncounter()
         {
-            armorMod = 5000;
-            weaponMod = 4000;
-            firstAidMod = 1000;
-            ammunitionMod = 6000;
-
-            //_gameManager.SelectedMainPlayer.FirstAid;
-            //_gameManager.SelectedMainPlayer.ArmorValue;
-            //_gameManager.SelectedMainPlayer.WeaponValue;
-            //_gameManager.SelectedMainPlayer.Ammunition;
             {
-                string prompt = ($"\nYou make your way down to the rustic village,\n" +
-                    $"where a few people keep watch, their demeanor nonviolent yet vigilant.\n" +
-                    $"They bear similar gear and weapons, hinting at a shared purpose and allegiance.\n" +
-                    $"Navigating through the small settlement while following the shop signs,\n" +
-                    $"you eventually find yourself standing before an old Cold War bunker,\n" +
-                    $"its entrance concealed within the earth. A neon sign above reads Strelock's Shop.\n" +
-                    $"With a sense of anticipation, you step into the store.\n" +
-                    $"Inside, you are greeted by an older man,\n" +
-                    $"his face weathered by the passage of time and marked by the effects of a life lived hard.\n" +
-                    $"Despite his gruff exterior, he welcomes you with a booming voice,\n" +
-                    $"urging you to enter and explore his wares.\n\n");
+                armorMod = 5000;
+                weaponMod = 4000;
+                firstAidMod = 1000;
+                ammunitionMod = 6000;
+
+                string prompt = ($"\nApproaching the end of the winding valley, your gaze is drawn to a colossal,\n" +
+                    $"crumbling structure ahead. With curiosity piqued,\n" +
+                    $"you raise your binoculars to gain a closer look at the figures milling about.\n" +
+                    $"As their features come into focus,\n" +
+                    $"you recognize the familiar uniforms worn by the individuals you encountered at the shop earlier.\n" +
+                    $"Reassured by their friendly attire, you move closer to greet them.\n" +
+                    $"You are welcomed by an experienced group of zone denizens.\n" +
+                    $"Their leader bellows out in a loud, booming voice,\n" +
+                    $"Hello, friend! If you've made it this far, you're trying to get to the Wish Giver/The Monolith.\n" +
+                    $"If you're going to make it, you have to fight those freaks that worship the Monolith as their god.\n" +
+                    $"You're going to need some supplies, so take a look.\n\n");
 
                 string[] options = {"1.Buy Ceramic Plates for your Armor\n \t - Armor + 5 - 5000 Rubles", "2.Buy Custom parts for your Weapon\n \t - WeaponValue + 8 - 4000 Rubles",
                     "3.Buy Bandit Chest Rig\n \t- Ammunition + 2 - 6000 Rubles", "4.Buy First Aid Kit\n \t - 1000 Rubles", "5.Check Stats", "6.Leave Shop"};
@@ -74,8 +70,8 @@ namespace TheAnomalousZone.Encounters.Shop
                         if (_gameManager.SelectedMainPlayer.Rubles >= weaponMod)
                         {
                             _gameManager.SelectedMainPlayer.Rubles -= weaponMod;
-                            _gameManager.SelectedMainPlayer.WeaponValue += 8;
-                            Console.WriteLine("Weapon value increased by 8!");
+                            _gameManager.SelectedMainPlayer.WeaponValue += 3;
+                            Console.WriteLine("Weapon value increased by 3!");
                             Console.ReadKey();
                             RunEncounter();
 
@@ -107,8 +103,8 @@ namespace TheAnomalousZone.Encounters.Shop
                     case 3:
                         if (_gameManager.SelectedMainPlayer.Rubles >= firstAidMod)
                         {
-                        if (_gameManager.SelectedMainPlayer.Rubles >= firstAidMod)
-                            _gameManager.SelectedMainPlayer.Rubles -= 1000;
+                            if (_gameManager.SelectedMainPlayer.Rubles >= firstAidMod)
+                                _gameManager.SelectedMainPlayer.Rubles -= 1000;
                             _gameManager.SelectedMainPlayer.FirstAid += 1;
                             Console.WriteLine("First Aid Added to your Inventory!");
                             Console.ReadKey();
@@ -130,22 +126,21 @@ namespace TheAnomalousZone.Encounters.Shop
                         break;
                     case 5:
                         Console.Clear();
-                        Console.WriteLine("\nThank you for your service!, Who you assume to be Strelock says,\n" +
-                            "his words carrying a weight of understanding.\n" +
-                            "I can see it in your eyes. \n" +
-                            "The call of the WishGiver. That towering Monolith beckons to you,\n" +
-                            "tempting you with untold riches, or perhaps infinite knowledge or power.\n" +
-                            "He pauses, his gaze piercing yet compassionate.\n" +
-                            "Be wary, for wishes are seldom what you actually want.\n" +
-                            "But who am I to tell a man not to follow his heart?' Good luck out there, friend. Also take this as a souvenir.\n" +
-                            "As he says these parting words he tosses you an old pair of binoculars" +
-                            "With his words echoing in your mind, you step out of Strelock's shop, ready to face the challenges ahead.\n\n\n");
+                        Console.WriteLine("As you prepare to depart, the leader of the friendlies steps forward,\n" +
+                            "offering you some parting advice.\n" +
+                            "'You are entering unknown territory, friend,' he cautions, their voice tinged with solemnity. \n" +
+                            "'Not many have made it this far. We would go further, but no one has come back from where you're headed.\n" +
+                            "He throws you an awkward helmet." +
+                            "Upon further inspection you realize that there night vision goggles on them'" +
+                            "'Good luck!', he yells out as stride out of the encampment\n" +
+                            "With those words echoing in your mind,\n" +
+                            "you steel yourself for the challenges that lie ahead,\n" +
+                            "grateful for their warning and help as you venture into uncharted territory.");
                         Console.ReadKey();
-                        NextEncounter(typeof(CorridorCrossRoads));
+                        NextEncounter(typeof(PowerPlantHallway));
                         break;
 
                 }
-
             }
         }
     }

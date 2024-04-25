@@ -24,7 +24,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                     $"leading your gaze to the far end where a massive power plant looms on the horizon.\n" +
                     $"As you stare at the setting sun behind the imposing structure,\n" +
                     $"the haunting hum of the Monolith from your nightmares reverberates in your skull,\n" +
-                    $"sending shivers down your spine.Once again, you are faced with a choice.\n" +
+                    $"sending shivers down your spine. Once again, you are faced with a choice.\n" +
                     $"To your left, a sign beckons with the promise of a Shop,\n" +
                     $"pointing toward a small rural village nestled amidst the landscape.\n" +
                     $"Ahead of you, the road stretches toward what you assume to be your destination,\n" +
