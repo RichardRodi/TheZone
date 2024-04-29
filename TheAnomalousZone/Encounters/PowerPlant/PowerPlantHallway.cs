@@ -30,7 +30,7 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                 $"blocking your path to your final goal of reaching the Monolith,\n" +
                 $"there is no way to evade their vigilant watch. You have to fight them!\n\n");
 
-            string[] options = { "1.No more hesitation. Begin the damn fight.", "2.Try and take out as many soldiers as possible before they notice.", "3.Quickly Use FirstAid Kit.", "4.Check Stats." };
+            string[] options = { "1.No more hesitation. Begin the damn fight.", "2.Try and take out as many soldiers as possible before they notice.", $"3.Quickly Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "4.Check Player Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -45,15 +45,19 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                     Console.WriteLine("There is no end to them!");
                     Console.ReadKey();
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[10]);
+                    Console.WriteLine("A very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
+                        "this lone soldier exudes an aura of relentless determination as he swiftly advances towards you.");
+                    BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[11]);
                     Console.WriteLine("As the relentless battle rages on,\n" +
                         "it feels like an endless struggle against an unyielding tide of adversaries.\n" +
                         "Suddenly, you stumble backward, only to find yourself sprawled beside a fallen soldier.\n" +
-                        "Amidst the chaos, your eyes catch sight of a grenade nestled on the lifeless soldier's belt.\n" +
+                        "Amidst the chaos, your eyes catch sight of a grenade nestled on a lifeless soldier's belt.\n" +
                         "Swiftly seizing the opportunity,\n" +
                         "you deftly extract the pin and hurl the grenade toward the mass of adversaries still locked in combat with you." +
-                        "As the smoke dissipates, revealing the aftermath of the chaos, only one figure remains standing amidst the debris.\n" +
-                        "Clad in formidable exo-skeleton armor,\n" +
-                        "this lone soldier exudes an aura of relentless determination as he swiftly advances towards you.\n");
+                        "As the smoke dissipates, revealing the aftermath of the chaos,\n" +
+                        "only one figure remains:\n" +
+                        "The previously defeated soldier in the advanced exo-skeleton armor is still damaged but still alive.\n" +
+                        "He advances towards you.");
                     Console.ReadKey(true);
                     FinalBoss();
                     break;
@@ -68,15 +72,19 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                     Console.WriteLine("There is no end to them!");
                     Console.ReadKey();
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[10]);
+                    Console.WriteLine("A very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
+                       "this lone soldier exudes an aura of relentless determination as he swiftly advances towards you.");
+                    BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[11]);
                     Console.WriteLine("As the relentless battle rages on,\n" +
                         "it feels like an endless struggle against an unyielding tide of adversaries.\n" +
                         "Suddenly, you stumble backward, only to find yourself sprawled beside a fallen soldier.\n" +
-                        "Amidst the chaos, your eyes catch sight of a grenade nestled on the lifeless soldier's belt.\n" +
+                        "Amidst the chaos, your eyes catch sight of a grenade nestled on a lifeless soldier's belt.\n" +
                         "Swiftly seizing the opportunity,\n" +
                         "you deftly extract the pin and hurl the grenade toward the mass of adversaries still locked in combat with you." +
-                        "As the smoke dissipates, revealing the aftermath of the chaos, only one figure remains standing amidst the debris.\n" +
-                        "Clad in formidable exo-skeleton armor,\n" +
-                        "this lone soldier exudes an aura of relentless determination as he swiftly advances towards you.\n");
+                        "As the smoke dissipates, revealing the aftermath of the chaos,\n" +
+                        "only one figure remains:\n" +
+                        "The previously defeated soldier in the advanced exo-skeleton armor is damaged but still alive.\n" +
+                        "He advances towards you");
                     Console.ReadKey(true);
                     FinalBoss();
                     break;
@@ -101,7 +109,7 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                 $"you frantically search for your weapon in vain.\n" +
                 $"unable to find it you realize must confront this formidable foe with nothing but your bare hands.\n\n");
 
-            string[] options = { "1.Grab a nearby pipe that was broken in the destruction and launch it at the soldier", "2.Attempt to block the first strike from your foe and counter", "3.Flail your arms in hopes defeating this terrifying foe.", "4. Put a little distance between you and the hulking soldier and quickly Use a FirstAid Kit.", "5.Check Stats." };
+            string[] options = { "1.Grab a nearby pipe that was broken in the destruction and launch it at the soldier", "2.Attempt to block the first strike from your foe and counter", "3.Flail your arms in hopes defeating this terrifying foe.", $"4.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -123,22 +131,23 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                     break;
                 case 1:
                     Console.WriteLine("You block the soldiers first attack and feel the pain of the massive strength of the suit.\n" +
-                        "However you are able to pull a large tube from the side of this soldiers armor.\n" +
+                        "However in desperation you are able to pull a large tube from the side of this soldiers armor.\n" +
                         "Suddenly, oil and gases spew forth from your target,\n" +
                         "which in turn ignites into flames that engulf the soldier in a blaze of searing heat.\n" +
                         "Blinded by the sudden burst of light, you swiftly remove your night vision goggles,\n" +
                         "Relying now on the fiery illumination emanating from the soldier's charred remains,\n" +
                         "you press forward into the depths of the power plant,\n" +
-                        "driven by an unyielding resolve to uncover whatever truth or prize awaits you in the darkness.\"  ");
+                        "driven by an unyielding resolve to uncover whatever truth or prize awaits you in the darkness.");
                     Console.ReadKey();
                     _gameManager.SelectedMainPlayer.PlayerDamage(5);
+                    DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                     Console.ReadKey(true);
                     NextEncounter(typeof(PowerPlantMaze));
                     break;
                 case 2:
-                    Console.WriteLine("You flail your arms in a futile attempt to break through.\n" +
+                    Console.WriteLine("You flail your arms in a futile attempt to fight back.\n" +
                         "Swiftly evading your erratic assault, the impenetrable wall of soldier seizes hold of your head,\n" +
-                        "forcefully driving it against the solid wall again and again.\n" +
+                        "forcefully driving it against the solid wall of the power plant, again and again.\n" +
                         "As your vision fades to darkness, you realize the gravity of your final, ill-fated choice.\n");
                     _gameManager.SelectedMainPlayer.PlayerDamage(100);
                     Console.ReadKey();
@@ -147,12 +156,12 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                 case 3:
                     _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                     Console.ReadKey(true);
-                    RunEncounter();
+                   FinalBoss();
                     break;
                 case 4:
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
-                    RunEncounter();
+                    FinalBoss();
                     break;
 
             }

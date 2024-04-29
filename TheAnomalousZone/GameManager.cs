@@ -32,19 +32,18 @@ namespace TheAnomalousZone
                 GenerateAllFirstAid();
             }
         }
-
         public void GenerateMainCharacter()
         {
 
 
-            AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 100, radiation: 0, damage: 2, armorValue: 15,
-                firstAid: 2, weaponValue: 20, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 100));
+            AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 50, radiation: 0, damage: 2, armorValue: 7,
+                firstAid: 2, weaponValue: 15, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
 
-            AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 40, radiation: 0, damage: 1, armorValue: 4,
-                firstAid: 3, weaponValue: 18, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 40));
+            AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 35, radiation: 0, damage: 1, armorValue: 4,
+                firstAid: 3, weaponValue: 18, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 35));
 
-            AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 30, radiation: 0, damage: 1, armorValue: 5,
-                firstAid: 4, weaponValue: 12, ammunitionPerMagazine: 9, speed: 10, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 30));
+            AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 40, radiation: 0, damage: 1, armorValue: 5,
+                firstAid: 4, weaponValue: 12, ammunitionPerMagazine: 9, speed: 10, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 40));
         }
 
 
@@ -89,7 +88,6 @@ namespace TheAnomalousZone
 
         }
 
-
         public void GenerateAllEncounters()
         {
 
@@ -126,11 +124,20 @@ namespace TheAnomalousZone
             var mainRoadContinued = new MainRoadContinued(this);
             Encounters.Add(mainRoadContinued);
 
-            var finalCorridorSection = new FinalCorridorSection(this);  
+            var finalCorridorSection = new FinalCorridorSection(this);
             Encounters.Add(finalCorridorSection);
 
             var powerPlantHallway = new PowerPlantHallway(this);
             Encounters.Add(powerPlantHallway);
+
+            var powerPlantMaze = new PowerPlantMaze(this);
+            Encounters.Add(powerPlantMaze);
+
+            var monolithEnd = new MonolithEnd(this);
+            Encounters.Add(monolithEnd);
+
+            var factoryMainArea = new FactoryMainArea(this);
+            Encounters.Add(factoryMainArea);
         }
 
         public void GenerateAllFirstAid()

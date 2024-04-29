@@ -30,7 +30,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                     $"Ahead of you, the road stretches toward what you assume to be your destination,\n" +
                     $"inviting you to continue your journey into the unknown.\n\n");
 
-                string[] options = { "1.Continue to your Left towards the Shop.", "2.Continue down the Road.", "3.Check Surroundings.", "4.Use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Continue to your Left towards the Shop.", "2.Continue down the Road.", "3.Check Surroundings.", $"4.Use a FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 

@@ -26,7 +26,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                     $"Pausing mid-feast, it fixes its gaze upon you with an unsettling intensity.\n" +
                     $"Brace yourself – this is going to be a touch fight.\n\n");
 
-                string[] options = { "1.Take a defensive position behind a nearby abandoned truck.", "2.Relinquish your personal courage and run!", "3.Immediately begin firing at the Monstrosity.", "4.Quickly use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Take a defensive position behind a nearby abandoned truck.", "2.Relinquish your personal courage and run!", "3.Immediately begin firing at the Monstrosity.", $"4.Quickly use a FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -112,7 +112,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         _gameManager.SelectedMainPlayer.DisplayStats();
                         Console.ReadKey(true);
                         Console.Clear();
-                        RunEncounter();
+                        ChimeraDefeated();
                         break;
 
 
@@ -131,7 +131,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                 $"Among them, a lone soldier grips a peculiar rifle, \n" +
                 $"This rifle is emanating an otherworldly energy.\n\n");
 
-            string[] options = { "1.Grab the Rifle.", "2.Leave the rifle and move on.", "3.Use FirstAid Kit.", "4.Check Stats." };
+            string[] options = { "1.Grab the Rifle.", "2.Leave the rifle and move on.", $"3.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "4.Check Player Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 

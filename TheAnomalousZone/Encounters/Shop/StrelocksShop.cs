@@ -44,7 +44,7 @@ namespace TheAnomalousZone.Encounters.Shop
                     $"urging you to enter and explore his wares.\n\n");
 
                 string[] options = {"1.Buy Ceramic Plates for your Armor\n \t - Armor + 5 - 5000 Rubles", "2.Buy Custom parts for your Weapon\n \t - WeaponValue + 8 - 4000 Rubles",
-                    "3.Buy Bandit Chest Rig\n \t- Ammunition + 2 - 6000 Rubles", "4.Buy First Aid Kit\n \t - 1000 Rubles", "5.Check Stats", "6.Leave Shop"};
+                    "3.Buy Bandit Chest Rig\n \t- Ammunition + 2 - 6000 Rubles", "4.Buy First Aid Kit\n \t - 1000 Rubles",$"5.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "6.Check Stats", "7.Leave Shop"};
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -123,12 +123,16 @@ namespace TheAnomalousZone.Encounters.Shop
 
                         break;
                     case 4:
-
-                        _gameManager.SelectedMainPlayer.DisplayStats();
+                        _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                         Console.ReadKey(true);
                         RunEncounter();
                         break;
                     case 5:
+                        _gameManager.SelectedMainPlayer.DisplayStats();
+                        Console.ReadKey(true);
+                        RunEncounter();
+                        break;
+                    case 6:
                         Console.Clear();
                         Console.WriteLine("\nThank you for your service!, Who you assume to be Strelock says,\n" +
                             "his words carrying a weight of understanding.\n" +

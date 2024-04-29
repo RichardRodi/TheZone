@@ -14,14 +14,14 @@ namespace TheAnomalousZone.Encounters.Swamp
         public override void RunEncounter()
         {
 
-            string prompt = ($"\nSurveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
+            string prompt = ($"Surveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
                 $"To your left, a small dilapidated building stands weathered and worn. \n" +
                 $"Despite its decrepit appearance, the structure beckons with an air of intrigue,\n\n" +
                 $"To your right, black smoke rises from the direction of a large warehouse,\n" +
                 $"it's imposing silhouette looming ominously against the horizon. \n" +
                 $"The source of the smoke remains unclear, casting doubt over the intentions of those who inhabit the structure.\n\n");
 
-            string[] options = { "1.Head to your Left.", "2.Head to your Right.", "3.Look Around.", "4.Check Stats.\n\n" };
+            string[] options = { "1.Head to your Left.", "2.Head to your Right.", "3.Look Around.", $"3.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"4.Check Player Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -52,6 +52,11 @@ namespace TheAnomalousZone.Encounters.Swamp
 
                     break;
                 case 3:
+                    _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
+                    Console.ReadKey(true);
+                    RunEncounter(); 
+                    break;
+                case 4:
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
                     RunEncounter();

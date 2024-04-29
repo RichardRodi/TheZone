@@ -17,7 +17,7 @@ namespace TheAnomalousZone.Encounters.Swamp
 
         {
 
-            string prompt = ($"\nAs you approach the dilapidated building, the snarl of a large animal breaks the quiet groan of the swamp around you.\n" +
+            string prompt = ($"As you approach the dilapidated building, the snarl of a large animal breaks the quiet groan of the swamp around you.\n" +
                 $"Emerging from the undergrowth is a creature unlike any you've seen before.\n" +
                 $"It possesses the unmistakable features of a boar, yet something is profoundly amiss.\n" +
                 $"It appears to be grotesquely mutated, its form twisted beyond recognition.\n\n");
@@ -78,7 +78,7 @@ namespace TheAnomalousZone.Encounters.Swamp
             string prompt = ($"\nAfter this swine like abomination breathes its last breath, you make your way towards the shanty home.\n" +
             $"There is a faint crackling coming from the home.\n\n");
 
-            string[] options = { "Check the house.", "Move On.", "Use FirstAid Kit.", "Check Stats." };
+            string[] options = { "1.Check the house.", "2.Move On.", $"3.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"4.Check PLayer Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -122,7 +122,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                 $"Sitting amidst this chaotic spectacle, a tiny swirling globe of pure energy captivates your attention. \n" +
                 $"An instinctual urge compels you to claim it as your own.\n\n");
 
-            string[] options = { "1.Run through the Electricity as fast as you can to grab the object.", "2.Pick up a piece of Metal debris to throw at the swirling maelstrom.", "3.Exit.", "4. Use FirstAid Kit.", "5.Check Stats." };
+            string[] options = { "1.Run through the Electricity as fast as you can to grab the object.", "2.Pick up a piece of Metal debris to throw at the swirling maelstrom.", "3.Exit.", $"4.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 

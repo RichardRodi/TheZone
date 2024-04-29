@@ -16,7 +16,7 @@ namespace TheAnomalousZone.Encounters.Swamp
 
         {
 
-            string prompt = ($"\nAs you approach the source of the voice when you realize you are surrounded by a group of armed men\n" +
+            string prompt = ($"As you approach the source of the voice when you realize you are surrounded by a group of armed men\n" +
                 $"The man who is speaking to you seems to be their leader.\n" +
                 $"In a snarled voice he politely asks you to empty your pockets and be on your way.\n\n");
 
@@ -31,7 +31,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                     Console.ReadKey(true);
                     Console.Clear();
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
-                    RunWareHouseDefeatedBanditLeader();
+                    WareHouseDefeatedBanditLeader();
                     break;
 
                 case 1:
@@ -44,7 +44,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                         Console.Clear();
                         Console.WriteLine("The Bandit Leader swiftly disengages his safety and opens fire before you can react, leaving you with little time to escape");
                         BanditCombat.FightBanditFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
-                        RunWareHouseDefeatedBanditLeader();
+                        WareHouseDefeatedBanditLeader();
                     }
 
                     else
@@ -67,23 +67,23 @@ namespace TheAnomalousZone.Encounters.Swamp
                     Console.ReadKey(true);
                     Console.Clear();
                     BanditCombat.FightBanditFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
-                    RunWareHouseDefeatedBanditLeader();
+                    WareHouseDefeatedBanditLeader();
                     break;
 
             }
 
         }
-        private void RunWareHouseDefeatedBanditLeader()
+        private void WareHouseDefeatedBanditLeader()
         {
             {
 
-                string prompt = ($"\nThe Bandit leader now lies face down in a pool of his own blood.\n" +
+                string prompt = ($"The Bandit leader now lies face down in a pool of his own blood.\n" +
                     $"Anticipating retaliation, you swiftly pivot your firearm muzzles towards the remaining bandits locations,\n" +
                     $"but it seems the demise of their leader has shattered any semblance of courage among them. \n" +
                     $"Pausing to catch your breath, you survey your surroundings.\n\n");
 
 
-                string[] options = { "1.Check the Area.", "2.Check the Inside of the Warehouse.", "3.Leave Area.", "4.Use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Check the Area.", "2.Check the Inside of the Warehouse.", "3.Leave Area.", $"4.Use FirstAid Kit.  Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"5.Check Player Stats.\n\n" };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -93,7 +93,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                         Console.WriteLine("You are standing in front of a large warehouse that seems to have been of some agricultural importance.\n" +
                             "There is an eerie crackling that is coming from the inside of the warehouse.");
                         Console.ReadKey(true);
-                        RunWareHouseDefeatedBanditLeader();
+                        WareHouseDefeatedBanditLeader();
                         break;
 
                     case 1:
@@ -115,14 +115,14 @@ namespace TheAnomalousZone.Encounters.Swamp
                         _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                         Console.ReadKey(true);
                         Console.Clear();
-                        RunWareHouseDefeatedBanditLeader();
+                        WareHouseDefeatedBanditLeader();
                         break;
 
                     case 4:
                         _gameManager.SelectedMainPlayer.DisplayStats();
                         Console.ReadKey(true);
                         Console.Clear();
-                        RunWareHouseDefeatedBanditLeader();
+                        WareHouseDefeatedBanditLeader();
                         break;
                 }
 
@@ -134,7 +134,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             {
 
-                string prompt = ($"\nYou approach the Anomaly, the searing heat from the flames washes over your face,\n" +
+                string prompt = ($"You approach the Anomaly, the searing heat from the flames washes over your face,\n" +
                     $"intensifying with each step.\n" +
                     $"Amidst the fiery tumult, something draws your gaze, a small spherical object weaving through the flames. \n" +
                     $"Its presence flickers, appearing and disappearing in a mesmerizing dance. \n" +
@@ -143,7 +143,7 @@ namespace TheAnomalousZone.Encounters.Swamp
 
                 string[] options = {"1.Climb the rafters to try and avoid the flames.",
                     "2.Do your best to run through the flames and grab the object.",
-                    "3.Leave the Warehouse.", "4.Use FirstAid Kit.", "5.Check Stats."};
+                    "3.Leave the Warehouse.", $"4.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"5.Check Player Stats.\n\n" };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -219,7 +219,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                     case 2:
                         Console.WriteLine("You look at the strange scene in front of you and decide to turn around and leave it alone.");
                         Console.ReadKey(true);
-                        RunWareHouseDefeatedBanditLeader();
+                        WareHouseDefeatedBanditLeader();
                         break;
                     case 3:
                         _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);

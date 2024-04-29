@@ -24,9 +24,9 @@ namespace TheAnomalousZone.Encounters
             string radiationSymbol = "\u2622";
 
             string prompt = ($"\n\t\t\t\t    {radiationSymbol}  {radiationSymbol}  {radiationSymbol}   Welcome To  {radiationSymbol}  {radiationSymbol}  {radiationSymbol}\n\t\n\n " +
-                $"{TitleArtAssets.GameHeader}\n\n\n Use Arrow Keys and Enter to Select Options: \n\n\n");
+                $"{TitleArtAssets.GameHeader}\n\nCreated by Richard Rodi\n\n\nUse Arrow Keys and Enter to Select Options: \n\n\n");
 
-            string[] options = { "Play Game", "Credits", "Exit" };
+            string[] options = { "Play Game", "Exit", };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -36,11 +36,6 @@ namespace TheAnomalousZone.Encounters
                     return true;
                     
                 case 1:
-                    Console.WriteLine("Created by Richard Rodi");
-                    Console.ReadKey();
-                    RunTitlePage();
-                    break;
-                case 2:
                     Environment.Exit(0);
                     break;
             }

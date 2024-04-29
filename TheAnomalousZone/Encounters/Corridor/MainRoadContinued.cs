@@ -19,12 +19,12 @@ namespace TheAnomalousZone.Encounters.Corridor
         {
             {
 
-                string prompt = ($"\nAs you advance toward the looming power plant structure at the valley's end,\n" +
+                string prompt = ($"\nAs you advance down the main road toward the looming power plant structure at the valley's end,\n" +
                     $"signs of human habitation come into view directly ahead. The camp appears haphazard and makeshift,\n" +
                     $"with a towering fire casting flickering shadows against the surrounding landscape.\n" +
                     $"As you approach you notice the men are wearing the same uniforms as the fallen soldiers with the eclipsed sun insignia.\n");
 
-                string[] options = { "1.Sneak up to the camp.", "2.Sneak past the camp.", "3.Create a distraction by throwing something.", "4.Use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Sneak up to the camp.", "2.Sneak past the camp.", "3.Create a distraction by throwing something.", $"4.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -75,7 +75,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                     $"its spongy encased exterior emitting a faint grating sound with each reverberating chant.\n" +
                     $"Sensing its potential significance, you recognize the value of this enigmatic item amidst the eerie scene.\n\n");
 
-                string[] options = { "1.Try to sneak in the camp and grab the object.", "2.Silently take out as many of these soldiers as possible.", "3.Forget what you have seen and head back from where you came.", "4.Use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Try to sneak in the camp and grab the object.", "2.Silently take out as many of these soldiers as possible.", "3.Forget what you have seen and head back from where you came.", $"4.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -133,13 +133,12 @@ namespace TheAnomalousZone.Encounters.Corridor
                     case 3:
                         _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                         Console.ReadKey(true);
-                        RunEncounter();
+                        MakeShiftCamp();
                         break;
                     case 4:
                         _gameManager.SelectedMainPlayer.DisplayStats();
                         Console.ReadKey(true);
-
-                        RunEncounter();
+                        MakeShiftCamp();
                         break;
                 }
             }

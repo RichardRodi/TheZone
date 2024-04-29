@@ -19,14 +19,14 @@ namespace TheAnomalousZone.Encounters
 
          string prompt = $"{StoryScript.IntroCharacterCreationPrompt}";
 
-            string[] options = { "1.You were a Soldier.", "2.You were a Sniper.", "3.You were a Scientist.\n\n" };
+            string[] options = { "1.You were a Soldier.", "2.You were a Sniper.", "3.You were a Scientist.\n" };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("You remember were a Sergeant in the Army.\n" +
+                    Console.WriteLine("You remember you were a Sergeant in the Army.\n" +
                         "Gripping your heavy but well maintained Kalashnikov Rifle you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedSoldier = _gameManager.AllMainCharacters.Where(x => x.Name == "Sergei").FirstOrDefault();

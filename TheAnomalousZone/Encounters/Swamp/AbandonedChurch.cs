@@ -21,12 +21,12 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             {
 
-                string prompt = ($"\nIn the heart of the murky swamp stands an Old Church,\n" +
+                string prompt = ($"In the heart of the murky swamp stands an Old Church,\n" +
                     $"its weathered facade adorned with ornate carvings and intricate details of ancient saints.\n" +
                     $"Tall, slender spires pierce the mist-shrouded sky, \n" +
                     $"their hollowed out peaks disappearing into the veil of fog that hangs heavy over the damp swamp.\n\n");
 
-                string[] options = { "1.Walk through the center of the Church.", "2.Walk around the perimeter of the Church.", "3.Check your surroundings.", "4.Use FirstAid Kit.", "5.Check Stats." };
+                string[] options = { "1.Walk through the center of the Church.", "2.Walk around the perimeter of the Church.", "3.Check your surroundings.", "4.Use FirstAid Kit.", $"5.Check Stats. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}\n\n" };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -89,7 +89,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                 $"Clad in the shredded remnants of their uniform and boots,\n" +
                 $"their face obscured behind cracked gas masks with flailing hoses.\n\n");
 
-            string[] options = { "1.Stand and Fight!", "2.Run!", "3.Check Stats.", };
+            string[] options = { "1.Stand and Fight!", "2.Run!", $"3.Quickly use a FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"4.Check Player Stats.\n\n", };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -126,8 +126,12 @@ namespace TheAnomalousZone.Encounters.Swamp
                         NextEncounter(typeof(CorridorIntro));
                     }
                     break;
-
                 case 2:
+                    _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
+                    Console.ReadKey(true);
+                    ChurchFight();
+                    break;
+                case 3:
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
                     ChurchFight();
@@ -153,11 +157,11 @@ namespace TheAnomalousZone.Encounters.Swamp
                         "adorned only by the broken half of an Eastern Orthodox cross, \n" +
                         "teetering precariously upon its surface. Below the Alter lies a small Lock Box." +
                         "There is a simple lock with a four digit combination keeping it shut.\n\n\n" +
-                        "Please type numbers to try and open the LockBox.");
+                        "Please type four numbers nad hit enter to try and open the Lock Box.");
                     var answer = Console.ReadLine();
                     if (answer == "9012")
                     {
-                        Console.WriteLine("The Lockbox opens with a satisfying click.\n" +
+                        Console.WriteLine("The Lock Box opens with a satisfying click.\n" +
                             "Inside is a giant stack of rubles!\n" +
                             "You gain 5000 Rubles!");
                         _gameManager.SelectedMainPlayer.Rubles += 5000;
