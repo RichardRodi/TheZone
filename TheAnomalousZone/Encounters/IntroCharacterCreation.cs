@@ -26,7 +26,8 @@ namespace TheAnomalousZone.Encounters
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("You remember you were a Sergeant in the Army.\n" +
+
+                    Console.WriteLine("\nYou remember you were a Sergeant in the Army.\n" +
                         "Gripping your heavy but well maintained Kalashnikov Rifle you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedSoldier = _gameManager.AllMainCharacters.Where(x => x.Name == "Sergei").FirstOrDefault();
@@ -34,7 +35,7 @@ namespace TheAnomalousZone.Encounters
                         _gameManager.SelectedMainPlayer = selectedSoldier;
                     break;
                 case 1:
-                    Console.WriteLine("You remember you were a Mercenary that fought in foreign lands.\n" +
+                    Console.WriteLine("\nYou remember you were a Mercenary that fought in foreign lands.\n" +
                         "Gripping your well worn but functional Bolt Action Rifle you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedSniper = _gameManager.AllMainCharacters.Where(x => x.Name == "Artyom").FirstOrDefault();
@@ -43,7 +44,7 @@ namespace TheAnomalousZone.Encounters
                    
                     break;
                 case 2:
-                    Console.WriteLine("You remember were a Scientist working for the Government trying to understand the Zone.\n" +
+                    Console.WriteLine("\nYou remember were a Scientist working for the Government trying to understand the Zone.\n" +
                         "Gripping your Old Soviet Surplus Handgun you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedScientist = _gameManager.AllMainCharacters.Where(x => x.Name == "Dimitri").FirstOrDefault();

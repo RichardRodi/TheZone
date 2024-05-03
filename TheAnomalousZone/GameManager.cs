@@ -37,12 +37,12 @@ namespace TheAnomalousZone
 
 
             AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 50, radiation: 0, damage: 2, armorValue: 7,
-                firstAid: 2, weaponValue: 15, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
+                firstAid: 1, weaponValue: 12, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
 
-            AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 35, radiation: 0, damage: 1, armorValue: 4,
-                firstAid: 3, weaponValue: 18, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 35));
+            AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 35, radiation: 0, damage: 1, armorValue: 5,
+                firstAid: 3, weaponValue: 20, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 35));
 
-            AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 40, radiation: 0, damage: 1, armorValue: 5,
+            AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 40, radiation: 0, damage: 1, armorValue: 6,
                 firstAid: 4, weaponValue: 12, ammunitionPerMagazine: 9, speed: 10, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 40));
         }
 
@@ -90,9 +90,6 @@ namespace TheAnomalousZone
 
         public void GenerateAllEncounters()
         {
-
-            var spaceEncounter = new SpaceEncounter(this);
-            Encounters.Add(spaceEncounter);
 
             var swampIntro = new SwampIntro(this);
             Encounters.Add(swampIntro);
@@ -144,6 +141,9 @@ namespace TheAnomalousZone
         {
             Items.Add(new ItemBase(iD: 0, "Basic FirstAid Kit", price: 1000, minAmountToHeal: 10, maxAmountToHeal: 15));
             Items.Add(new ItemBase(iD: 1, "Military FirstAid Kit", price: 2000, minAmountToHeal: 15, maxAmountToHeal: 20));
+            Items.Add(new ItemBase(iD: 2, "Armor Mod", price: 5000, minAmountToHeal:0, maxAmountToHeal: 0));
+            Items.Add(new ItemBase(iD: 2, "Weapon Mod", price: 4000, minAmountToHeal: 0, maxAmountToHeal: 0));
+            Items.Add(new ItemBase(iD: 2, "Ammunition Mod", price: 3000, minAmountToHeal: 0, maxAmountToHeal: 20));
         }
         public void RunGame()
         {

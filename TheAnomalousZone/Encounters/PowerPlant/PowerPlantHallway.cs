@@ -37,18 +37,18 @@ namespace TheAnomalousZone.Encounters.PowerPlant
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("Gathering your courage you open fire on the strange soldiers guarding your path to the prize");
+                    Console.WriteLine("\nGathering your courage you open fire on the strange soldiers guarding your path to the prize");
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[8]);
-                    Console.WriteLine("They keep coming!");
-                    Console.ReadKey();
+                    Console.WriteLine("\nThey keep coming!");
+                    Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[9]);
-                    Console.WriteLine("There is no end to them!");
-                    Console.ReadKey();
+                    Console.WriteLine("\nThere is no end to them!");
+                    Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[10]);
-                    Console.WriteLine("A very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
+                    Console.WriteLine("\nA very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
                         "this lone soldier exudes an aura of relentless determination as he swiftly advances towards you.");
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[11]);
-                    Console.WriteLine("As the relentless battle rages on,\n" +
+                    Console.WriteLine("\nAs the relentless battle rages on,\n" +
                         "it feels like an endless struggle against an unyielding tide of adversaries.\n" +
                         "Suddenly, you stumble backward, only to find yourself sprawled beside a fallen soldier.\n" +
                         "Amidst the chaos, your eyes catch sight of a grenade nestled on a lifeless soldier's belt.\n" +
@@ -63,19 +63,20 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                     break;
 
                 case 1:
-                    Console.WriteLine("You manage to sink your knife into one of the soldiers,\n" +
+                    Console.WriteLine("\nYou manage to sink your knife into one of the soldiers,\n" +
                         "but just as quickly as he breathes his last breath the other soldiers immediately open fire upon you.");
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[8]);
-                    Console.WriteLine("They keep coming!");
-                    Console.ReadKey();
+                    Console.WriteLine("\nThey keep coming!");
+                    Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[9]);
                     Console.WriteLine("There is no end to them!");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[10]);
-                    Console.WriteLine("A very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
+                    Console.WriteLine("\nA very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
                        "this lone soldier exudes an aura of relentless determination as he swiftly advances towards you.");
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[11]);
-                    Console.WriteLine("As the relentless battle rages on,\n" +
+                    Console.Clear();
+                    Console.WriteLine("\nAs the relentless battle rages on,\n" +
                         "it feels like an endless struggle against an unyielding tide of adversaries.\n" +
                         "Suddenly, you stumble backward, only to find yourself sprawled beside a fallen soldier.\n" +
                         "Amidst the chaos, your eyes catch sight of a grenade nestled on a lifeless soldier's belt.\n" +
@@ -116,7 +117,7 @@ namespace TheAnomalousZone.Encounters.PowerPlant
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("With a surge of resourcefulness,\n" +
+                    Console.WriteLine("\nWith a surge of resourcefulness,\n" +
                         "you wrench a nearby pipe free and hurl its jagged end at the advancing demon soldier.\n" +
                         "The makeshift projectile finds its mark,\n" +
                         "embedding itself deep within the intricate gears of the complex armor.\n" +
@@ -126,11 +127,11 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                         "Relying now on the fiery illumination emanating from the soldier's charred remains,\n" +
                         "you press forward into the depths of the power plant,\n" +
                         "driven by an unyielding resolve to uncover whatever truth or prize awaits you in the darkness.");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     NextEncounter(typeof(PowerPlantMaze));
                     break;
                 case 1:
-                    Console.WriteLine("You block the soldiers first attack and feel the pain of the massive strength of the suit.\n" +
+                    Console.WriteLine("\nYou block the soldiers first attack and feel the pain of the massive strength of the suit.\n" +
                         "However in desperation you are able to pull a large tube from the side of this soldiers armor.\n" +
                         "Suddenly, oil and gases spew forth from your target,\n" +
                         "which in turn ignites into flames that engulf the soldier in a blaze of searing heat.\n" +
@@ -138,19 +139,19 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                         "Relying now on the fiery illumination emanating from the soldier's charred remains,\n" +
                         "you press forward into the depths of the power plant,\n" +
                         "driven by an unyielding resolve to uncover whatever truth or prize awaits you in the darkness.");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     _gameManager.SelectedMainPlayer.PlayerDamage(5);
                     DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                     Console.ReadKey(true);
                     NextEncounter(typeof(PowerPlantMaze));
                     break;
                 case 2:
-                    Console.WriteLine("You flail your arms in a futile attempt to fight back.\n" +
+                    Console.WriteLine("\nYou flail your arms in a futile attempt to fight back.\n" +
                         "Swiftly evading your erratic assault, the impenetrable wall of soldier seizes hold of your head,\n" +
                         "forcefully driving it against the solid wall of the power plant, again and again.\n" +
                         "As your vision fades to darkness, you realize the gravity of your final, ill-fated choice.\n");
                     _gameManager.SelectedMainPlayer.PlayerDamage(100);
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                     break;
                 case 3:

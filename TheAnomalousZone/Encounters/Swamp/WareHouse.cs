@@ -16,7 +16,8 @@ namespace TheAnomalousZone.Encounters.Swamp
 
         {
 
-            string prompt = ($"As you approach the source of the voice when you realize you are surrounded by a group of armed men\n" +
+          
+            string prompt = ($"\nAs you approach the source of the voice when you realize you are surrounded by a group of armed men\n" +
                 $"The man who is speaking to you seems to be their leader.\n" +
                 $"In a snarled voice he politely asks you to empty your pockets and be on your way.\n\n");
 
@@ -27,7 +28,7 @@ namespace TheAnomalousZone.Encounters.Swamp
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("Without hesitating you raise your rifle to the bandit leader. With a loud deafening thud you begin to fire at him.");
+                    Console.WriteLine("\nWithout hesitating you raise your rifle to the bandit leader. With a loud deafening thud you begin to fire at him.");
                     Console.ReadKey(true);
                     Console.Clear();
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
@@ -35,21 +36,21 @@ namespace TheAnomalousZone.Encounters.Swamp
                     break;
 
                 case 1:
-                    Console.WriteLine("You attempt to run away from the Bandits.");
+                    Console.WriteLine("\nYou attempt to run away from the Bandits.");
                     bool getAway = RunAway.Run(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
                     if (!getAway)
                     {
 
                         Console.ReadKey(true);
                         Console.Clear();
-                        Console.WriteLine("The Bandit Leader swiftly disengages his safety and opens fire before you can react, leaving you with little time to escape");
+                        Console.WriteLine("\nThe Bandit Leader swiftly disengages his safety and opens fire before you can react, leaving you with little time to escape");
                         BanditCombat.FightBanditFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[1]);
                         WareHouseDefeatedBanditLeader();
                     }
 
                     else
                     {
-                        Console.WriteLine("Deciding not to mess with this unsavory looking people,\n" +
+                        Console.WriteLine("\nDeciding not to mess with this unsavory looking people,\n" +
                             "you make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
                             "As you get closer to the structure you realize that it is a church.");
@@ -58,11 +59,11 @@ namespace TheAnomalousZone.Encounters.Swamp
                     }
                     break;
                 case 2:
-                    Console.WriteLine("You take a closer look at the bandit.");
+                    Console.WriteLine("\nYou take a closer look at the bandit.");
                     _gameManager.Enemies[1].DisplayStats();
                     Console.ReadKey(true);
                     Console.Clear();
-                    SlowPrint.Print("While you took your time inspecting the Bandit Leader, \n" +
+                    SlowPrint.Print("\nWhile you took your time inspecting the Bandit Leader, \n" +
                         "he quietly unclicks the safety on his rifle and begins to fire at you.");
                     Console.ReadKey(true);
                     Console.Clear();
@@ -77,7 +78,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             {
 
-                string prompt = ($"The Bandit leader now lies face down in a pool of his own blood.\n" +
+                string prompt = ($"\nThe Bandit leader now lies face down in a pool of his own blood.\n" +
                     $"Anticipating retaliation, you swiftly pivot your firearm muzzles towards the remaining bandits locations,\n" +
                     $"but it seems the demise of their leader has shattered any semblance of courage among them. \n" +
                     $"Pausing to catch your breath, you survey your surroundings.\n\n");
@@ -90,24 +91,24 @@ namespace TheAnomalousZone.Encounters.Swamp
                 switch (selectedIndex)
                 {
                     case 0:
-                        Console.WriteLine("You are standing in front of a large warehouse that seems to have been of some agricultural importance.\n" +
+                        Console.WriteLine("\nYou are standing in front of a large warehouse that seems to have been of some agricultural importance.\n" +
                             "There is an eerie crackling that is coming from the inside of the warehouse.");
                         Console.ReadKey(true);
                         WareHouseDefeatedBanditLeader();
                         break;
 
                     case 1:
-                        Console.WriteLine("As you step through the threshold of the warehouse's expansive entrance, an astounding sight greets you:\n" +
+                        Console.WriteLine("\nAs you step through the threshold of the warehouse's expansive entrance, an astounding sight greets you:\n" +
                             "large bales of hay erupting with fiery geysers. Despite appearances,\n" +
                             "the hay isn't consumed by flames but rather generates this curious anomaly.\n\n");
                         Console.ReadKey(true);
                         RunWarehouseAnomaly();
                         break;
                     case 2:
-                        Console.WriteLine("You decide to not mess with this anomaly and make your way out of this area and proceed along a small dirt path.\n" +
+                        Console.WriteLine("\nYou decide to not mess with this anomaly and make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
                             "As you get closer to the structure you realize that it is a church.");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         NextEncounter(typeof(AbandonedChurch));
 
                         break;
@@ -134,7 +135,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             {
 
-                string prompt = ($"You approach the Anomaly, the searing heat from the flames washes over your face,\n" +
+                string prompt = ($"\nYou approach the Anomaly, the searing heat from the flames washes over your face,\n" +
                     $"intensifying with each step.\n" +
                     $"Amidst the fiery tumult, something draws your gaze, a small spherical object weaving through the flames. \n" +
                     $"Its presence flickers, appearing and disappearing in a mesmerizing dance. \n" +
@@ -154,12 +155,14 @@ namespace TheAnomalousZone.Encounters.Swamp
                             "The brittle rafters give way and you fall into a large open flame scorching your arm.\n");
 
                         _gameManager.SelectedMainPlayer.PlayerDamage(20); ;
-                        Console.WriteLine("You pick yourself up and gaze at your burnt Arm. You definitely felt the extreme heat on your skin as you reached for the object.\n" +
-                            "Grasping the spherical item a rush of light-headedness briefly overwhelms you before dissipating and coursing down your body.\n" +
+                        Console.WriteLine("\nYou pick yourself up and gaze at your burnt Arm.\n" +
+                            "You definitely felt the extreme heat on your skin as you reached for the object.\n" +
+                            "Grasping the spherical item a rush of light-headedness," +
+                            "this briefly overwhelms you before dissipating and coursing down your body.\n" +
                             "In an instant you feel a newfound lightness and agility surge through you.");
 
                         _gameManager.SelectedMainPlayer.Speed += 1;
-                        Console.WriteLine("You are now faster Speed + 1!\n" +
+                        Console.WriteLine("\nYou are now faster Speed + 1!\n" +
                             "Since there is nothing left of interest in this area you decide to move on from the warehouse.");
                         Console.ReadKey(true);
                         NextEncounter(typeof(AbandonedChurch));
@@ -170,54 +173,54 @@ namespace TheAnomalousZone.Encounters.Swamp
                     case 1:
                         if (_gameManager.SelectedMainPlayer.Speed > 10)
                         {
-                            Console.WriteLine("You sprint as fast as you can through the flames to grab the object.");
+                            Console.WriteLine("\nYou sprint as fast as you can through the flames to grab the object.");
                             _gameManager.SelectedMainPlayer.PlayerDamage(5);
                             Console.ReadKey(true);
-                            Console.WriteLine("You definitely felt the extreme heat on your skin as you reached for the object. Grasping the spherical item,\n" +
+                            Console.WriteLine("\nYou definitely felt the extreme heat on your skin as you reached for the object. Grasping the spherical item,\n" +
                                 "a rush of light-headedness briefly overwhelms you before dissipating and coursing down your body. In an instant,\n" +
                                 "you feel a newfound lightness and agility surge through you.");
-                            _gameManager.SelectedMainPlayer.Speed += 1;
-                            Console.WriteLine("You are now faster Speed + 1!\n" +
+                            _gameManager.SelectedMainPlayer.Speed += 2;
+                            Console.WriteLine("\nYou are now faster Speed + 2!\n" +
                                 "Since there is nothing left of interest in this area you decide to move on from the warehouse.");
                             Console.ReadKey(true);
-                            Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
+                            Console.WriteLine("\nYou make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
                             "As you get closer to the structure you realize that it is a church.");
                             NextEncounter(typeof(AbandonedChurch));
                         }
                         else
                         {
-                            Console.WriteLine("You sprint as fast as you can through the flames to grab the object.\n" +
+                            Console.WriteLine("\nYou sprint as fast as you can through the flames to grab the object.\n" +
                                 "You are not quite quick enough and get severely burned in the process.");
                             _gameManager.SelectedMainPlayer.PlayerDamage(15);
                             Console.ReadKey(true);
                             Console.Clear();
-                            Console.WriteLine("You definitely felt the extreme heat on your skin as you reached for the object. Grasping the spherical item,\n" +
+                            Console.WriteLine("\nYou definitely felt the extreme heat on your skin as you reached for the object. Grasping the spherical item,\n" +
                                 "a rush of light-headedness briefly overwhelms you before dissipating and coursing down your body. In an instant,\n" +
                                 "you feel a newfound lightness and agility surge through you.");
                             Console.ReadKey(true);
                             _gameManager.SelectedMainPlayer.Speed += 2;
-                            Console.WriteLine("You are now faster: Speed + 2!");
+                            Console.WriteLine("\nYou are now faster: Speed + 2!");
                             Console.ReadKey(true);
-                            Console.WriteLine("Since there is nothing left of interest in this area you decide to move on from the warehouse.");
+                            Console.WriteLine("\nSince there is nothing left of interest in this area you decide to move on from the warehouse.");
                             Console.ReadKey(true);
                             Console.Clear();
-                            Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
+                            Console.WriteLine("\nYou make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
                             "As you get closer to the structure you realize that it is a church.");
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             NextEncounter(typeof(AbandonedChurch));
                         }
 
-                        Console.WriteLine("You make your way out of this area and proceed along a small dirt path.\n" +
+                        Console.WriteLine("\nYou make your way out of this area and proceed along a small dirt path.\n" +
                             "You notice the only way out of this terrible bog is through a nearby looming structure.\n" +
                             "As you get closer to the structure you realize that it is a church.");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         NextEncounter(typeof(AbandonedChurch));
                         Console.Clear();
                         break;
                     case 2:
-                        Console.WriteLine("You look at the strange scene in front of you and decide to turn around and leave it alone.");
+                        Console.WriteLine("\nYou look at the strange scene in front of you and decide to turn around and leave it alone.");
                         Console.ReadKey(true);
                         WareHouseDefeatedBanditLeader();
                         break;

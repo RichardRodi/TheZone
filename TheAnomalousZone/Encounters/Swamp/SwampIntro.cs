@@ -14,7 +14,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         public override void RunEncounter()
         {
 
-            string prompt = ($"Surveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
+            string prompt = ($"\nSurveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
                 $"To your left, a small dilapidated building stands weathered and worn. \n" +
                 $"Despite its decrepit appearance, the structure beckons with an air of intrigue,\n\n" +
                 $"To your right, black smoke rises from the direction of a large warehouse,\n" +
@@ -29,7 +29,7 @@ namespace TheAnomalousZone.Encounters.Swamp
             {
                 case 0:
 
-                    Console.WriteLine("As you cautiously advance down a muddy path, aided by makeshift bridges that span the damp terrain,\n" +
+                    Console.WriteLine("\nAs you cautiously advance down a muddy path, aided by makeshift bridges that span the damp terrain,\n" +
                         "each footfall echoes with the unmistakable squelch of mud under decaying wooden planks. \n" +
                         "Suddenly, a strange rustling breaks the silence, emanating from a nearby bush.\n" +
                         "Your heart races as you try to discern the source of the disturbance, your senses on high alert for any sign of danger.");
@@ -38,13 +38,13 @@ namespace TheAnomalousZone.Encounters.Swamp
                     break;
                 case 1:
 
-                    Console.WriteLine("As you navigate the murky path toward the makeshift camp, each step sinking into the soft mire beneath your feet,\n" +
+                    Console.WriteLine("\nAs you navigate the murky path toward the makeshift camp, each step sinking into the soft mire beneath your feet,\n" +
                         "a commanding voice cuts through the damp silence, echoing across the swamp with an air of smugness and authority.");
                     Console.ReadKey(true);
                     NextEncounter(typeof(WareHouse));
                     break;
                 case 2:
-                    Console.WriteLine("As you look around the vast and expansive swamp, the air is thick with moisture and the scent of decay,\n" +
+                    Console.WriteLine("\nAs you look around the vast and expansive swamp, the air is thick with moisture and the scent of decay,\n" +
                         "your gaze falls upon the scattered structures that emerge from the murky landscape. These remnants of civilization,\n" +
                         "once proud and sturdy, now stand as silent witnesses to the relentless march of time and nature's reclaiming embrace.");
                     Console.ReadKey(true);
@@ -72,34 +72,6 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
 
             _gameManager.Encounters.Where(x => x.GetType() == encounterType).FirstOrDefault().RunEncounter();
-            //    try
-            //    {
-            //        var nextEncounter = _gameManager.Encounters
-            //            .Where(x => x.GetType() == encounterType)
-            //            .FirstOrDefault();
-
-            //        if (nextEncounter != null)
-            //            nextEncounter.RunEncounter();
-            //        else
-            //        {
-            //            // try to run a backup encounter //
-            //            nextEncounter = _gameManager.Encounters
-            //                .Where(x => x.GetType() == typeof(WareHouse))
-            //                .FirstOrDefault();
-
-            //            if (nextEncounter != null)
-            //                nextEncounter.RunEncounter();
-            //        }
-
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        Console.WriteLine($"Error with Message: {ex.Message}");
-            //        Console.WriteLine($"Restarting Game");
-            //        Console.ReadKey();
-            //        _gameManager.RunGame();
-            //    }
-            //}
 
         }
     }

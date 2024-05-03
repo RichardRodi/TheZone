@@ -68,8 +68,9 @@
                     }
 
                 } while (keyPressed != ConsoleKey.Enter);
-
+                Console.Clear();
                 return SelectedIndex;
+            
             }
         
     }

@@ -2,7 +2,7 @@
 {
     public static class StoryScript
     {
-        public const string IntroCharacterCreationPrompt = $"Enveloped within the swirling vortex of a dream,\n" +
+        public const string IntroCharacterCreationPrompt = $"\nEnveloped within the swirling vortex of a dream,\n" +
                $"you find yourself confronted by a towering presence:\n" +
                $"a Massive Monolith stretches out before you.\n" +
                $"Its surface emits a faint, rhythmic pulse that intensifies,\n" +

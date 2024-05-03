@@ -17,7 +17,7 @@ namespace TheAnomalousZone.Encounters.Corridor
 
         public override void RunEncounter()
         {
-            string prompt = ($"As you step through the towering gates of the factory entrance,\n" +
+            string prompt = ($"\nAs you step through the towering gates of the factory entrance,\n" +
                 $"the distant echoes of gunfire reverberate through the air,\n" +
                 $"Drawing nearer,\n" +
                 $"you bear witness to a tense standoff between two distinct factions,\n" +
@@ -33,17 +33,19 @@ namespace TheAnomalousZone.Encounters.Corridor
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("Assuming a defensive stance, you unleash a volley of gunfire upon the encroaching bandits.\n");
+                    Console.WriteLine("\nAssuming a defensive stance, you unleash a volley of gunfire upon the encroaching bandits.\n");
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[0]);
-                    Console.WriteLine("After defeating one foe you notice a Bandit Sniper on a roof who is inflicting a lot of damage and engage him");
+                    Console.WriteLine("\nAfter defeating one foe you notice a Bandit Sniper on a roof who is inflicting a lot of damage and engage him.\n");
+                    Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[2]);
-                    Console.WriteLine("As the skirmish unfolds, it becomes evident that the tide of battle decidedly favors your side.\n" +
+                    Console.WriteLine("\nAs the skirmish unfolds, it becomes evident that the tide of battle decidedly favors your side.\n" +
                         "The bandits, facing insurmountable odds, start to falter and scatter,\n" +
-                        "their resolve crumbling beneath the relentless onslaught.\n\n" +
-                        "As quickly as this skirmish began it ends just as abruptly," +
-                        "while the last of the bandits lies dead or has retreated.");
-                    Console.ReadKey();
-                    Console.WriteLine("Taking a moment to assess the aftermath,\n" +
+                        "their resolve crumbling beneath the relentless onslaught.\n" +
+                        "As quickly as this skirmish began it ends just as abruptly, " +
+                        "while the last of the bandits lies dead or has retreated.\n");
+                    Console.ReadKey(true);
+                    Console.Clear();
+                    Console.WriteLine("\nTaking a moment to assess the aftermath,\n" +
                         "you're approached by one of the friendly soldiers.\n" +
                         "Hey friend, he begins, his voice laced with urgency,\n" +
                         "'There's something far more sinister lurking ahead than the scum we just faced.\n" +
@@ -54,30 +56,30 @@ namespace TheAnomalousZone.Encounters.Corridor
                         "As he speaks, the soldiers diligently scavenge the fallen for weapons and equipment.\n" +
                         "A gesture of goodwill breaks the tension as one of them tosses two first aid kits your way.\n" +
                         "Looks like you could use these,\n" +
-                        "\r\nCatching the first aid kits, you notice a glint of metallic sheen from within.\n" +
+                        "\nCatching the first aid kits, you notice a glint of metallic sheen from within.\n" +
                         "Peering inside, you find a small bundle of currency,\n" +
                         "presumably looted off the fallen soldiers, tucked snugly alongside the medical supplies.\n" +
                         "You get 2 First Aid Kits and 2000 Rubles!\n" +
                         "You move on from this area into the heart of the factory complex.");
                     _gameManager.SelectedMainPlayer.FirstAid += 2;
                     _gameManager.SelectedMainPlayer.Rubles += 2000;
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     NextEncounter(typeof(FactoryMainArea));
                     break;
                 case 1:
-                    Console.WriteLine("As you aim your weapon at your friends,\n" +
+                    Console.WriteLine("\nAs you aim your weapon at your friends,\n" +
                         "a nagging voice in the depths of your conscience whispers that this isn't the path to take.\n" +
                         "Lowering your weapon, you holster it with a heavy heart,\n" +
                         "acknowledging that this isn't the right course of action.\n" +
                         "As the adrenaline-fueled moment passes, clarity dawns upon you,\n" +
                         "presenting only two viable choices: to stand and lend a hand,\n" +
                         "or to retreat and preserve your own safety.");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     RunEncounter();
                     break;
                 case 2:
-                    Console.WriteLine("You decide to leave this skirmish behind and descend into the depths of the factory complex");
-                    Console.ReadKey();
+                    Console.WriteLine("\nYou decide to leave this skirmish behind and descend into the depths of the factory complex");
+                    Console.ReadKey(true);
                     NextEncounter(typeof(FactoryMainArea));
                     break;
                 case 3:

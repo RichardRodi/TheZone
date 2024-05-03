@@ -37,14 +37,16 @@ namespace TheAnomalousZone.Encounters.Corridor
                 switch (selectedIndex)
                 {
                     case 0:
-                        Console.WriteLine($"Trusting that this is not an other ambush or trap,\n" +
+                        Console.WriteLine($"\nTrusting that this is not an other ambush or trap,\n" +
                             "you make your towards the 'Shop'");
+                        Console.ReadKey(true);
+                        Console.Clear(); 
                         NextEncounter(typeof(StrelocksShop));
                         break;
 
                     case 1:
-                        Console.WriteLine($"Not wanting to risk being eaten or shot you make your way down the road.");
-                        Console.ReadKey();
+                        Console.WriteLine($"\nNot wanting to risk being eaten or shot you make your way down the road.");
+                        Console.ReadKey(true);
                         NextEncounter(typeof(CorridorCrossRoads));
                         break;
                     case 2:
@@ -54,7 +56,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                             $"However, as your eyes drift towards the shop sign, a sense of tranquility washes over you.\n" +
                             $"It's as if an unseen force gently nudges you towards the quaint village,\n" +
                             $"whispering that there may be something of value waiting for you there.\n");
-                        Console.Read();
+                        Console.ReadKey(true);
                         RunEncounter();
                         break;
                     case 3:

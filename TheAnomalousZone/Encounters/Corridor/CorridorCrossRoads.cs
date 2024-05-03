@@ -28,18 +28,18 @@ namespace TheAnomalousZone.Encounters.Corridor
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine($"You navigate the somewhat large road, now uneven and broken from the anomalous activities that have threatened the zone.\n");
-                    Console.ReadKey();
+                    Console.WriteLine($"\nYou navigate the somewhat large road, now uneven and broken from the anomalous activities that have threatened the zone.\n");
+                    Console.ReadKey(true);
                     NextEncounter(typeof(MainRoad));
                     break;
 
                 case 1:
-                    Console.WriteLine($"Taking a chance you head towards the sprawling factory like complex.\n");
-                    Console.ReadKey();
+                    Console.WriteLine($"\nTaking a chance you head towards the sprawling factory like complex.\n");
+                    Console.ReadKey(true);
                     NextEncounter(typeof(FactoryEntrance));
                     break;
                 case 2:
-                    Console.WriteLine($"Peering through the binoculars Strelock provided,\n" +
+                    Console.WriteLine($"\nPeering through the binoculars Strelock provided,\n" +
                         $"you meticulously survey the valley ahead.\n" +
                         $"The main road sprawls in disrepair,\n" +
                         $"As you strain to focus on the road,\n" +

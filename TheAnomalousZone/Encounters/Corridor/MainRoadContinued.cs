@@ -31,25 +31,25 @@ namespace TheAnomalousZone.Encounters.Corridor
                 switch (selectedIndex)
                 {
                     case 0:
-                        Console.WriteLine("You sneak up to the makeshift camp.\n" +
+                        Console.WriteLine("\nYou sneak up to the makeshift camp.\n" +
                             "As you get closer you notice that the soldiers are all making a unique sound." +
                             "They seem to be chanting in unison. A sort of hum.\n" +
                             "As you approach the chant gets louder and begins to mimic a hum.\n" +
                             "This hum is eerily familiar to you. Its the hum of the Monolith.\n" +
-                            "With a mounting sense of urgency, you cover your ears as you approach the camp,\n");
-                        Console.ReadKey();
+                            "With a mounting sense of urgency, you cover your ears as you approach the camp.\n");
+                        Console.ReadKey(true);
                         MakeShiftCamp();
                         break;
 
                     case 1:
-                        Console.WriteLine("Using the shadows to your advantage you sneak past the chanting soldiers");
-                        Console.ReadKey();
+                        Console.WriteLine("\nUsing the shadows to your advantage you sneak past the chanting soldiers");
+                        Console.ReadKey(true);
                         NextEncounter(typeof(FinalCorridorSection));
                         break;
                     case 2:
-                        Console.WriteLine("You pick up a large screw like bolt and toss it an metal container. It makes a loud clang.\n" +
-                            "The guards are unphased by the sound and continue their chant");
-                        Console.ReadKey();
+                        Console.WriteLine("\nYou pick up a large screw like bolt and toss it an metal container. It makes a loud clang.\n" +
+                            "The guards are unphased by the sound and continue their chant.");
+                        Console.ReadKey(true);
                         RunEncounter();
                         break;
                     case 3:
@@ -82,7 +82,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                 switch (selectedIndex)
                 {
                     case 0:
-                        Console.WriteLine("Approaching the mysterious object within the heart of the camp,\n" +
+                        Console.WriteLine("\nApproaching the mysterious object within the heart of the camp,\n" +
                             "you move with cautious steps, mindful of the escalating hum permeating the air.\n" +
                             "The resonance of the hum intensifies with each stride,\n" +
                             "building a palpable tension as your hand inches closer to the enigmatic artifact.\n" +
@@ -95,14 +95,17 @@ namespace TheAnomalousZone.Encounters.Corridor
                             "only to be confronted by the grim sight of the soldiers reduced to deformed melted husks,\n" +
                             "a haunting testament to the power that had been unleashed.\n" +
                             "As you scavenge the area for anything salvageable, your search yields only a few crumpled rubles amidst the chaos.");
-                        Console.ReadKey();
-                        Console.WriteLine("You gained 1000 rubles");
+                        Console.ReadKey(true);
+                        Console.WriteLine("\nYou gained 1000 rubles");
                         _gameManager.SelectedMainPlayer.Rubles = +1000;
-                        Console.ReadKey();
+                        Console.WriteLine("\nYou continue down the main path towards your ultimate goal.");
+                        Console.ReadKey(true);
+                        NextEncounter(typeof(FinalCorridorSection));
+                        Console.ReadKey(true);
                         break;
 
                     case 1:
-                        Console.WriteLine("Approaching the mysterious object nestled deep within the camp,\n" +
+                        Console.WriteLine("\nApproaching the mysterious object nestled deep within the camp,\n" +
                             "your movements are deliberate,\n" +
                             "each step calculated to avoid detection amidst the escalating hum that resonates through the air.\n" +
                             "With each passing moment, the hum grows louder, a persistent reminder of the impending unknown.\n" +
@@ -113,18 +116,21 @@ namespace TheAnomalousZone.Encounters.Corridor
                             "an unbearable cacophony that rattles your senses to their core before abruptly falling silent.\n" +
                             "In the deafening stillness that follows, the two remaining soldiers emerge from their trance-like state.\n" +
                             "They immediately realize their fallen comrades and train their rifles on you.");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[8]);
-                        Console.WriteLine("Before you can even catch your breath you have to fight an other soldier");
-                        Console.ReadKey();
+                        Console.WriteLine("\nBefore you can even catch your breath you have to fight an other soldier");
+                        Console.ReadKey(true);
                         BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[9]);
-                        Console.WriteLine("With your adversaries vanquished, you stride confidently toward the enigmatic object.\n" +
+                        Console.WriteLine("\nWith your adversaries vanquished, you stride confidently toward the enigmatic object.\n" +
                             "As you reach out to touch the object,\n" +
                             "a wave of energy washes over you, suffusing every fiber of your being with vitality.\n" +
                             "Your body feels invigorated, your spirit fortified against the trials that lie ahead.\n" +
                             "With a newfound sense of strength coursing through your veins, you realize that your maximum health has increased by 10!");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
+                        Console.WriteLine("\nYou continue down the main path towards your ultimate goal.");
+                        Console.ReadKey(true);
                         _gameManager.SelectedMainPlayer.MaxHealth += 10;
+                        Console.Clear();
                         NextEncounter(typeof(FinalCorridorSection));
                         break;
                     case 2:

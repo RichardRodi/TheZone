@@ -16,6 +16,6 @@
             MinAmountToHeal = minAmountToHeal;
             MaxAmountToHeal = maxAmountToHeal;
         }
-
+       
     }
 }

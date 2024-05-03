@@ -33,78 +33,78 @@ namespace TheAnomalousZone.Encounters.Corridor
                 switch (selectedIndex)
                 {
                     case 0:
-                        Console.WriteLine($"You run behind a nearby truck to get a bead on the monster.\n" +
+                        Console.WriteLine($"\nYou run behind a nearby truck to get a bead on the monster.\n" +
                             $"Since the sun is going down you lose sight of the mutant.\n" +
                             $"As you frantically dart your eyes around trying to adjust to the dimming light,\n" +
                             $" you hear a snarl behind you and realize its super close. It takes a swipe at you.\n");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         if (_gameManager.SelectedMainPlayer.Speed > 10)
                         {
                             Console.WriteLine($"You deftly dodge the mutants grasp. Now you have to put it down.");
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[4]);
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             ChimeraDefeated();
                         }
                         else
                         {
-                            Console.WriteLine($"The Monster connects with your body rocking you to the ground.\n" +
+                            Console.WriteLine($"\nThe Monster connects with your body rocking you to the ground.\n" +
                                 $"You jump up from the wound and have no choice but to put down the monster.");
                             _gameManager.SelectedMainPlayer.PlayerDamage(10);
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[4]);
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             ChimeraDefeated();
 
                         }
                         break;
 
                     case 1:
-                        Console.WriteLine($"You whisper a nope under your breath and decide to flee this area and head to towards the factories.");
+                        Console.WriteLine($"\nYou whisper a nope under your breath and decide to flee this area and head to towards the factories.");
                         if (_gameManager.SelectedMainPlayer.Speed > 11)
                         {
-                            Console.WriteLine($"You are able to flee before the mutant notices you.\n" +
+                            Console.WriteLine($"\nYou are able to flee before the mutant notices you.\n" +
                                 $"Heading over a hill you see the path towards the factories ahead of you.");
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             NextEncounter(typeof(FactoryEntrance));
                         }
                         else
                         {
 
-                            Console.WriteLine($"As you try and flee the mutant connects with your body rocking you to the ground.\n" +
+                            Console.WriteLine($"\nAs you try and flee the mutant connects with your body rocking you to the ground.\n" +
                                 $"You jump up from the wound and have no choice but to put down the monster.");
                             _gameManager.SelectedMainPlayer.PlayerDamage(10);
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                             MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[4]);
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                             ChimeraDefeated();
                         }
                         break;
                     case 2:
-                        Console.WriteLine($"You fire at the mutant but given its distance and speed it dodges your attacks.\n" +
+                        Console.WriteLine($"\nYou fire at the mutant but given its distance and speed it dodges your attacks.\n" +
                             $"You have to reload as all the ammunition in your magazine is spent.\n" +
                             $"You are not able to raise your rifle in time before the beast gets its claws out to attack you.\n");
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         _gameManager.SelectedMainPlayer.PlayerDamage(5);
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                         MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[4]);
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         ChimeraDefeated();
                         break;
                     case 3:
-                        Console.WriteLine($"You quickly use a first aid kit as the mutant barrels towards you.\n" +
+                        Console.WriteLine($"\nYou quickly use a first aid kit as the mutant barrels towards you.\n" +
                             $"You are not able to raise your rifle in time before the beast gets its claws out to attack you.\n");
                         _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         _gameManager.SelectedMainPlayer.PlayerDamage(5);
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                         MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[4]);
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         ChimeraDefeated();
 
                         break;
@@ -138,23 +138,23 @@ namespace TheAnomalousZone.Encounters.Corridor
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("You seize the peculiar rifle, its weight demanding you relinquish your current weapon.\n" +
+                    Console.WriteLine("\nYou seize the peculiar rifle, its weight demanding you relinquish your current weapon.\n" +
                         "Upon closer examination, you discover a small artifact nestled within its structure.\n" +
                         "Eager to test its capabilities, you take aim at a nearby road sign. With a resounding whoosh,\n" +
                         "the rifle unleashes an intense blue stream of light, effortlessly melting the sign in half.\n" +
                         "You do this two more times and notice the rifle gets super hot and glows.\n" +
                         "You need to give it a moment to cool down before you can continue firing.");
-                    Console.ReadKey();
-                    Console.WriteLine("Your new weapon gives you Weapon Value: 22, Ammunition Per Magazine: 3!\n" +
+                    Console.ReadKey(true);
+                    Console.WriteLine("\nYour new weapon gives you Weapon Value: 22, Ammunition Per Magazine: 3!\n" +
                         "You Continue on your journey down the main road");
                     _gameManager.SelectedMainPlayer.Ammunition = 3;
                     _gameManager.SelectedMainPlayer.WeaponValue = 22;
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                     NextEncounter(typeof(MainRoadContinued));
                     break;
                 case 1:
-                    Console.WriteLine("You decide to forgo picking up the rifle and continue on your way down the arduous road.");
-                    Console.ReadKey();
+                    Console.WriteLine("\nYou decide to forgo picking up the rifle and continue on your way down the arduous road.");
+                    Console.ReadKey(true);
                     NextEncounter(typeof(MainRoadContinued));
                     break;
                 case 2:

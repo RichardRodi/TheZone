@@ -28,7 +28,7 @@ namespace TheAnomalousZone.MainCharacter
         public void DisplayStats()
         {
             Console.WriteLine($"Character Stats\n\n---------------\n");
-            Console.WriteLine($"Name: {Name}\nHealth \u2661  {Health}/{MaxHealth}\nArmor Rating  \u26E8  {ArmorValue}\nWeapon Damage \u2694  {WeaponValue}\nSpeed \u269E  {Speed}\nAmmunition per Magazine \u204D  {Ammunition}\nFirstAid Kits \u2624  {FirstAid}\nRubles \u20BD  {Rubles}");
+            Console.WriteLine($"Name: {Name}\nHealth: {Health}/{MaxHealth}\nArmor Rating: {ArmorValue}\nWeapon Damage: {WeaponValue}\nSpeed: {Speed}\nAmmunition per Magazine: {Ammunition}\nFirstAid Kits: {FirstAid}\nRubles:{Rubles}");
         }
         public void Heal(int minAmountToHeal, int maxAmountToHeal)
         {
@@ -37,11 +37,11 @@ namespace TheAnomalousZone.MainCharacter
             if (Health >= MaxHealth)
             {
                 Health = MaxHealth;
-                Console.WriteLine("You are at full Health!");
+                Console.WriteLine("\nYou are at full Health!");
             }
             else if (FirstAid <= 0)
             {
-                Console.WriteLine("You are out of First Aid Kits!");
+                Console.WriteLine("\nYou are out of First Aid Kits!");
             }
 
             else
@@ -53,7 +53,7 @@ namespace TheAnomalousZone.MainCharacter
                     Health = MaxHealth;
                 }
                 FirstAid--;
-                Console.WriteLine($"You Healed for {amountToHeal} Health");
+                Console.WriteLine($"\nYou Healed for {amountToHeal} Health");
 
             }
 
