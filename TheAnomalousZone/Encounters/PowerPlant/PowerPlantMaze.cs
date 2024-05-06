@@ -18,16 +18,16 @@ namespace TheAnomalousZone.Encounters.PowerPlant
 
         public override void RunEncounter()
         {
-            string prompt = ($"\nInjured but not finished you venture further into the bowels of the power plant,\n" +
-                $"you are immediately met with an otherworldly sight:\n" +
-                $"A colossal chamber covered with eerily still and silent sand dunes.\n" +
-                $"Towering pillars stretch towards a crumbling ceiling, eerie moonlight streams through ceiling's cracks.\n" +
-                $"Passing through the center of these pillars,\n" +
-                $"you venture into a dark hallway, only to emerge once more into the same room.\n" +
-                $"With each attempt to navigate the space,\n" +
-                $"it becomes clear that you are ensnared in a perplexing loop.\n" +
-                $"Is there an escape from this confounding puzzle? Here is the layout of the room\n\n" +
-                $" {TitleArtAssets.FloorPlan}" +
+            string prompt = ($"\n\tInjured but not finished you venture further into the bowels of the power plant,\n" +
+                $"\tyou are immediately met with an otherworldly sight:\n" +
+                $"\tA colossal chamber covered with eerily still and silent sand dunes.\n" +
+                $"\tTowering pillars stretch towards a crumbling ceiling, eerie moonlight streams through ceiling's cracks.\n" +
+                $"\tPassing through the center of these pillars,\n" +
+                $"\tyou venture into a dark hallway, only to emerge once more into the same room.\n" +
+                $"\tWith each attempt to navigate the space,\n" +
+                $"\tit becomes clear that you are ensnared in a perplexing loop.\n" +
+                $"\tIs there an escape from this confounding puzzle? Here is the layout of the room\n\n" +
+                $"\t{TitleArtAssets.FloorPlan}" +
                 $"\n\n");
 
             string[] options = { "1.Walk through the opening between the left wall and left pillar", "2.Walk through the center of the room between the right and left pillar.", "3.Walk between the right wall and the right pillar." };
@@ -37,23 +37,23 @@ namespace TheAnomalousZone.Encounters.PowerPlant
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("\nAs you traverse the expansive space between the left wall and pillar,\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
-                        "finding yourself back at the room's entrance.");
+                    Console.WriteLine("\n\tAs you traverse the expansive space between the left wall and pillar,\n" +
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;
 
                 case 1:
-                    Console.WriteLine("\nAs you traverse the expansive space in the center of the room between the right and left pillar.\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
-                        "finding yourself back at the room's entrance.");
+                    Console.WriteLine("\n\tAs you traverse the expansive space in the center of the room between the right and left pillar.\n" +
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;
                 case 2:
-                    Console.WriteLine("\nNothing happens as you walk through the threshold of the right wall and the right pillar.\n" +
-                        "You need to make another decision to proceed");
+                    Console.WriteLine("\n\tNothing happens as you walk through the threshold of the right wall and the right pillar.\n" +
+                        "\tYou need to make another decision to proceed.");
                     Console.ReadKey(true);
                     MazeSecondPillar();
                     break;
@@ -63,10 +63,10 @@ namespace TheAnomalousZone.Encounters.PowerPlant
         }
         private void MazeEntrance()
         {
-            string prompt = ($"\nBack at the entrance of this confounding room,\n" +
-                $"it becomes clear that you are ensnared in a perplexing loop.\n" +
-                $"Is there an escape from this confounding puzzle? Here is the layout of the room\n\n" +
-                $" {TitleArtAssets.FloorPlan}" +
+            string prompt = ($"\n\tBack at the entrance of this confounding room,\n" +
+                $"\tit becomes clear that you are ensnared in a perplexing loop.\n" +
+                $"\tIs there an escape from this confounding puzzle? Here is the layout of the room\n\n" +
+                $"\t{TitleArtAssets.FloorPlan}" +
                 $"\n\n");
 
             string[] options = { "1.Walk through the opening between the left wall and left pillar.", "2.Walk through the center of the room between the right and left pillar.", "3.Walk between the right wall and the right pillar." };
@@ -76,23 +76,23 @@ namespace TheAnomalousZone.Encounters.PowerPlant
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("\nAs you traverse the expansive space between the left wall and pillar,\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
-                        "finding yourself back at the room's entrance.");
+                    Console.WriteLine("\n\tAs you traverse the expansive space between the left wall and pillar,\n" +
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;
 
                 case 1:
-                    Console.WriteLine("\nAs you traverse the expansive space in the center of the room between the right and left pillar.\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
-                        "finding yourself back at the room's entrance.");
+                    Console.WriteLine("\n\tAs you traverse the expansive space in the center of the room between the right and left pillar.\n" +
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;
                 case 2:
-                    Console.WriteLine("\nNothing happens as you walk through the threshold of the right wall and the right pillar.\n" +
-                        "You need to make another decision to proceed.");
+                    Console.WriteLine("\n\tNothing happens as you walk through the threshold of the right wall and the right pillar.\n" +
+                        "\tYou need to make another decision to proceed.");
                     Console.ReadKey(true);
                     MazeSecondPillar();
                     break;
@@ -102,8 +102,8 @@ namespace TheAnomalousZone.Encounters.PowerPlant
         }
         private void MazeSecondPillar()
         {
-            string prompt = ($"\nStanding in the center of the massive room\n" +
-                $"you have an other decision to make." +
+            string prompt = ($"\n\tStanding in the center of the massive room\n" +
+                $"\tyou have an other decision to make." +
                 $"\n\n");
 
             string[] options = { "1.Walk through the opening between the left wall and left pillar", "2.Walk through the center of the room between the right and left pillar.", "3.Walk between the right wall and the right pillar." };
@@ -113,23 +113,23 @@ namespace TheAnomalousZone.Encounters.PowerPlant
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine("\nNothing happens as you walk through the threshold of the left wall and the left pillar.\n" +
-                        "You need to make another decision to proceed.");
+                    Console.WriteLine("\n\tNothing happens as you walk through the threshold of the left wall and the left pillar.\n" +
+                        "\tYou need to make another decision to proceed.");
                     Console.ReadKey(true);
                     MazeThirdPillar();
                     break;
 
                 case 1:
-                    Console.WriteLine("\nAs you traverse the expansive space in the center of the room between the right and left pillar.\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
-                        "finding yourself back at the room's entrance.");
+                    Console.WriteLine("\n\tAs you traverse the expansive space in the center of the room between the right and left pillar.\n" +
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;
                 case 2:
-                    Console.WriteLine("\nAs you traverse the expansive space between the right wall and pillar,\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
-                        "finding yourself back at the room's entrance.");
+                    Console.WriteLine("\n\tAs you traverse the expansive space between the right wall and pillar,\n" +
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;
@@ -138,10 +138,9 @@ namespace TheAnomalousZone.Encounters.PowerPlant
         }
         private void MazeThirdPillar()
         {
-            string prompt = ($"\nStanding towards the end of the massive room\n" +
-                $"you have an other decision to make.\n\n" +
-              $" {TitleArtAssets.FloorPlan}" +
-              $"\n\n");
+            string prompt = ($"\n\tStanding towards the end of the massive room\n" +
+                $"\tyou have an other decision to make.\n\n" ); 
+        
             string[] options = { "1.Walk through the opening between the left wall and left pillar", "2.Walk through the center of the room between the right and left pillar.", "3.Walk between the right wall and the right pillar." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
@@ -149,24 +148,24 @@ namespace TheAnomalousZone.Encounters.PowerPlant
             {
                 case 0:
                     Console.WriteLine("\nAs you traverse the expansive space between the left wall and pillar,\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold once more,\n" +
-                        "finding yourself back at the room's entrance.");
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold once more,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;
 
                 case 1:
-                    Console.WriteLine("\nAs you step through the threshold of the room's center,\n" +
-                        "a profound sense of tranquility washes over you.\n" +
-                        "The rhythmic echoes of the Monolith resonate gently in your ears.\n" +
-                        "Exiting the eerie chamber, you emerge into a soothing, warm glow of light.");
+                    Console.WriteLine("\n\tAs you step through the threshold of the room's center,\n" +
+                        "\ta profound sense of tranquility washes over you.\n" +
+                        "\tThe rhythmic echoes of the Monolith resonate gently in your ears.\n" +
+                        "\tExiting the eerie chamber, you emerge into a soothing, warm glow of light.");
                     Console.ReadKey(true);
                     NextEncounter(typeof(MonolithEnd));
                     break;
                 case 2:
-                    Console.WriteLine("\nAs you traverse the expansive space between the right wall and pillar,\n" +
-                        "a rush of air and a sudden blaze of light greet you as you cross the threshold once more,\n" +
-                        "finding yourself back at the room's entrance.");
+                    Console.WriteLine("\n\tAs you traverse the expansive space between the right wall and pillar,\n" +
+                        "\ta rush of air and a sudden blaze of light greet you as you cross the threshold once more,\n" +
+                        "\tfinding yourself back at the room's entrance.");
                     Console.ReadKey(true);
                     MazeEntrance();
                     break;

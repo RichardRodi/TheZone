@@ -14,14 +14,14 @@ namespace TheAnomalousZone.Encounters.Swamp
         public override void RunEncounter()
         {
 
-            string prompt = ($"\nSurveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
-                $"To your left, a small dilapidated building stands weathered and worn. \n" +
-                $"Despite its decrepit appearance, the structure beckons with an air of intrigue,\n\n" +
-                $"To your right, black smoke rises from the direction of a large warehouse,\n" +
-                $"it's imposing silhouette looming ominously against the horizon. \n" +
-                $"The source of the smoke remains unclear, casting doubt over the intentions of those who inhabit the structure.\n\n");
+            string prompt = ($"\n\tSurveying your surroundings, you find yourself standing at the heart of a crossroads,\n" +
+                $"\tTo your left, a small dilapidated building stands weathered and worn. \n" +
+                $"\tDespite its decrepit appearance, the structure beckons with an air of intrigue,\n\n" +
+                $"\tTo your right, black smoke rises from the direction of a large warehouse,\n" +
+                $"\tit's imposing silhouette looming ominously against the horizon. \n" +
+                $"\tThe source of the smoke remains unclear, casting doubt over the intentions of those who inhabit the structure.\n\n");
 
-            string[] options = { "1.Head to your Left.", "2.Head to your Right.", "3.Look Around.", $"3.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"4.Check Player Stats." };
+            string[] options = { "1.Head to your Left.", "2.Head to your Right.", "3.Look Around.", $"4.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"5.Check Player Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -29,24 +29,31 @@ namespace TheAnomalousZone.Encounters.Swamp
             {
                 case 0:
 
-                    Console.WriteLine("\nAs you cautiously advance down a muddy path, aided by makeshift bridges that span the damp terrain,\n" +
-                        "each footfall echoes with the unmistakable squelch of mud under decaying wooden planks. \n" +
-                        "Suddenly, a strange rustling breaks the silence, emanating from a nearby bush.\n" +
-                        "Your heart races as you try to discern the source of the disturbance, your senses on high alert for any sign of danger.");
+                    Console.WriteLine("\n\tAs you cautiously advance down a muddy path,\n" +
+                        "\taided by makeshift bridges that span the damp terrain,\n" +
+                        "\teach footfall echoes with the unmistakable squelch of mud under decaying wooden planks\n" +
+                        "\tSuddenly, a strange rustling breaks the silence, emanating from a nearby bush.\n" +
+                        "\tYour heart races as you try to discern the source of the disturbance,\n" +
+                        "\tyour senses on high alert for any sign of danger.");
                     Console.ReadKey(true);
                     NextEncounter(typeof(DilapidatedBuilding));
                     break;
                 case 1:
 
-                    Console.WriteLine("\nAs you navigate the murky path toward the makeshift camp, each step sinking into the soft mire beneath your feet,\n" +
-                        "a commanding voice cuts through the damp silence, echoing across the swamp with an air of smugness and authority.");
+                    Console.WriteLine("\n\tAs you navigate the murky path toward the makeshift camp,\n" +
+                        "\teach step sinking into the soft mire beneath your feet,\n" +
+                        "\ta commanding voice cuts through the damp silence,\n" +
+                        "\techoing across the swamp with an air of smugness and authority.");
                     Console.ReadKey(true);
                     NextEncounter(typeof(WareHouse));
                     break;
                 case 2:
-                    Console.WriteLine("\nAs you look around the vast and expansive swamp, the air is thick with moisture and the scent of decay,\n" +
-                        "your gaze falls upon the scattered structures that emerge from the murky landscape. These remnants of civilization,\n" +
-                        "once proud and sturdy, now stand as silent witnesses to the relentless march of time and nature's reclaiming embrace.");
+                    Console.WriteLine("\n\tAs you look around the vast and expansive swamp,\n" +
+                        "\tthe air is thick with moisture and the scent of decay,\n" +
+                        "\tyour gaze falls upon the scattered structures that emerge from the murky landscape.\n" +
+                        "\tThese remnants of civilization,\n" +
+                        "\tonce proud and sturdy,\n" +
+                        "\tnow stand as silent witnesses to the relentless march of time and nature's reclaiming embrace.");
                     Console.ReadKey(true);
                     RunEncounter();
 

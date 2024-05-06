@@ -14,7 +14,7 @@ namespace TheAnomalousZone.Combat
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            SlowPrint.Print($"\t {player.Name} is now fighting a {enemy.Name}!");
+            SlowPrint.Print($"\n\t\t{player.Name} is now fighting a {enemy.Name}!");
 
             while (player.Health > 0 && enemy.Health > 0)
             {
@@ -28,12 +28,12 @@ namespace TheAnomalousZone.Combat
                     int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, player.Speed, enemy.Speed);
                     enemy.TakeDamage(playerDamage);
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    SlowPrint.Print($"{player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
+                    SlowPrint.Print($"\t{player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
 
                     if (player.Health <= 0)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        SlowPrint.Print($"\t{player.Name} has been defeated!");
                         Console.ReadKey(true);
                         Console.ResetColor();
                         var deathmenu = new DeathMenu();
@@ -45,7 +45,7 @@ namespace TheAnomalousZone.Combat
                         int c = random.Next(200, 750);
                         player.Rubles += c;
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
+                        SlowPrint.Print($"\t{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
                         Console.ResetColor();
                         Console.ReadKey(true);
                         break;
@@ -55,24 +55,24 @@ namespace TheAnomalousZone.Combat
                     int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, player.Speed, enemy.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                    SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+                    SlowPrint.Print($"\t{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
                     if (i == ammunition - 1 && player.Health > 0 && enemy.Health > 0)
                     {
 
 
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                        SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
+                        SlowPrint.Print($"\t{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
                         enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, player.Speed, enemy.Speed);
                         player.TakeDamage(enemyDamage);
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+                        SlowPrint.Print($"\t{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
                     }
                     if (player.Health <= 0)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        SlowPrint.Print($"\t{player.Name} has been defeated!");
                         Console.ReadKey(true);
                         Console.ResetColor();
                         var deathmenu = new DeathMenu();
@@ -84,7 +84,7 @@ namespace TheAnomalousZone.Combat
                         int c = random.Next(200, 750);
                         player.Rubles += c;
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
+                        SlowPrint.Print($"\t{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
                         Console.ResetColor();
                         Console.ReadKey(true);
                         break;
@@ -98,7 +98,7 @@ namespace TheAnomalousZone.Combat
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            SlowPrint.Print($"\t {player.Name} is now fighting a {enemy.Name}!");
+            SlowPrint.Print($"\n\t\t{player.Name} is now fighting a {enemy.Name}!");
 
             while (player.Health > 0 && enemy.Health > 0)
             {
@@ -111,12 +111,12 @@ namespace TheAnomalousZone.Combat
                     int enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                     player.TakeDamage(enemyDamage);
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                    SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+                    SlowPrint.Print($"\t{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
                     if (player.Health <= 0)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        SlowPrint.Print($"\t{player.Name} has been defeated!");
                         Console.ReadKey(true);
                         Console.ResetColor();
                         var deathmenu = new DeathMenu();
@@ -128,7 +128,7 @@ namespace TheAnomalousZone.Combat
                         int c = random.Next(200, 750);
                         player.Rubles += c;
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
+                        SlowPrint.Print($"\t{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
                         Console.ResetColor();
                         Console.ReadKey(true);
                         break;
@@ -138,26 +138,26 @@ namespace TheAnomalousZone.Combat
                     int playerDamage = CalculateDamage(player.WeaponValue, enemy.ArmorValue, enemy.Speed, player.Speed);
                     enemy.TakeDamage(playerDamage);
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    SlowPrint.Print($"{player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
+                    SlowPrint.Print($"\t{player.Name} fires weapon at {enemy.Name} and hits for {playerDamage} damage.");
 
                     if (i == ammunition - 1 && player.Health > 0 && enemy.Health > 0)
                     {
 
 
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                        SlowPrint.Print($"{player.Name} is out of ammunition and reloading!");
+                        SlowPrint.Print($"\t{player.Name} is out of ammunition and reloading!");
                         ammunition = 0;
                         enemyDamage = CalculateDamage(enemy.WeaponValue, player.ArmorValue, enemy.Speed, player.Speed);
                         player.TakeDamage(enemyDamage);
 
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        SlowPrint.Print($"{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
+                        SlowPrint.Print($"\t{enemy.Name} attacks {player.Name} for {enemyDamage} damage.");
 
                     }
                     if (player.Health <= 0)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        SlowPrint.Print($"{player.Name} has been defeated!");
+                        SlowPrint.Print($"\t{player.Name} has been defeated!");
                         Console.ReadKey(true);
                         var deathmenu = new DeathMenu();
                         deathmenu.RunEncounter();
@@ -170,7 +170,7 @@ namespace TheAnomalousZone.Combat
                         int c = random.Next(200, 750);
                         player.Rubles += c;
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        SlowPrint.Print($"{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
+                        SlowPrint.Print($"\t{enemy.Name} has been defeated! You Found {c} Rubles in the Bandit's Pockets.");
                         Console.ResetColor();
                         Console.ReadKey(true);
                         break;
@@ -187,7 +187,7 @@ namespace TheAnomalousZone.Combat
             if (random.NextDouble() > hitChance)
             {
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
-                Console.WriteLine($"Attack Missed!");
+                Console.WriteLine($"\tAttack Missed!");
                 return 0;
 
             }

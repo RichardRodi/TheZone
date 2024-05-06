@@ -18,14 +18,14 @@ namespace TheAnomalousZone.Combat
 
             {
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                SlowPrint.Print("You Got Away!");
+                SlowPrint.Print("\tYou Got Away!");
                 Console.ResetColor();
                 return true;
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                SlowPrint.Print($"You Failed To Get Away from the {enemy.Name}!");
+                SlowPrint.Print($"\tYou Failed To Get Away from the {enemy.Name}!");
                 Console.ResetColor();
                 return false;
             }

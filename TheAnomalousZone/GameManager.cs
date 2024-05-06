@@ -141,7 +141,7 @@ namespace TheAnomalousZone
         {
             Items.Add(new ItemBase(iD: 0, "Basic FirstAid Kit", price: 1000, minAmountToHeal: 10, maxAmountToHeal: 15));
             Items.Add(new ItemBase(iD: 1, "Military FirstAid Kit", price: 2000, minAmountToHeal: 15, maxAmountToHeal: 20));
-            Items.Add(new ItemBase(iD: 2, "Armor Mod", price: 5000, minAmountToHeal:0, maxAmountToHeal: 0));
+            Items.Add(new ItemBase(iD: 2, "Armor Mod", price: 5000, minAmountToHeal: 0, maxAmountToHeal: 0));
             Items.Add(new ItemBase(iD: 2, "Weapon Mod", price: 4000, minAmountToHeal: 0, maxAmountToHeal: 0));
             Items.Add(new ItemBase(iD: 2, "Ammunition Mod", price: 3000, minAmountToHeal: 0, maxAmountToHeal: 20));
         }

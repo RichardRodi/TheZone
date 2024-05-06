@@ -27,16 +27,16 @@ namespace TheAnomalousZone.Encounters
             {
                 case 0:
 
-                    Console.WriteLine("\nYou remember you were a Sergeant in the Army.\n" +
-                        "Gripping your heavy but well maintained Kalashnikov Rifle you head into the unknown.");
+                    Console.WriteLine("\n\tYou remember you were a Sergeant in the Army.\n" +
+                        "\tGripping your heavy but well maintained Kalashnikov Rifle you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedSoldier = _gameManager.AllMainCharacters.Where(x => x.Name == "Sergei").FirstOrDefault();
                     if(selectedSoldier is not null)
                         _gameManager.SelectedMainPlayer = selectedSoldier;
                     break;
                 case 1:
-                    Console.WriteLine("\nYou remember you were a Mercenary that fought in foreign lands.\n" +
-                        "Gripping your well worn but functional Bolt Action Rifle you head into the unknown.");
+                    Console.WriteLine("\n\tYou remember you were a Mercenary that fought in foreign lands.\n" +
+                        "\tGripping your well worn but functional Bolt Action Rifle you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedSniper = _gameManager.AllMainCharacters.Where(x => x.Name == "Artyom").FirstOrDefault();
                     if (selectedSniper is not null)
@@ -44,8 +44,8 @@ namespace TheAnomalousZone.Encounters
                    
                     break;
                 case 2:
-                    Console.WriteLine("\nYou remember were a Scientist working for the Government trying to understand the Zone.\n" +
-                        "Gripping your Old Soviet Surplus Handgun you head into the unknown.");
+                    Console.WriteLine("\n\tYou remember were a Scientist working for the Government trying to understand the Zone.\n" +
+                        "\tGripping your Old Soviet Surplus Handgun you head into the unknown.");
                     Console.ReadKey(true);
                     var selectedScientist = _gameManager.AllMainCharacters.Where(x => x.Name == "Dimitri").FirstOrDefault();
                     if (selectedScientist is not null)

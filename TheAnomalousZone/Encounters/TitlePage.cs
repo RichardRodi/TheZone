@@ -23,8 +23,8 @@ namespace TheAnomalousZone.Encounters
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             string radiationSymbol = "\u2622";
 
-            string prompt = ($"\n\t\t\t\t    {radiationSymbol}  {radiationSymbol}  {radiationSymbol}   Welcome To  {radiationSymbol}  {radiationSymbol}  {radiationSymbol}\n\t\n\n " +
-                $"{TitleArtAssets.GameHeader}\n\nCreated by Richard Rodi\n\n\nUse Arrow Keys and Enter to Select Options: \n\n\n");
+            string prompt = ($"\n\n\t\t\t\t    {radiationSymbol}  {radiationSymbol}  {radiationSymbol}   Welcome To  {radiationSymbol}  {radiationSymbol}  {radiationSymbol}\n\t\n\n " +
+                $"{TitleArtAssets.GameHeader}\n\n\tCreated by Richard Rodi\n\tUse Arrow Keys and Enter to Select Options: \n");
 
             string[] options = { "Play Game", "Exit", };
             BaseMenu menu = new BaseMenu(prompt, options);
