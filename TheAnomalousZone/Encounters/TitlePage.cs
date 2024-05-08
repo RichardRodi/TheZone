@@ -24,7 +24,7 @@ namespace TheAnomalousZone.Encounters
             string radiationSymbol = "\u2622";
 
             string prompt = ($"\n\n\t\t\t\t    {radiationSymbol}  {radiationSymbol}  {radiationSymbol}   Welcome To  {radiationSymbol}  {radiationSymbol}  {radiationSymbol}\n\t\n\n " +
-                $"{TitleArtAssets.GameHeader}\n\n\tCreated by Richard Rodi\n\tUse Arrow Keys and Enter to Select Options: \n");
+                $"{TitleArtAssets.GameHeader}\n\n\tCreated by Richard Rodi\n\n\tUse Arrow Keys and Enter to Select Options: \n");
 
             string[] options = { "Play Game", "Exit", };
             BaseMenu menu = new BaseMenu(prompt, options);

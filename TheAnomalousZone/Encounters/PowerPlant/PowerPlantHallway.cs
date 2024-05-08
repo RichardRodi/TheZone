@@ -47,6 +47,7 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[10]);
                     Console.WriteLine("\n\tA very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
                         "\tthis lone soldier exudes an aura of relentless determination as he swiftly advances towards you.");
+                    Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[11]);
                     Console.WriteLine("\n\tAs the relentless battle rages on,\n" +
                         "\tit feels like an endless struggle against an unyielding tide of adversaries.\n" +
@@ -74,6 +75,7 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[10]);
                     Console.WriteLine("\n\tA very large soldier clad in formidable exo-skeleton armor steps forward,\n" +
                        "\tthis lone soldier exudes an aura of relentless determination as he swiftly advances towards you.");
+                    Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[11]);
                     Console.Clear();
                     Console.WriteLine("\n\tAs the relentless battle rages on,\n" +
@@ -82,7 +84,7 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                         "\tAmidst the chaos, your eyes catch sight of a grenade nestled on a lifeless soldier's belt.\n" +
                         "\tSwiftly seizing the opportunity,\n" +
                         "\tyou deftly extract the pin and hurl the grenade toward the mass of adversaries still locked in combat with you.\n" +
-                        "\tAs the smoke dissipates, revealing the aftermath of the chaos,\n" +
+                        "\n\tAs the smoke dissipates, revealing the aftermath of the chaos,\n" +
                         "\tonly one figure remains:\n" +
                         "\tThe previously defeated soldier in the advanced exo-skeleton armor is damaged but still alive.\n" +
                         "\tHe advances towards you.");

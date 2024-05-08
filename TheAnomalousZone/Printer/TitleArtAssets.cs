@@ -38,20 +38,42 @@ namespace TheAnomalousZone.Printer
                        |    |     | |______      /_____ |_____| |  \_| |______
                                                            
 ";
-        public static string FloorPlan = @"
+        public static string FloorPlanFirst = @"
 ╔────────────╗
 |            |   
-│   x   x    |
+│   0   0    |
 │            |   
-│   x   x    |   
+│   0   0    |   
 │            |   
-|   x   x    |            
+|   0   0    |            
+│     x      |
+|   player   |
+╚────────────╝";
+
+        public static string FloorPlanSecond = @"
+╔────────────╗
+|            |   
+│   0   0    |
+│            |   
+│   0   0    |   
+│         x  |
+|      player|   
+|   0   0    |
+|            |            
 │            |
 ╚────────────╝";
 
-
-
-
+        public static string FloorPlanThird = @"
+╔────────────╗
+|            |   
+│   0   0    |
+│  x         |
+|player      |   
+│   0   0    |   
+│            |   
+|   0   0    |            
+│            |
+╚────────────╝";
     }
 }
     

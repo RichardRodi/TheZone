@@ -30,7 +30,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                     $"\tIf you're going to make it, you have to fight those freaks that worship the Monolith as their god.\n" +
                     $"\tYou're going to need some supplies, so take a look.\n");
 
-                string[] options = {"1.Buy Plates for your Armor\n Armor + 5 - 5000 Rubles", "2.Buy Custom parts for your Weapon\n Weapon Damage + 8 - 4000 Rubles",
+                string[] options = {"1.Buy Plates for your Armor\n Armor + 5 - 5000 Rubles", "2.Buy Custom parts for your Weapon\n Weapon Damage + 4 - 4000 Rubles",
                     "3.Buy Bandit Chest Rig\n Ammunition + 2 - 3000 Rubles", "4.Buy First Aid Kit.\n 1000 Rubles",$"5.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "6.Check Stats.", "7.Leave Shop."};
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
@@ -49,7 +49,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             RunEncounter();
                         }
@@ -61,8 +61,8 @@ namespace TheAnomalousZone.Encounters.Corridor
                         if (_gameManager.SelectedMainPlayer.Rubles >= _gameManager.Items[3].Price)
                         {
                             _gameManager.SelectedMainPlayer.Rubles -= _gameManager.Items[3].Price;
-                            _gameManager.SelectedMainPlayer.WeaponValue += 8;
-                            Console.WriteLine("\n\tWeapon Damage increased by 8!");
+                            _gameManager.SelectedMainPlayer.WeaponValue += 4;
+                            Console.WriteLine("\n\tWeapon Damage increased by 4!");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -70,7 +70,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -88,7 +88,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -109,7 +109,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -130,14 +130,14 @@ namespace TheAnomalousZone.Encounters.Corridor
                         break;
                     case 6:
                         Console.Clear();
-                        Console.WriteLine("\n\tAs you prepare to depart, the leader of the friendlies steps forward,\n" +
+                        Console.WriteLine("\n\tAs you prepare to depart, the leader of the friendly soldiers steps forward,\n" +
                             "\toffering you some parting advice.\n" +
                             "\t'You are entering unknown territory, friend,' he cautions, their voice tinged with solemnity. \n" +
                             "\t'Not many have made it this far. We would go further,\n" +
                             "\tbut no one has come back from where you're headed.\n" +
                             "\tHe throws you an awkward helmet.\n" +
-                            "\tUpon further inspection you realize that there night vision goggles on them'\n" +
-                            "\t'Good luck!', he yells out as stride out of the encampment\n" +
+                            "\tUpon further inspection you realize that the helmet contains night vision goggles'.\n" +
+                            "\t'Good luck!', he yells out as stride out of the encampment.\n" +
                             "\tWith those words echoing in your mind,\n" +
                             "\tyou steel yourself for the challenges that lie ahead.\n"); 
                         Console.ReadKey(true);

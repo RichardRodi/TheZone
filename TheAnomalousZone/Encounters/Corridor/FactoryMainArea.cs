@@ -21,19 +21,19 @@ namespace TheAnomalousZone.Encounters.Corridor
                 string prompt = ($"\n\tNavigating the main complex of the factory with cautious steps,\n" +
                     $"\tyou remain alert, mindful of the lingering presence of bandits.\n" +
                     $"\tThe rusted corridors and corroded depot present a surreal sight,\n" +
-                    $"\tpunctuated by pools of eerie,\n" +
-                    $"\tglowing jelly that seem to seep into the very fabric of the old Soviet architecture.\n" +
-                    $"\tMoving forward, you realize that traversing through this strange substance will pose a challenge.\n" +
+                    $"\tpools of glowing jelly seem to seep into the very fabric of the old Soviet architecture.\n" +
+                    $"\tYou realize that traversing through this strange substance will pose a challenge.\n" +
                     $"\tAs you cautiously extend your foot to touch the strange substance,\n" +
                     $"\ta sudden realization dawns upon you—the jelly-like material exhibits a corrosive nature, \n" +
-                    $"\tfar beyond your initial expectations.\n" +
-                    $"\tWith a mere graze, it sets to work with alarming speed, devouring the sole of your boot as if it were mere paper.\n" +
-                    $"\tAmidst this alien landscape, another curious but somewhat familiar sight catches your eye, an ethereal,\n" +
+                    $"\tWith a mere graze, it sets to work with alarming speed,\n" +
+                    $"\tdevouring a part of your boot within seconds.\n" +
+                    $"\tAmidst this alien landscape,\n" +
+                    $"\tanother curious but somewhat familiar sight catches your eye, an ethereal,\n" +
                     $"\tsemi-transparent orb hovers faintly in the air above a mass of the glowing jelly,\n" +
                     $"\tits presence barely discernible amidst the eerie glow of the ooze.\n" +
                     $"\tInstinct tells you that this enigmatic orb may hold secrets or treasures yet unknown.\n\n");
 
-                string[] options = { "1.Begin cautiously moving towards the object", "2. Sprint as fast as you can through the unknown substance. ", "3.Dealing with this substance is too risky. You move on.", $"4.Use a FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
+                string[] options = { "1.Begin cautiously moving towards the object.", "2. Sprint as fast as you can through the unknown substance. ", "3.Dealing with this substance is too risky. You move on.", $"4.Use a FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Player Stats." };
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
 
@@ -133,7 +133,8 @@ namespace TheAnomalousZone.Encounters.Corridor
                         "\tas though you can conquer any challenge that lies ahead.\n" +
                         "\tYour focus sharpens to a razor's edge,\n" +
                         "\tand you find yourself wielding your weapons with newfound expertise,\n" +
-                        "\tas if they were extensions of your very being. Weapon Damage + 5!");
+                        "\tas if they were extensions of your very being.\n" +
+                        "\tWeapon Damage + 5!");
                     Console.ReadKey(true);
                     Console.WriteLine("\n\tWith nothing of value left in this area you carefully retrace your steps and move on.\n" +
                         "\tYou exit the factory facility and continue down the main road.");
@@ -145,7 +146,8 @@ namespace TheAnomalousZone.Encounters.Corridor
                 case 1:
                     Console.WriteLine("\n\tOpting for the right path, where the density of pools containing the unknown substance is higher,\n" +
                         "\tyou tread carefully, attempting to navigate the treacherous minefield of corrosive pools.\n" +
-                        "\tDespite your best efforts, you can't avoid all contact with the viscous substance due to its sheer volume in this area.\n" +
+                        "\tDespite your best efforts,\n" +
+                        "\tyou can't avoid contact with the viscous substance due to its sheer volume in this area.\n" +
                         "\tA splash of it surges upward, searing through your pant legs with an intensity coursing pain through your body.");
                     _gameManager.SelectedMainPlayer.PlayerDamage(15);
                     DeathCheck.IsALive(_gameManager.SelectedMainPlayer);

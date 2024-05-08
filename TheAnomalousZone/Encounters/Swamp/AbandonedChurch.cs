@@ -144,7 +144,7 @@ namespace TheAnomalousZone.Encounters.Swamp
         {
             string prompt = ($"\n\tYou stand amidst the fallen mutant freaks.\n" +
                 $"\tAny other enemies that could have caused you trouble have run away in terror.\n" +
-                $"\tfeeling the weight of exhaustion settle upon you from the fierce battle you've just endured.\n" +
+                $"\tYou are now feeling the weight of exhaustion settle upon you from the fierce battle you've just endured.\n" +
                 $"\tYou find yourself amidst the eerie silence of this ghostly church.\n\n");
 
             string[] options = { "1.Check the Altar.", "2.Look around.", "3.Climb the stairs and check the steeple.", "4.You want to Leave!", $"5.Use a FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "6.Check Stats." };
@@ -177,14 +177,14 @@ namespace TheAnomalousZone.Encounters.Swamp
                     }
                     else
                         Console.WriteLine("\n\tUnfortunately that is not the combination to the lockbox");
-                    Console.ReadKey(true);
-                    ChurchFightFinished();
+                        Console.ReadKey(true);
+                        ChurchFightFinished();
                     break;
 
                 case 1:
                     Console.WriteLine("\n\tLooking up at the strangely defiant structure,\n" +
                         "\tyou notice the numbers 1 and 2 etched into the vacant area of the crucifix");
-                    Console.ReadKey(true);
+                        Console.ReadKey(true);
                     ChurchFightFinished();
                     break;
 

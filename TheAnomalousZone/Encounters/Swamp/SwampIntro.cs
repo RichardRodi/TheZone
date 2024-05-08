@@ -19,7 +19,8 @@ namespace TheAnomalousZone.Encounters.Swamp
                 $"\tDespite its decrepit appearance, the structure beckons with an air of intrigue,\n\n" +
                 $"\tTo your right, black smoke rises from the direction of a large warehouse,\n" +
                 $"\tit's imposing silhouette looming ominously against the horizon. \n" +
-                $"\tThe source of the smoke remains unclear, casting doubt over the intentions of those who inhabit the structure.\n\n");
+                $"\tThe source of the smoke remains unclear,\n" +
+                $"\tcasting doubt over the intentions of those who inhabit the structure.\n\n");
 
             string[] options = { "1.Head to your Left.", "2.Head to your Right.", "3.Look Around.", $"4.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"5.Check Player Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);

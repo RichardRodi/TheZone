@@ -52,7 +52,8 @@ namespace TheAnomalousZone.Encounters.Corridor
                     case 2:
                         Console.WriteLine($"\n\tYou gaze at the road leading towards the power plant,\n" +
                             $"\trecognizing the daunting challenge it presents.\n" +
-                            $"\tYet, despite the difficulties ahead, you understand that this path is one of significance and potential reward.\n" +
+                            $"\tYet, despite the difficulties ahead,\n" +
+                            $"\tyou understand that this path is one of significance and potential reward.\n" +
                             $"\tHowever, as your eyes drift towards the shop sign, a sense of tranquility washes over you.\n" +
                             $"\tIt's as if an unseen force gently nudges you towards the quaint village,\n" +
                             $"\twhispering that there may be something of value waiting for you there.\n");

@@ -65,7 +65,7 @@ namespace TheAnomalousZone.MainCharacter
             if (Health < 0)
                 Health = 0;
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            SlowPrint.Print($"You Took {damage} Damage!");
+            SlowPrint.Print($"\tYou Took {damage} Damage!");
             Console.ResetColor();
             if (Health <= 0)
 

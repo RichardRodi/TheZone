@@ -29,7 +29,8 @@ namespace TheAnomalousZone.Encounters.Corridor
             switch (selectedIndex)
             {
                 case 0:
-                    Console.WriteLine($"\n\tYou navigate the somewhat large road, now uneven and broken from the anomalous activities that have threatened the zone.\n");
+                    Console.WriteLine($"\n\tYou navigate the somewhat large road,\n" +
+                        $"\tnow uneven and broken from the anomalous activities that have threatened the zone.\n");
                     Console.ReadKey(true);
                     NextEncounter(typeof(MainRoad));
                     break;

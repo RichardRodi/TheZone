@@ -23,7 +23,7 @@ namespace TheAnomalousZone.Encounters.Swamp
                 $"\tIt possesses the unmistakable features of a boar, yet something is profoundly amiss.\n" +
                 $"\tIt appears to be grotesquely mutated, its form twisted beyond recognition.\n\n");
 
-            string[] options = { "1.Raise your Firearm to fire at it!", "2.Run to avoid this monstrosity and the house all together.", "3.Take a Closer look at the Boar." };
+            string[] options = { "1.Raise your Firearm to fire at it!", "2.Run to avoid this monstrosity.", "3.Take a Closer look at the Boar." };
             BaseMenu menu = new BaseMenu(prompt, options);
             int selectedIndex = menu.Run();
 
@@ -51,12 +51,11 @@ namespace TheAnomalousZone.Encounters.Swamp
 
                     else
                     {
-                        Console.WriteLine("\n\tDeciding not to mess with this ridiculous animal,\n" +
-                            "\tyou make your way out of this area and proceed along a small dirt path.\n" +
-                            "\tYou notice the only way out of this terrible bog is through a nearby looming structure.\n" +
-                            "\tAs you get closer to the structure you realize that it is a church.");
+                        Console.WriteLine("\n\tAfter creating a gap between yourself and the mutant,\n" +
+                            "\tit relents in its pursuit and retreats,\n" +
+                            "\tleaving you to navigate toward the dilapidated building.");
                         Console.ReadKey(true);
-                        NextEncounter(typeof(AbandonedChurch));
+                        RunBoarRanAway();
 
                     }
                     break;
@@ -76,7 +75,8 @@ namespace TheAnomalousZone.Encounters.Swamp
         private void RunBoarDefeated()
         {
 
-            string prompt = ($"\n\tAfter this swine like abomination breathes its last breath, you make your way towards the shanty home.\n" +
+            string prompt = ($"\n\tAfter this swine like abomination breathes its last breath,\n" +
+                $"\tyou make your way towards the shanty home.\n" +
             $"\tThere is a faint crackling coming from the home.\n\n");
 
             string[] options = { "1.Check the house.", "2.Move On.", $"3.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"4.Check PLayer Stats." };
@@ -93,7 +93,8 @@ namespace TheAnomalousZone.Encounters.Swamp
                     break;
 
                 case 1:
-                    Console.WriteLine("\n\tYou decide to not mess with this anomaly and make your way out of this area and proceed along a small dirt path.\n" +
+                    Console.WriteLine("\n\tYou decide to not mess with this anomaly\n" +
+                        "\tand make your way out of this area and proceed along a small dirt path.\n" +
                             "\tYou notice the only way out of this terrible bog is through a nearby looming structure.\n" +
                             "\tAs you get closer to the structure you realize that it is a church.");
                     Console.ReadKey(true);
@@ -109,6 +110,49 @@ namespace TheAnomalousZone.Encounters.Swamp
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
                     RunBoarDefeated();
+                    break;
+
+            }
+
+        }
+        private void RunBoarRanAway()
+        {
+
+            string prompt = ($"\n\tAfter putting some distance between you and the swine like abomination,\n" +
+                $"\tyou make your way towards the shanty home.\n" +
+                $"\tThere is a faint crackling coming from the home.\n\n");
+
+            string[] options = { "1.Check the house.", "2.Move On.", $"3.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", $"4.Check Player Stats." };
+            BaseMenu menu = new BaseMenu(prompt, options);
+            int selectedIndex = menu.Run();
+
+            switch (selectedIndex)
+            {
+                case 0:
+                    Console.WriteLine("\n\tAs you approach the home, the hairs on the back of your neck stand on end.\n" +
+                        "\tThis is not from fear but from some unexplained external force. You decide to go inside.");
+                    Console.ReadKey(true);
+                    RunElectricalAnomaly();
+                    break;
+
+                case 1:
+                    Console.WriteLine("\n\tYou decide to not mess with this anomaly\n" +
+                        "\tand make your way out of this area and proceed along a small dirt path.\n" +
+                            "\tYou notice the only way out of this terrible bog is through a nearby looming structure.\n" +
+                            "\tAs you get closer to the structure you realize that it is a church.");
+                    Console.ReadKey(true);
+                    NextEncounter(typeof(AbandonedChurch));
+                    break;
+
+                case 2:
+                    _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
+                    Console.ReadKey(true);
+                    RunBoarRanAway();
+                    break;
+                case 3:
+                    _gameManager.SelectedMainPlayer.DisplayStats();
+                    Console.ReadKey(true);
+                    RunBoarRanAway();
                     break;
 
             }
@@ -137,9 +181,10 @@ namespace TheAnomalousZone.Encounters.Swamp
                         _gameManager.SelectedMainPlayer.PlayerDamage(5);
                         Console.ReadKey(true);
                         DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
-                        Console.WriteLine("\n\tYou skin feels strange to the touch as if has been hardened from the strange artifact you are holding");
-                        _gameManager.SelectedMainPlayer.ArmorValue += 1;
-                        Console.WriteLine("\n\tYou get are now tougher Armor + 1!");
+                        Console.WriteLine("\n\tYou skin feels strange to the touch,\n" +
+                            "\tas if has been hardened from the strange artifact you are holding");
+                        _gameManager.SelectedMainPlayer.ArmorValue += 2;
+                        Console.WriteLine("\n\tYou get are now tougher Armor + 2!");
                         Console.ReadKey(true);
                         Console.WriteLine("\n\tSince there is nothing left of interest in this area you decide to move on from this home.");
                         Console.ReadKey(true);

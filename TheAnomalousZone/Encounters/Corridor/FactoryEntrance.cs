@@ -24,7 +24,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                 $"\teach clad in their unmistakable attire.\n" +
                 $"\tOne group proudly wears the familiar insignias of allies you've encountered before,\n" +
                 $"\twhile the other remains a mystery,\n" +
-                $"\ttheir mismatched uniforms mirroring those typically associated with the notorious bandits that roam the Zone.\n\n");
+                $"\ttheir mismatched uniforms mirroring those typically associated with the bandits that roam the Zone.\n\n");
 
             string[] options = { "1.Help the friendly troops in their fight against the bandits.", "2.Turn on your friends and fight with the bandits.", "3.Leave them to their own devices and continue on.", $"4.Use a FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "5.Check Stats." };
             BaseMenu menu = new BaseMenu(prompt, options);
@@ -34,11 +34,14 @@ namespace TheAnomalousZone.Encounters.Corridor
             {
                 case 0:
                     Console.WriteLine("\n\tAssuming a defensive stance, you unleash a volley of gunfire upon the encroaching bandits.\n");
+                    Console.ReadKey();
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[0]);
-                    Console.WriteLine("\n\tAfter defeating one foe you notice a Bandit Sniper on a roof who is inflicting a lot of damage and engage him.\n");
+                    Console.WriteLine("\n\tAfter defeating one foe you notice a Bandit Sniper on a roof who is inflicting a lot of damage and\n" +
+                        "\tengage him.\n");
                     Console.ReadKey(true);
                     BanditCombat.FightPlayerFirst(_gameManager.SelectedMainPlayer, _gameManager.Enemies[2]);
-                    Console.WriteLine("\n\tAs the skirmish unfolds, it becomes evident that the tide of battle decidedly favors your side.\n" +
+                    Console.WriteLine("\n\tAs the skirmish unfolds,\n" +
+                        "\tit becomes evident that the tide of battle decidedly favors your side.\n" +
                         "\tThe bandits, facing insurmountable odds, start to falter and scatter,\n" +
                         "\ttheir resolve crumbling beneath the relentless onslaught.\n" +
                         "\tAs quickly as this skirmish began it ends just as abruptly,\n" +
@@ -78,7 +81,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                     RunEncounter();
                     break;
                 case 2:
-                    Console.WriteLine("\n\tYou decide to leave this skirmish behind and descend into the depths of the factory complex");
+                    Console.WriteLine("\n\tYou decide to leave this skirmish behind and descend into the factory complex");
                     Console.ReadKey(true);
                     NextEncounter(typeof(FactoryMainArea));
                     break;

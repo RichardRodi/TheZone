@@ -1,4 +1,7 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Data;
+using System.Runtime.CompilerServices;
+using System.Runtime.Intrinsics.X86;
+using System.Threading.Tasks;
 using TheAnomalousZone.Encounters.Corridor;
 using TheAnomalousZone.NewFolder;
 
@@ -21,18 +24,17 @@ namespace TheAnomalousZone.Encounters.Shop
         {
             
             {
-                string prompt = ($"\tYou make your way down to the rustic village,\n" +
+                string prompt = ($"\n\tYou make your way down to the rustic village,\n" +
                     $"\twhere a few people keep watch, their demeanor nonviolent yet vigilant.\n" +
                     $"\tThey bear similar gear and weapons, hinting at a shared purpose and allegiance.\n" +
                     $"\tNavigating through the small settlement while following the shop signs,\n" +
                     $"\tyou eventually find yourself standing before an old Cold War bunker,\n" +
                     $"\tits entrance concealed within the earth. A neon sign above reads Strelock's Shop.\n" +
                     $"\tInside, you are greeted by an older man,\n" +
-                    $"\this face weathered by the passage of time and marked by the effects of a life lived hard.\n" +
                     $"\tDespite his gruff exterior, he welcomes you with a booming voice,\n" +
                     $"\turging you to enter and explore his wares.\n");
 
-                string[] options = {"1.Buy Plates for your Armor\n Armor + 5 - 5000 Rubles", "2.Buy Custom parts for your Weapon\nWeapon Damage + 8 - 4000 Rubles",
+                string[] options = {"1.Buy Plates for your Armor\n Armor + 5 - 5000 Rubles", "2.Buy Custom parts for your Weapon\nWeapon Damage + 4 - 4000 Rubles",
                     "3.Buy Bandit Chest Rig\n Ammunition + 2 - 3000 Rubles", "4.Buy First Aid Kit.\n 1000 Rubles",$"5.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "6.Check Stats.", "7.Leave Shop."};
                 BaseMenu menu = new BaseMenu(prompt, options);
                 int selectedIndex = menu.Run();
@@ -51,7 +53,7 @@ namespace TheAnomalousZone.Encounters.Shop
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             RunEncounter();
                         }
@@ -63,8 +65,8 @@ namespace TheAnomalousZone.Encounters.Shop
                         if (_gameManager.SelectedMainPlayer.Rubles >= _gameManager.Items[3].Price)
                         {
                             _gameManager.SelectedMainPlayer.Rubles -= _gameManager.Items[3].Price;
-                            _gameManager.SelectedMainPlayer.WeaponValue += 8;
-                            Console.WriteLine("\n\tWeapon Damage increased by 8!");
+                            _gameManager.SelectedMainPlayer.WeaponValue += 4;
+                            Console.WriteLine("\n\tWeapon Damage increased by 4!");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -72,7 +74,7 @@ namespace TheAnomalousZone.Encounters.Shop
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -90,7 +92,7 @@ namespace TheAnomalousZone.Encounters.Shop
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -111,7 +113,7 @@ namespace TheAnomalousZone.Encounters.Shop
                         }
                         else
                         {
-                            Console.WriteLine("\n\tNot Enough Money");
+                            Console.WriteLine("\n\tNot Enough Money.");
                             Console.ReadKey(true);
                             Console.Clear();
                             RunEncounter();
@@ -132,26 +134,21 @@ namespace TheAnomalousZone.Encounters.Shop
                         break;
                     case 6:
                         Console.Clear();
-                        Console.WriteLine("\n\tThank you for your service!, Who you assume to be Strelock says,\n" +
-                            "\this words carrying a weight of understanding.\n" +
-                            "\tI can see it in your eyes. \n" +
-                            "\tThe call of the WishGiver. That towering Monolith beckons to you,\n" +
-                            "\ttempting you with untold riches, or perhaps infinite knowledge or power.\n" +
-                            "\tHe pauses, his gaze piercing yet compassionate.\n" +
-                            "\tBe wary, for wishes are seldom what you actually want.\n" +
-                            "\tBut who am I to tell a man not to follow his heart?' Good luck out there, friend. Also take this as a souvenir.\n" +
-                            "\tAs he says these parting words he tosses you an old pair of binoculars\n" +
-                            "\tWith his words echoing in your mind, you step out of Strelock's shop, ready to face the challenges ahead.\n\n\n");
+                        Console.WriteLine("\n\tStrelock the owner of this shop speaks to you, his words laden with significance.\n" +
+                            "\t'Thank you for your patronage!\n" +
+                            "\tI can see it in your eyes, the call of the WishGiver, that towering Monolith tempting you with untold riches,\n" +
+                            "\tor perhaps infinite knowledge or power.' He pauses, his gaze both penetrating and compassionate.\n" +
+                            "\t'Be wary, for wishes are seldom what you truly desire.\n" +
+                            "\tBut who am I to dissuade a man from following his heart? Good luck out there, friend.'\n" +
+                            "\tWith these parting words, he tosses you an old pair of binoculars.\n" +
+                            "\t'These are on the house friend.'\n" +
+                            "\tHis advice echoing in your mind, you exit Strelock's shop.") ;
                         Console.ReadKey(true);
                         Console.Clear();
                         NextEncounter(typeof(CorridorCrossRoads));
                         break;
-
                 }
-
             }
-            
-
         }
         
     }

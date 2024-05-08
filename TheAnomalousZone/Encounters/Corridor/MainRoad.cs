@@ -62,7 +62,8 @@ namespace TheAnomalousZone.Encounters.Corridor
                         break;
 
                     case 1:
-                        Console.WriteLine($"\n\tYou whisper a nope under your breath and decide to flee this area and head to towards the factories.");
+                        Console.WriteLine($"\n\tYou whisper a nope under your breath\n" +
+                            $"\tand decide to flee this area and head to towards the factories.");
                         if (_gameManager.SelectedMainPlayer.Speed > 11)
                         {
                             Console.WriteLine($"\n\tYou are able to flee before the mutant notices you.\n" +
@@ -128,7 +129,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                 $"\tTaking a moment to tend to your own wounds and regain your composure, you survey the grim aftermath. \n" +
                 $"\tStrewn across the landscape are rotting fallen soldiers presumably killed by this great beast.\n" +
                 $"\tThey are clad in distinctive uniforms adorned with matching patches bearing an eclipsed sun.\n" +
-                $"\tAmong them, a lone soldier grips a peculiar rifle, \n" +
+                $"\tAmong them, a lone soldier grips a peculiar rifle,\n" +
                 $"\tThis rifle is emanating an otherworldly energy.\n\n");
 
             string[] options = { "1.Grab the Rifle.", "2.Leave the rifle and move on.", $"3.Use FirstAid Kit. Player's Health: {_gameManager.SelectedMainPlayer.Health}/{_gameManager.SelectedMainPlayer.MaxHealth}", "4.Check Player Stats." };
@@ -160,12 +161,12 @@ namespace TheAnomalousZone.Encounters.Corridor
                 case 2:
                     _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                     Console.ReadKey(true);
-                    RunEncounter();
+                    ChimeraDefeated();
                     break;
                 case 3:
                     _gameManager.SelectedMainPlayer.DisplayStats();
                     Console.ReadKey(true);
-                    RunEncounter();
+                    ChimeraDefeated();
                     break;
 
             }

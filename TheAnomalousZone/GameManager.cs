@@ -37,26 +37,26 @@ namespace TheAnomalousZone
 
 
             AllMainCharacters.Add(new MainPlayer(name: "Sergei", health: 50, radiation: 0, damage: 2, armorValue: 7,
-                firstAid: 1, weaponValue: 12, ammunitionPerMagazine: 4, speed: 9, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
+                firstAid: 1, weaponValue: 10, ammunitionPerMagazine: 4, speed: 8, "You were a soldier in the Ukranian Army", rubles: 500, maxHealth: 50));
 
             AllMainCharacters.Add(new MainPlayer(name: "Artyom", health: 35, radiation: 0, damage: 1, armorValue: 5,
-                firstAid: 3, weaponValue: 20, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 35));
+                firstAid: 3, weaponValue: 18, ammunitionPerMagazine: 1, speed: 12, "You were a sniper in the Ukranian Army", rubles: 1000, maxHealth: 35));
 
             AllMainCharacters.Add(new MainPlayer(name: "Dimitri", health: 40, radiation: 0, damage: 1, armorValue: 6,
-                firstAid: 4, weaponValue: 12, ammunitionPerMagazine: 9, speed: 10, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 40));
+                firstAid: 4, weaponValue: 9, ammunitionPerMagazine: 9, speed: 10, "You were a scientist in the Ukranian Army", rubles: 800, maxHealth: 40));
         }
 
 
         public void GenerateAllEnemies()
         {
 
-            Enemies.Add(new Bandits("Bandit Soldier", health: 20, damage: 2, armorValue: 3,
+            Enemies.Add(new Bandits("Bandit Soldier", health: 32, damage: 2, armorValue: 4,
                 firstAid: 1, weaponValue: 6, ammunition: 8, speed: 10, numberOfShotsFired: 3));
 
-            Enemies.Add(new Bandits("Bandit Leader", health: 25, damage: 1, armorValue: 4,
+            Enemies.Add(new Bandits("Bandit Leader", health: 28, damage: 1, armorValue: 5,
                 firstAid: 2, weaponValue: 9, ammunition: 5, speed: 12, numberOfShotsFired: 1));
 
-            Enemies.Add(new Bandits("Bandit Scout", health: 15, damage: 1, armorValue: 2,
+            Enemies.Add(new Bandits("Bandit Scout", health: 28, damage: 1, armorValue: 3,
                 firstAid: 1, weaponValue: 9, ammunition: 2, speed: 14, numberOfShotsFired: 2));
 
             Enemies.Add(new MutatedAnimals("Mutated Boar", health: 20, damage: 8, armorValue: 4, radiationDamage: 1,
@@ -74,13 +74,13 @@ namespace TheAnomalousZone
             Enemies.Add(new MutatedAnimals("Snork", health: 30, damage: 7, armorValue: 5, radiationDamage: 1,
                 speed: 15, "This is a mutated Snork"));
 
-            Enemies.Add(new Bandits("Monolith Soldier", health: 25, damage: 2, armorValue: 5,
+            Enemies.Add(new Bandits("Monolith Soldier", health: 35, damage: 2, armorValue: 5,
                 firstAid: 1, weaponValue: 7, ammunition: 8, speed: 10, numberOfShotsFired: 3));
 
-            Enemies.Add(new Bandits("Monolith Soldier", health: 25, damage: 2, armorValue: 5,
+            Enemies.Add(new Bandits("Monolith Soldier", health: 35, damage: 2, armorValue: 5,
                firstAid: 1, weaponValue: 7, ammunition: 8, speed: 10, numberOfShotsFired: 3));
 
-            Enemies.Add(new Bandits("Monolith Soldier", health: 25, damage: 2, armorValue: 5,
+            Enemies.Add(new Bandits("Monolith Soldier", health: 35, damage: 2, armorValue: 5,
                 firstAid: 1, weaponValue: 7, ammunition: 8, speed: 10, numberOfShotsFired: 3));
 
             Enemies.Add(new Bandits("Monolith Leader", health: 50, damage: 2, armorValue: 9,

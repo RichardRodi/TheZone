@@ -16,7 +16,6 @@ namespace TheAnomalousZone.Encounters.Swamp
 
         {
 
-          
             string prompt = ($"\n\tAs you approach the source of the voice when you realize you are surrounded by a group of armed men\n" +
                 $"\tThe man who is speaking to you seems to be their leader.\n" +
                 $"\tIn a snarled voice he politely asks you to empty your pockets and be on your way.\n\n");
@@ -158,16 +157,16 @@ namespace TheAnomalousZone.Encounters.Swamp
                     case 0:
                         Console.WriteLine("\n\tYou climb the rafters of the roof to try and avoid the flames,\n" +
                             "\tThe brittle rafters give way and you fall into a large open flame scorching your arm.\n");
-
+                        Console.ReadKey(true);
                         _gameManager.SelectedMainPlayer.PlayerDamage(20); ;
                         Console.WriteLine("\n\tYou pick yourself up and gaze at your burnt Arm.\n" +
                             "\tYou definitely felt the extreme heat on your skin as you reached for the object.\n" +
-                            "\tGrasping the spherical item a rush of light-headedness," +
+                            "\tGrasping the spherical item a rush of light-headedness,\n" +
                             "\tthis briefly overwhelms you before dissipating and coursing down your body.\n" +
                             "\tIn an instant you feel a newfound lightness and agility surge through you.");
-
-                        _gameManager.SelectedMainPlayer.Speed += 1;
-                        Console.WriteLine("\nYou are now faster Speed + 1!\n" +
+                        Console.ReadKey(true);
+                        _gameManager.SelectedMainPlayer.Speed += 3;
+                        Console.WriteLine("\nYou are now faster: Speed + 3!\n" +
                             "\tSince there is nothing left of interest in this area you decide to move on from the warehouse.");
                         Console.ReadKey(true);
                         NextEncounter(typeof(AbandonedChurch));
@@ -183,10 +182,11 @@ namespace TheAnomalousZone.Encounters.Swamp
                             Console.ReadKey(true);
                             Console.WriteLine("\n\tYou definitely felt the extreme heat on your skin as you reached for the object.\n" +
                                 "\tGrasping the spherical item,\n" +
-                                "\ta rush of light-headedness briefly overwhelms you before dissipating and coursing down your body. In an instant,\n" +
+                                "\ta rush of light-headedness briefly overwhelms you before dissipating and coursing down your body.\n" +
+                                "\tIn an instant,\n" +
                                 "\tyou feel a newfound lightness and agility surge through you.");
-                            _gameManager.SelectedMainPlayer.Speed += 2;
-                            Console.WriteLine("\n\tYou are now faster Speed + 2!\n" +
+                            _gameManager.SelectedMainPlayer.Speed += 3;
+                            Console.WriteLine("\n\tYou are now faster Speed + 3!\n" +
                                 "\tSince there is nothing left of interest in this area you decide to move on from the warehouse.");
                             Console.ReadKey(true);
                             Console.WriteLine("\n\tYou make your way out of this area and proceed along a small dirt path.\n" +
@@ -203,7 +203,8 @@ namespace TheAnomalousZone.Encounters.Swamp
                             Console.Clear();
                             Console.WriteLine("\n\tYou definitely felt the extreme heat on your skin as you reached for the object.\n" +
                                 "\tGrasping the spherical item,\n" +
-                                "\ta rush of light-headedness briefly overwhelms you before dissipating and coursing down your body. In an instant,\n" +
+                                "\ta rush of light-headedness briefly overwhelms you before dissipating and coursing down your body.\n" +
+                                "\tIn an instant,\n" +
                                 "\tyou feel a newfound lightness and agility surge through you.");
                             Console.ReadKey(true);
                             _gameManager.SelectedMainPlayer.Speed += 2;
