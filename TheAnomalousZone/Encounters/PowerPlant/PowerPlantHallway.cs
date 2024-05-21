@@ -62,7 +62,6 @@ namespace TheAnomalousZone.Encounters.PowerPlant
                     Console.ReadKey(true);
                     FinalBoss();
                     break;
-
                 case 1:
                     Console.WriteLine("\n\tYou manage to sink your knife into one of the soldiers,\n" +
                         "\tbut just as quickly as he breathes his last breath the other soldiers immediately open fire upon you.");
