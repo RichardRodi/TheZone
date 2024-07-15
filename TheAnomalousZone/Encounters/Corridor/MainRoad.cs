@@ -62,7 +62,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                         break;
 
                     case 1:
-                        Console.WriteLine($"\n\tYou whisper a nope under your breath\n" +
+                        Console.WriteLine($"\n\tYou whisper a 'nope' under your breath\n" +
                             $"\tand decide to flee this area and head to towards the factories.");
                         if (_gameManager.SelectedMainPlayer.Speed > 11)
                         {
@@ -89,7 +89,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                             $"\tYou have to reload as all the ammunition in your magazine is spent.\n" +
                             $"\tYou are not able to raise your rifle in time before the beast gets its claws out to attack you.\n");
                         Console.ReadKey(true);
-                        _gameManager.SelectedMainPlayer.PlayerDamage(5);
+                        _gameManager.SelectedMainPlayer.PlayerDamage(6);
                         Console.ReadKey(true);
                         DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                         MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[4]);
@@ -101,7 +101,7 @@ namespace TheAnomalousZone.Encounters.Corridor
                             $"You are not able to raise your rifle in time before the beast gets its claws out to attack you.\n");
                         _gameManager.SelectedMainPlayer.Heal(_gameManager.Items[0].MinAmountToHeal, _gameManager.Items[0].MaxAmountToHeal);
                         Console.ReadKey(true);
-                        _gameManager.SelectedMainPlayer.PlayerDamage(5);
+                        _gameManager.SelectedMainPlayer.PlayerDamage(7);
                         Console.ReadKey(true);
                         DeathCheck.IsALive(_gameManager.SelectedMainPlayer);
                         MutantCombat.FightPlayerFirstMutant(_gameManager.SelectedMainPlayer, _gameManager.Enemies[4]);
